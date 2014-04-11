@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
-  <link href="http://davylin.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Jvm | My Octopress Blog]]></title>
+  <link href="http://davylin.github.io/blog/categories/jvm/atom.xml" rel="self"/>
   <link href="http://davylin.github.io/"/>
   <updated>2014-04-11T13:30:52+08:00</updated>
   <id>http://davylin.github.io/</id>
@@ -64,19 +64,6 @@
 <p>1.如果使用句柄访问方式，java堆中将会划分出一块内存来作为句柄池，reference中存储的就是对象的句柄地址，而句柄中包含了对象实例数据和类型数据各自的具体地址信息。</p>
 
 <p>2.如果使用直接指针访问方式，java堆对象的布局中就必须考虑如何放置访问类型数据的相关信息，reference中直接存储的就是对象地址。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[My First Octopress Blog]]></title>
-    <link href="http://davylin.github.io/blog/2014/04/09/my-first-octopress-blog/"/>
-    <updated>2014-04-09T15:04:27+08:00</updated>
-    <id>http://davylin.github.io/blog/2014/04/09/my-first-octopress-blog</id>
-    <content type="html"><![CDATA[<h1>Setting up this blog</h1>
-
-<p>Apparently I&rsquo;m using <a href="http://octopress.org/">Octopress</a>to power this blog.Many thanks for the nice framework that save me a lot of time to get up to speed.I probably wouldn&rsquo;t have decided to move my blog here in the first place if there weren&rsquo;t ready-to-use solutions for lazy people like me.</p>
-
-<p>Just to remind myself of the steps i took to set it up:</p>
 ]]></content>
   </entry>
   

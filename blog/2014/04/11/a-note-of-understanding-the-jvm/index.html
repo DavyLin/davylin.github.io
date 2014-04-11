@@ -5,11 +5,15 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: Blog,other - My Octopress Blog</title>
+  <title>A Note of Understanding the JVM - My Octopress Blog</title>
   <meta name="author" content="Your Name">
 
   
-  <meta name="description" content="Category: blog,other">
+  <meta name="description" content="java内存区域和内存溢出异常 运行时数据区域 程序计数器（Program Counter Register）
+Java虚拟机栈（Java Virtual Machine Stacks）
+本地方法栈（Native Method Stacks）
+Java堆（Java Heap）
+方法区（Method &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +22,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://davylin.github.ioblog/categories/blog-other">
+  <link rel="canonical" href="http://davylin.github.io/blog/2014/04/11/a-note-of-understanding-the-jvm">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
@@ -65,35 +69,129 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Category: Blog,other</h1>
+    
+      <h1 class="entry-title">A Note of Understanding the JVM</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-11T13:05:48+08:00" pubdate data-updated="true">Apr 11<span>th</span>, 2014</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
 
 
+<div class="entry-content"><h2>java内存区域和内存溢出异常</h2>
 
-  
-  <h2>2014</h2>
+<h3>运行时数据区域</h3>
 
-<article>
-  
-<h1><a href="/blog/2014/04/09/my-first-octopress-blog/">My First Octopress Blog</a></h1>
-<time datetime="2014-04-09T15:04:27+08:00" pubdate><span class='month'>Apr</span> <span class='day'>09</span> <span class='year'>2014</span></time>
+<ul>
+<li>程序计数器（Program Counter Register）</li>
+<li>Java虚拟机栈（Java Virtual Machine Stacks）</li>
+<li>本地方法栈（Native Method Stacks）</li>
+<li>Java堆（Java Heap）</li>
+<li>方法区（Method Area）
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/blog-other/'>blog,other</a></span>
-</footer>
+<ul>
+<li>运行时常量池（Runtime Constant Pool）</li>
+</ul>
+</li>
+<li>另：直接内存</li>
+</ul>
 
 
-</article>
+<h3>程序计数器</h3>
 
+<p>e.g&hellip;</p>
+
+<h3>Java虚拟机栈</h3>
+
+<p>e.g&hellip;</p>
+
+<h3>本地方法栈</h3>
+
+<p>e.g&hellip;</p>
+
+<h3>Java堆</h3>
+
+<p>e.g&hellip;</p>
+
+<h3>方法区</h3>
+
+<p>e.g&hellip;</p>
+
+<h3>对象访问</h3>
+
+<h4>主流的访问有两种：使用句柄和直接指针</h4>
+
+<p>1.如果使用句柄访问方式，java堆中将会划分出一块内存来作为句柄池，reference中存储的就是对象的句柄地址，而句柄中包含了对象实例数据和类型数据各自的具体地址信息。</p>
+
+<p>2.如果使用直接指针访问方式，java堆对象的布局中就必须考虑如何放置访问类型数据的相关信息，reference中直接存储的就是对象地址。</p>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Your Name</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-11T13:05:48+08:00" pubdate data-updated="true">Apr 11<span>th</span>, 2014</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/jvm/'>jvm</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://davylin.github.io/blog/2014/04/11/a-note-of-understanding-the-jvm/" data-via="" data-counturl="http://davylin.github.io/blog/2014/04/11/a-note-of-understanding-the-jvm/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/04/09/my-first-octopress-blog/" title="Previous Post: My first octopress blog">&laquo; My first octopress blog</a>
+      
+      
+    </p>
+  </footer>
 </article>
 
 </div>

@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>CountDownLatch - My Personal Blog</title>
+  <meta name="author" content="DavyLin">
+
+  
+  <meta name="description" content="同步工具类之闭锁-CountDownLatch 闭锁是一种同步工具类，可以延迟线程的进度直到其到达终止状态。闭锁的作用相当于一扇门：在闭锁到达结束状态之前，这扇门一直是关闭的，并且没有
+任何线程能通过，当到达结束状态时，这扇门会打开并允许所有的线程通过。当闭锁到达结束状态后，将不会再改变状态， &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://davylin.github.io/blog/2014/05/10/countdownlatch">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="My Personal Blog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">My Personal Blog</a></h1>
+  
+    <h2>DavyLin Blog</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:davylin.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="https://github.com/davylin">Github</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">CountDownLatch</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-10T15:29:21+08:00" pubdate data-updated="true">May 10<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><h3>同步工具类之闭锁-CountDownLatch</h3>
+
+<p><em>闭锁</em>是一种同步工具类，可以延迟线程的进度直到其到达终止状态。闭锁的作用相当于一扇门：在闭锁到达结束状态之前，这扇门一直是关闭的，并且没有
+任何线程能通过，当到达结束状态时，这扇门会打开并允许所有的线程通过。当闭锁到达结束状态后，将不会再改变状态，因此这扇门将永远保持打开状态。
+闭锁可以用来确保某些活动直到其他活动都完成后才继续执行。</p>
+
+<p><strong>CountDownLatch</strong>是一种灵活的闭锁实现，可以在上述各种情况中使用，它可以使一个或多个线程等待一组事件发生。闭锁状态包括一个计数器，该计数器
+被初始化为一个正数，表示需要等待的事件数量。countDown方法递减计数器，表示有一个事件已经发生了，而await方法等待计数器达到零，这表示所有
+需要等待的事件都已经发生。如果计数器的值非零，那么await会一直阻塞直到计数器为零，或者等待中的线程中断，或者等待超时。</p>
+
+<pre><code>public class TestHarness {  
+    public long timeTasks(int nthreads, final Runnable task) throws             InterruptedException {  
+        final CountDownLatch startGate = new CountDownLatch(1);  
+        final CountDownLatch endGate = new CountDownLatch(nthreads);  
+
+        for (int i = 0; i &lt; nthreads; i++) {  
+        Thread t = new Thread(){  
+            @Override  
+            public void run() {  
+                try{  
+                    startGate.await();  
+                    try{  
+                        task.run();  
+                    }finally {  
+                        endGate.countDown();  
+                    }  
+                } catch (InterruptedException ignored) {}  
+            }  
+        };  
+        t.start();  
+        }  
+
+        long start = System.nanoTime();  
+        startGate.countDown();  
+        endGate.await();  
+        long end = System.nanoTime();  
+        return end-start;  
+    }  
+}  
+</code></pre>
+
+<p>startGate计数器的初始值为1，而endGate计数器的初始值为工作线程的数量。每个工作线程首先要做的就是在startGate上等待，从而确保所有线程都就绪后
+才开始执行。而每个线程要做的最后一件事情是将调用endGate的countDown方法减1，这能使主线程高效地等待直到所有工作线程都执行完成，因此可以更准确
+地统计所消耗的时间</p>
+
+<p><strong>ps. 为什么要在上例中使用闭锁，而不是在线程创建后就立即启动？或许，我们希望测试n个线程并发执行某个任务时需要的时间。如果在创建线程后立即启动
+它们，那么先启动的线程将“领先”后启动的线程，并且活跃线程数量会随着时间的推移而增加或减少，竞争程度也在不断发生变化。</strong></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">DavyLin</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-10T15:29:21+08:00" pubdate data-updated="true">May 10<span>th</span>, 2014</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/jvm/'>jvm</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://davylin.github.io/blog/2014/05/10/countdownlatch/" data-via="" data-counturl="http://davylin.github.io/blog/2014/05/10/countdownlatch/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/04/11/a-note-of-understanding-the-jvm/" title="Previous Post: A note of Understanding the JVM">&laquo; A note of Understanding the JVM</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/05/10/countdownlatch/">CountDownLatch</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/04/11/a-note-of-understanding-the-jvm/">A Note of Understanding the JVM</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/04/09/my-first-octopress-blog/">My First Octopress Blog</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - DavyLin -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Jvm | My Personal Blog]]></title>
+  <title><![CDATA[Category: jvm | My Personal Blog]]></title>
   <link href="http://davylin.github.io/blog/categories/jvm/atom.xml" rel="self"/>
   <link href="http://davylin.github.io/"/>
-  <updated>2014-05-10T15:35:32+08:00</updated>
+  <updated>2014-05-23T22:06:22+08:00</updated>
   <id>http://davylin.github.io/</id>
   <author>
     <name><![CDATA[DavyLin]]></name>
@@ -69,7 +69,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[A Note of Understanding the JVM]]></title>
+    <title type="html"><![CDATA[A note of Understanding the JVM]]></title>
     <link href="http://davylin.github.io/blog/2014/04/11/a-note-of-understanding-the-jvm/"/>
     <updated>2014-04-11T13:05:48+08:00</updated>
     <id>http://davylin.github.io/blog/2014/04/11/a-note-of-understanding-the-jvm</id>

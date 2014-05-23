@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: blog,other | My Personal Blog]]></title>
+  <title><![CDATA[Category: blog,other | 枫中畅游]]></title>
   <link href="http://davylin.github.io/blog/categories/blog-other/atom.xml" rel="self"/>
   <link href="http://davylin.github.io/"/>
-  <updated>2014-05-23T22:06:22+08:00</updated>
+  <updated>2014-05-23T23:50:06+08:00</updated>
   <id>http://davylin.github.io/</id>
   <author>
     <name><![CDATA[DavyLin]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[My first octopress blog]]></title>
-    <link href="http://davylin.github.io/blog/2014/04/09/my-first-octopress-blog/"/>
+    <link href="http://davylin.github.io/blog/my-first-octopress-blog/"/>
     <updated>2014-04-09T15:04:27+08:00</updated>
-    <id>http://davylin.github.io/blog/2014/04/09/my-first-octopress-blog</id>
+    <id>http://davylin.github.io/blog/my-first-octopress-blog</id>
     <content type="html"><![CDATA[<h1>Setting up this blog</h1>
 
 <p>Apparently I&rsquo;m using <a href="http://octopress.org/">Octopress</a>to power this blog.Many thanks for the nice framework that save me a lot of time to get up to speed.I probably wouldn&rsquo;t have decided to move my blog here in the first place if there weren&rsquo;t ready-to-use solutions for lazy people like me.</p>

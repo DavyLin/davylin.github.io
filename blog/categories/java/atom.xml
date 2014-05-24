@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: jvm,java | 枫中畅游]]></title>
-  <link href="http://davylin.github.io/blog/categories/jvm-java/atom.xml" rel="self"/>
+  <title><![CDATA[Category: java | 枫中畅游]]></title>
+  <link href="http://davylin.github.io/blog/categories/java/atom.xml" rel="self"/>
   <link href="http://davylin.github.io/"/>
-  <updated>2014-05-24T18:55:45+08:00</updated>
+  <updated>2014-05-24T19:41:53+08:00</updated>
   <id>http://davylin.github.io/</id>
   <author>
     <name><![CDATA[Davy Lin]]></name>

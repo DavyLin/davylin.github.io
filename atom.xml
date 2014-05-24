@@ -4,7 +4,7 @@
   <title><![CDATA[枫中畅游]]></title>
   <link href="http://davylin.github.io/atom.xml" rel="self"/>
   <link href="http://davylin.github.io/"/>
-  <updated>2014-05-24T10:28:07+08:00</updated>
+  <updated>2014-05-24T10:38:37+08:00</updated>
   <id>http://davylin.github.io/</id>
   <author>
     <name><![CDATA[Davy Lin]]></name>
@@ -69,7 +69,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[A Note of Understanding the JVM]]></title>
+    <title type="html"><![CDATA[A note of Understanding the JVM]]></title>
     <link href="http://davylin.github.io/blog/a-note-of-understanding-the-jvm/"/>
     <updated>2014-04-11T13:05:48+08:00</updated>
     <id>http://davylin.github.io/blog/a-note-of-understanding-the-jvm</id>
@@ -149,7 +149,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[My First Octopress Blog]]></title>
+    <title type="html"><![CDATA[My first octopress blog]]></title>
     <link href="http://davylin.github.io/blog/my-first-octopress-blog/"/>
     <updated>2014-04-09T15:04:27+08:00</updated>
     <id>http://davylin.github.io/blog/my-first-octopress-blog</id>

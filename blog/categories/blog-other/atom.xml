@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Blog,other | 枫中畅游]]></title>
+  <title><![CDATA[Category: blog,other | 枫中畅游]]></title>
   <link href="http://davylin.github.io/blog/categories/blog-other/atom.xml" rel="self"/>
   <link href="http://davylin.github.io/"/>
-  <updated>2014-05-24T10:28:07+08:00</updated>
+  <updated>2014-05-24T10:38:37+08:00</updated>
   <id>http://davylin.github.io/</id>
   <author>
     <name><![CDATA[Davy Lin]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[My First Octopress Blog]]></title>
+    <title type="html"><![CDATA[My first octopress blog]]></title>
     <link href="http://davylin.github.io/blog/my-first-octopress-blog/"/>
     <updated>2014-04-09T15:04:27+08:00</updated>
     <id>http://davylin.github.io/blog/my-first-octopress-blog</id>

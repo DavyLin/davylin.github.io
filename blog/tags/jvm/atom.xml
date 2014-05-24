@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[枫中畅游]]></title>
-  <link href="http://davylin.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Tag: jvm | 枫中畅游]]></title>
+  <link href="http://davylin.github.io/blog/tags/jvm/atom.xml" rel="self"/>
   <link href="http://davylin.github.io/"/>
   <updated>2014-05-24T22:01:32+08:00</updated>
   <id>http://davylin.github.io/</id>
@@ -12,61 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[CountDownLatch]]></title>
-    <link href="http://davylin.github.io/blog/countdownlatch/"/>
-    <updated>2014-05-10T15:29:21+08:00</updated>
-    <id>http://davylin.github.io/blog/countdownlatch</id>
-    <content type="html"><![CDATA[<h3>同步工具类之闭锁-CountDownLatch</h3>
-
-<p><em>闭锁</em>是一种同步工具类，可以延迟线程的进度直到其到达终止状态。闭锁的作用相当于一扇门：在闭锁到达结束状态之前，这扇门一直是关闭的，并且没有
-任何线程能通过，当到达结束状态时，这扇门会打开并允许所有的线程通过。当闭锁到达结束状态后，将不会再改变状态，因此这扇门将永远保持打开状态。
-闭锁可以用来确保某些活动直到其他活动都完成后才继续执行。</p>
-
-<p><strong><code>CountDownLatch</code></strong>是一种灵活的闭锁实现，可以在上述各种情况中使用，它可以使一个或多个线程等待一组事件发生。闭锁状态包括一个计数器，该计数器
-被初始化为一个正数，表示需要等待的事件数量。<code>countDown</code>方法递减计数器，表示有一个事件已经发生了，而await方法等待计数器达到零，这表示所有
-需要等待的事件都已经发生。如果计数器的值非零，那么<code>await</code>会一直阻塞直到计数器为零，或者等待中的线程中断，或者等待超时。</p>
-
-<pre><code>public class TestHarness {  
-    public long timeTasks(int nthreads, final Runnable task) throws InterruptedException {  
-        final CountDownLatch startGate = new CountDownLatch(1);  
-        final CountDownLatch endGate = new CountDownLatch(nthreads);  
-
-        for (int i = 0; i &lt; nthreads; i++) {  
-        Thread t = new Thread(){  
-            @Override  
-            public void run() {  
-                try{  
-                    startGate.await();  
-                    try{  
-                        task.run();  
-                    }finally {  
-                        endGate.countDown();  
-                    }  
-                } catch (InterruptedException ignored) {}  
-            }  
-        };  
-        t.start();  
-        }  
-
-        long start = System.nanoTime();  
-        startGate.countDown();  
-        endGate.await();  
-        long end = System.nanoTime();  
-        return end-start;  
-    }  
-}  
-</code></pre>
-
-<p><code>startGate</code>计数器的初始值为1，而<code>endGate</code>计数器的初始值为工作线程的数量。每个工作线程首先要做的就是在startGate上等待，从而确保所有线程都就绪后
-才开始执行。而每个线程要做的最后一件事情是将调用<code>endGate</code>的<code>countDown</code>方法减1，这能使主线程高效地等待直到所有工作线程都执行完成，因此可以更准确
-地统计所消耗的时间</p>
-
-<p><strong>ps. 为什么要在上例中使用闭锁，而不是在线程创建后就立即启动？或许，我们希望测试n个线程并发执行某个任务时需要的时间。如果在创建线程后立即启动
-它们，那么先启动的线程将“领先”后启动的线程，并且活跃线程数量会随着时间的推移而增加或减少，竞争程度也在不断发生变化。</strong></p>
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[A note of Understanding the JVM]]></title>
@@ -104,7 +49,7 @@
 <h3>Java虚拟机栈</h3>
 
 <p>与程序计数器一样，java虚拟机栈也是线程私有的，它的生命周期与线程相同。它描述的是java方法执行的内存模型：每个方法被执行的时候都会同时创建一个栈帧(Stack Frame)用于存储局部变量表、操作栈、动态链接、方法出口等信息。
-经常有人把java内存区分为堆内存(heap)和栈内存(stack)，这种分法比较粗糙.而所指的&#8221;栈&#8221;就是现在讲的虚拟机栈，或者说是虚拟机栈中的局部变量表部分。
+经常有人把java内存区分为堆内存(heap)和栈内存(stack)，这种分法比较粗糙.而所指的"栈"就是现在讲的虚拟机栈，或者说是虚拟机栈中的局部变量表部分。
 局部变量表存放了编译期可知的各种基本数据类型（boolean、byte、char、short、int、float、long、double）、对象引用（reference类型，它不等同于对象本身，根据不同的虚拟机实现，它可能是一个指向对象超始地址的引用指针，也可能指向一个代表对象的句柄或者其他与此对象相关的位置）和returnAddress类型（指向了一条字节码指令的地址）。
 在java虚拟机规范中，对这个区域规定了两种异常状况：如果线程请求的栈深度大于虚拟机所允许的深度，将抛出StackOverflowError异常；如果虚拟机栈可以动态扩展，当扩展时无法申请到足够的内存时会抛出OutOfMemoryError异常。</p>
 
@@ -138,19 +83,6 @@ java堆是垃圾收集器管理的主要区域，因此很多时候也被称做�
 <p>1.如果使用句柄访问方式，java堆中将会划分出一块内存来作为句柄池，reference中存储的就是对象的句柄地址，而句柄中包含了对象实例数据和类型数据各自的具体地址信息。</p>
 
 <p>2.如果使用直接指针访问方式，java堆对象的布局中就必须考虑如何放置访问类型数据的相关信息，reference中直接存储的就是对象地址。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[My first octopress blog]]></title>
-    <link href="http://davylin.github.io/blog/my-first-octopress-blog/"/>
-    <updated>2014-04-09T15:04:27+08:00</updated>
-    <id>http://davylin.github.io/blog/my-first-octopress-blog</id>
-    <content type="html"><![CDATA[<h1>Setting up this blog</h1>
-
-<p>Apparently I&rsquo;m using <a href="http://octopress.org/"><code>Octopress</code></a>to power this blog.Many thanks for the nice framework that save me a lot of time to get up to speed.I probably wouldn&rsquo;t have decided to move my blog here in the first place if there weren&rsquo;t ready-to-use solutions for lazy people like me.</p>
-
-<p>Just to remind myself of the steps i took to set it up:</p>
 ]]></content>
   </entry>
   

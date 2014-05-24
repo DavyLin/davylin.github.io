@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[枫中畅游]]></title>
-  <link href="http://davylin.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Tag: java | 枫中畅游]]></title>
+  <link href="http://davylin.github.io/blog/tags/java/atom.xml" rel="self"/>
   <link href="http://davylin.github.io/"/>
   <updated>2014-05-24T22:01:32+08:00</updated>
   <id>http://davylin.github.io/</id>
@@ -104,7 +104,7 @@
 <h3>Java虚拟机栈</h3>
 
 <p>与程序计数器一样，java虚拟机栈也是线程私有的，它的生命周期与线程相同。它描述的是java方法执行的内存模型：每个方法被执行的时候都会同时创建一个栈帧(Stack Frame)用于存储局部变量表、操作栈、动态链接、方法出口等信息。
-经常有人把java内存区分为堆内存(heap)和栈内存(stack)，这种分法比较粗糙.而所指的&#8221;栈&#8221;就是现在讲的虚拟机栈，或者说是虚拟机栈中的局部变量表部分。
+经常有人把java内存区分为堆内存(heap)和栈内存(stack)，这种分法比较粗糙.而所指的"栈"就是现在讲的虚拟机栈，或者说是虚拟机栈中的局部变量表部分。
 局部变量表存放了编译期可知的各种基本数据类型（boolean、byte、char、short、int、float、long、double）、对象引用（reference类型，它不等同于对象本身，根据不同的虚拟机实现，它可能是一个指向对象超始地址的引用指针，也可能指向一个代表对象的句柄或者其他与此对象相关的位置）和returnAddress类型（指向了一条字节码指令的地址）。
 在java虚拟机规范中，对这个区域规定了两种异常状况：如果线程请求的栈深度大于虚拟机所允许的深度，将抛出StackOverflowError异常；如果虚拟机栈可以动态扩展，当扩展时无法申请到足够的内存时会抛出OutOfMemoryError异常。</p>
 
@@ -138,19 +138,6 @@ java堆是垃圾收集器管理的主要区域，因此很多时候也被称做�
 <p>1.如果使用句柄访问方式，java堆中将会划分出一块内存来作为句柄池，reference中存储的就是对象的句柄地址，而句柄中包含了对象实例数据和类型数据各自的具体地址信息。</p>
 
 <p>2.如果使用直接指针访问方式，java堆对象的布局中就必须考虑如何放置访问类型数据的相关信息，reference中直接存储的就是对象地址。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[My first octopress blog]]></title>
-    <link href="http://davylin.github.io/blog/my-first-octopress-blog/"/>
-    <updated>2014-04-09T15:04:27+08:00</updated>
-    <id>http://davylin.github.io/blog/my-first-octopress-blog</id>
-    <content type="html"><![CDATA[<h1>Setting up this blog</h1>
-
-<p>Apparently I&rsquo;m using <a href="http://octopress.org/"><code>Octopress</code></a>to power this blog.Many thanks for the nice framework that save me a lot of time to get up to speed.I probably wouldn&rsquo;t have decided to move my blog here in the first place if there weren&rsquo;t ready-to-use solutions for lazy people like me.</p>
-
-<p>Just to remind myself of the steps i took to set it up:</p>
 ]]></content>
   </entry>
   

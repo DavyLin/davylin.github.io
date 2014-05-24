@@ -50,7 +50,7 @@ titlecase: false       # Converts page and post titles to titlecase
 
 # list each of the sidebar modules you want to include, in the order you want them to appear.
 # To add custom asides, create files in /source/_includes/custom/asides/ and add them to the list like 'custom/asides/custom_aside_name.html'
-default_asides: [custom/asides/weibo.html,asides/recent_posts.html,custom/asides/recent_comments.html, asides/github.html, asides/delicious.html, asides/pinboard.html, asides/googleplus.html]
+default_asides: [custom/asides/weibo.html,asides/recent_posts.html,custom/asides/recent_comments.html,asides/github.html, asides/delicious.html, custom/asides/douban.html, asides/pinboard.html, asides/googleplus.html]
 
 # Each layout uses the default asides, but they can have their own asides instead. Simply uncomment the lines below
 # and add an array with the asides you want to use.
@@ -102,6 +102,19 @@ facebook_like: false
 # weibo
 weibo_user: 2150445074
 weibo_share_button: true
+
+# Douban
+douban_user: davylin #Cannot be blank, either you douban id (eight-digit number) or your douban account name
+douban_people: David.Lin
+douban_apikey: #YOu can leave it blank
+douban_show:  #The type of display ,include: dolist(doing),wishlist(want to),collection(seen), Leave it blank to random
+douban_display_category: book|movie|music #The type of display ,include:book music blog movie, format: xx|yy|zz (for example movie|book|music), Leave it blank to All
+douban_display: random #What for display, Other options: favorite(good),Leave it blank to display last added
+douban_total_show: 10 #How many to display
+douban_percolumn: 2 #How many per column 
+douban_img_style: medium #The size of the content pictures, Leave it blank to small
+douban_hidelogo: true #Leave it blank to false
+douban_hideself:  true #Leave it blank to false
 
 # duoshuo comments
 duoshuo_comments: true

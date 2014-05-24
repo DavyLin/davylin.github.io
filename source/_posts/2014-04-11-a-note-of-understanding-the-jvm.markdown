@@ -3,7 +3,7 @@ layout: post
 title: "A note of Understanding the JVM"
 date: 2014-04-11 13:05:48 +0800
 comments: true
-tags: jvm,java
+tags: jvm java
 categories: java
 ---
 *****

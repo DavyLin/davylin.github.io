@@ -3,7 +3,7 @@ layout: post
 title: "CountDownLatch"
 date: 2014-05-10 15:29:21 +0800
 comments: true
-tags: java,concurrence
+tags: java concurrence
 categories: java
 ---
 

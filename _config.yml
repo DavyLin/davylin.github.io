@@ -63,13 +63,13 @@ default_asides: [custom/asides/weibo.html,asides/recent_posts.html,custom/asides
 # ----------------------- #
 
 # Github repositories
-github_user:DavyLin
+github_user: DavyLin
 github_repo_count: 3
 github_show_profile_link: true
 github_skip_forks: true
 
 # Twitter
-twitter_user:javalinjx
+twitter_user: javalinjx
 twitter_tweet_button: true
 
 # Google +1
@@ -86,7 +86,7 @@ pinboard_user:
 pinboard_count: 3
 
 # Delicious
-delicious_user:davylin
+delicious_user: davylin
 delicious_count: 3
 
 # Disqus Comments
@@ -107,7 +107,7 @@ weibo_share_button: true
 duoshuo_comments: true
 duoshuo_short_name: davylin
 duoshuo_asides_num: 5       # 侧边栏评论显示条目数
-duoshuo_asides_avatars:0    # 侧边栏评论是否显示头像
+duoshuo_asides_avatars: 0    # 侧边栏评论是否显示头像
 duoshuo_asides_time: 1      # 侧边栏评论是否显示时间
 duoshuo_asides_title: 1     # 侧边栏评论是否显示标题
 duoshuo_asides_admin: 0     # 侧边栏评论是否显示作者评论

@@ -3,7 +3,8 @@ layout: post
 title: "CountDownLatch"
 date: 2014-05-10 15:29:21 +0800
 comments: true
-categories: jvm,java
+tags: java,concurrence
+categories: java
 ---
 
 ###同步工具类之闭锁-CountDownLatch

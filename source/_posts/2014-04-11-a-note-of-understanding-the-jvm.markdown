@@ -3,7 +3,8 @@ layout: post
 title: "A note of Understanding the JVM"
 date: 2014-04-11 13:05:48 +0800
 comments: true
-categories: jvm,java
+tags: jvm,java
+categories: java
 ---
 *****
 ##java内存区域和内存溢出异常

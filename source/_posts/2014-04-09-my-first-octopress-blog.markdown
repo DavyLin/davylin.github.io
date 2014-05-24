@@ -3,7 +3,8 @@ layout: post
 title: "My first octopress blog"
 date: 2014-04-09 15:04:27 +0800
 comments: true
-categories: Test,other
+tags: other
+categories: other
 ---
 # Setting up this blog
 

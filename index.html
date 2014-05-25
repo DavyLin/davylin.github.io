@@ -9,8 +9,12 @@
   <meta name="author" content="Davy Lin">
 
   
-  <meta name="description" content="同步工具类之闭锁-CountDownLatch 闭锁是一种同步工具类，可以延迟线程的进度直到其到达终止状态。闭锁的作用相当于一扇门：在闭锁到达结束状态之前，这扇门一直是关闭的，并且没有
-任何线程能通过，当到达结束状态时，这扇门会打开并允许所有的线程通过。当闭锁到达结束状态后，将不会再改变状态， &hellip;">
+  <meta name="description" content="grep and linux grep 1.从文件中查找关键词 grep &lsquo;linux&rsquo; text.txt //查找包含 linux的关键词 1
+2
+3
+[root@localhost ~]# grep 'root' /etc/group
+root:x:0:root
+bin &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -67,6 +71,115 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/grep-and-find/">grep and find</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-25T17:54:49+08:00" pubdate data-updated="true">May 25<span>th</span>, 2014</time>
+        
+        
+         | <a href="/blog/grep-and-find/#comments">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h1>grep and linux</h1>
+
+<h2>grep</h2>
+
+<h3>1.从文件中查找关键词</h3>
+
+<p><strong>grep &lsquo;linux&rsquo; text.txt //查找包含 linux的关键词</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[root@localhost ~]# grep 'root' /etc/group
+</span><span class='line'>root:x:0:root
+</span><span class='line'>bin:x:1:root,bin,daemon</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>2.从多个文件中查找关键词</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[root@localhost ~]# grep 'root' /etc/group /etc/my.cnf
+</span><span class='line'>/etc/group:root:x:0:root
+</span><span class='line'>/etc/my.cnf:user = root</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>3.查找当前目录下以及下辖子目录下所有包含str字符串的文件,会列出文件名.以及该行的内容.以及行号</h3>
+
+<p><strong>-n是打印行号，-r是在子目录也要查询</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>grep -n "str" -r ./</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>用 -i 搜索的时候可以忽略大小写</strong></p>
+
+<p><strong>利用 -r 来完成所有的子目录下面执行相应的查找</strong></p>
+
+<p><strong>用-l是打印所有的结果</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>grep -ril 'str' ./</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>find 是查找文件的常用命令</h2>
+
+<h3>1.查找在 /etc 目录下所有文件名中含有 mail 的文件</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[root@localhost ]# find /etc/ -name '*mail*'
+</span><span class='line'>/etc/mail.rc
+</span><span class='line'>/etc/rc.d/rc5.d/K30sendmail
+</span><span class='line'>/etc/rc.d/rc4.d/K30sendmail</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>2.查找文件大小超过指定值的文件</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[root@localhost ]# find ./ -type f -size +100M
+</span><span class='line'>./test.sql</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>3.最近几天被修改过的文件</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>find . -mtime -2 </span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -323,6 +436,10 @@ java堆是垃圾收集器管理的主要区域，因此很多时候也被称做�
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/grep-and-find/">grep and find</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/countdownlatch/">CountDownLatch</a>
       </li>
     
@@ -364,7 +481,7 @@ java堆是垃圾收集器管理的主要区域，因此很多时候也被称做�
 
 <section>
   <h1>Tag Cloud</h1>
-    <span id="tag-cloud"><embed type='application/x-shockwave-flash' src='/javascripts/tagcloud.swf'width='100%' height='250' bgcolor='#fdf6e3' id='tagcloudflash' name='tagcloudflash' quality='high' allowscriptaccess='always'flashvars="tcolor=0x00aa00&amp;tcolor2=0x00dd00&amp;hicolor=0xff3333&amp;tspeed=100&amp;distr=true&amp;mode=tags&amp;tagcloud=%3Ctags%3E%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Fconcurrence%27+style%3D%27font-size%3A+30.0%25%27%3Econcurrence%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Fjava%27+style%3D%27font-size%3A+50.0%25%27%3Ejava%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Fjvm%27+style%3D%27font-size%3A+30.0%25%27%3Ejvm%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Fother%27+style%3D%27font-size%3A+30.0%25%27%3Eother%3C%2Fa%3E+%3C%2Ftags%3E"></span>
+    <span id="tag-cloud"><embed type='application/x-shockwave-flash' src='/javascripts/tagcloud.swf'width='100%' height='250' bgcolor='#fdf6e3' id='tagcloudflash' name='tagcloudflash' quality='high' allowscriptaccess='always'flashvars="tcolor=0x00aa00&amp;tcolor2=0x00dd00&amp;hicolor=0xff3333&amp;tspeed=100&amp;distr=true&amp;mode=tags&amp;tagcloud=%3Ctags%3E%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Fconcurrence%27+style%3D%27font-size%3A+30.0%25%27%3Econcurrence%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Fjava%27+style%3D%27font-size%3A+50.0%25%27%3Ejava%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Fjvm%27+style%3D%27font-size%3A+30.0%25%27%3Ejvm%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Flinux%27+style%3D%27font-size%3A+30.0%25%27%3Elinux%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Fother%27+style%3D%27font-size%3A+30.0%25%27%3Eother%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Fshell%27+style%3D%27font-size%3A+30.0%25%27%3Eshell%3C%2Fa%3E+%3C%2Ftags%3E"></span>
 </section>
 
 

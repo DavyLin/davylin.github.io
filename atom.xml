@@ -4,7 +4,7 @@
   <title><![CDATA[枫中畅游]]></title>
   <link href="http://davylin.github.io/atom.xml" rel="self"/>
   <link href="http://davylin.github.io/"/>
-  <updated>2014-05-24T22:01:32+08:00</updated>
+  <updated>2014-05-25T18:05:22+08:00</updated>
   <id>http://davylin.github.io/</id>
   <author>
     <name><![CDATA[Davy Lin]]></name>
@@ -12,6 +12,85 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[grep and find]]></title>
+    <link href="http://davylin.github.io/blog/grep-and-find/"/>
+    <updated>2014-05-25T17:54:49+08:00</updated>
+    <id>http://davylin.github.io/blog/grep-and-find</id>
+    <content type="html"><![CDATA[<h1>grep and linux</h1>
+
+<h2>grep</h2>
+
+<h3>1.从文件中查找关键词</h3>
+
+<p><strong>grep &lsquo;linux&rsquo; text.txt //查找包含 linux的关键词</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[root@localhost ~]# grep 'root' /etc/group
+</span><span class='line'>root:x:0:root
+</span><span class='line'>bin:x:1:root,bin,daemon</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>2.从多个文件中查找关键词</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[root@localhost ~]# grep 'root' /etc/group /etc/my.cnf
+</span><span class='line'>/etc/group:root:x:0:root
+</span><span class='line'>/etc/my.cnf:user = root</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>3.查找当前目录下以及下辖子目录下所有包含str字符串的文件,会列出文件名.以及该行的内容.以及行号</h3>
+
+<p><strong>-n是打印行号，-r是在子目录也要查询</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>grep -n "str" -r ./</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>用 -i 搜索的时候可以忽略大小写</strong></p>
+
+<p><strong>利用 -r 来完成所有的子目录下面执行相应的查找</strong></p>
+
+<p><strong>用-l是打印所有的结果</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>grep -ril 'str' ./</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>find 是查找文件的常用命令</h2>
+
+<h3>1.查找在 /etc 目录下所有文件名中含有 mail 的文件</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[root@localhost ]# find /etc/ -name '*mail*'
+</span><span class='line'>/etc/mail.rc
+</span><span class='line'>/etc/rc.d/rc5.d/K30sendmail
+</span><span class='line'>/etc/rc.d/rc4.d/K30sendmail</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>2.查找文件大小超过指定值的文件</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[root@localhost ]# find ./ -type f -size +100M
+</span><span class='line'>./test.sql</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>3.最近几天被修改过的文件</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>find . -mtime -2 </span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[CountDownLatch]]></title>

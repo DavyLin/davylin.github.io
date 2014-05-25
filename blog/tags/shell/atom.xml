@@ -4,7 +4,7 @@
   <title><![CDATA[Tag: shell | 枫中畅游]]></title>
   <link href="http://davylin.github.io/blog/tags/shell/atom.xml" rel="self"/>
   <link href="http://davylin.github.io/"/>
-  <updated>2014-05-25T18:05:22+08:00</updated>
+  <updated>2014-05-25T18:11:43+08:00</updated>
   <id>http://davylin.github.io/</id>
   <author>
     <name><![CDATA[Davy Lin]]></name>
@@ -18,9 +18,7 @@
     <link href="http://davylin.github.io/blog/grep-and-find/"/>
     <updated>2014-05-25T17:54:49+08:00</updated>
     <id>http://davylin.github.io/blog/grep-and-find</id>
-    <content type="html"><![CDATA[<h1>grep and linux</h1>
-
-<h2>grep</h2>
+    <content type="html"><![CDATA[<h2>grep</h2>
 
 <h3>1.从文件中查找关键词</h3>
 

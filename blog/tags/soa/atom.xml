@@ -4,7 +4,7 @@
   <title><![CDATA[Tag: soa | 枫中畅游]]></title>
   <link href="http://davylin.github.io/blog/tags/soa/atom.xml" rel="self"/>
   <link href="http://davylin.github.io/"/>
-  <updated>2014-05-27T15:06:01+08:00</updated>
+  <updated>2014-05-27T15:13:13+08:00</updated>
   <id>http://davylin.github.io/</id>
   <author>
     <name><![CDATA[Davy Lin]]></name>
@@ -32,10 +32,10 @@ URL endpointURL = new URL(&ldquo;<a href="http://localhost:8080/webservice/Hello
         call.setReturnClass(String.class);  
         call.setReturnType(XMLType.XSD_STRING);// 设置返回类型  
         Object [] obj = new Object[]{ requestText };  
-        String result = (String) call.invoke(obj);  
+        String result = (String) call.invoke(obj);
 </code></pre>
 
-<p> ```</p>
+<p>```</p>
 
 <h2>XFire客户端调用</h2>
 
@@ -47,7 +47,7 @@ public void call() throws Exception {</p>
     String url = "http://localhost:8080/webservice/HelloService";  
     SmsService it = (SmsService)factory.create(service, url);  
     int b = it.sayHello("javalinjx");  
-}  
+}
 </code></pre>
 
 <p>```</p>
@@ -60,7 +60,7 @@ factory1.setServiceClass(UaAuthInterfaces.class);</p>
 
 <pre><code>    factory1.setAddress("http://localhost:8080/webservices/HelloService");  
     UaAuthInterfaces u = (UaAuthInterfaces) factory1.create();  
-            u.sayHello("javalinjx");  
+            u.sayHello("javalinjx");
 </code></pre>
 
 <p>```</p>

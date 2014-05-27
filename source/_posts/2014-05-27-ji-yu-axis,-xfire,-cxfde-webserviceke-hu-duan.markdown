@@ -1,0 +1,40 @@
+---
+layout: post
+title: "基于Axis、XFire、CXF的Webservice客户端"
+date: 2014-05-27 14:59:03 +0800
+comments: true
+tags: java soa
+categories: java
+---
+##Axis客户端调用 webservice
+```
+URL endpointURL = new URL("http://localhost:8080/webservice/HelloService");  
+            String requestText = "javalinjx"  
+            Service service = new Service();  
+            Call call = (Call) service.createCall();  
+            call.setTargetEndpointAddress(endpointURL);  
+            call.setOperationName("sayHello");  
+            call.addParameter("xml", XMLType.XSD_STRING, ParameterMode.IN);  
+            call.setReturnClass(String.class);  
+            call.setReturnType(XMLType.XSD_STRING);// 设置返回类型  
+            Object [] obj = new Object[]{ requestText };  
+            String result = (String) call.invoke(obj);
+```
+##XFire客户端调用
+```
+public void call() throws Exception {  
+        Service service = new ObjectServiceFactory().create(HelloService.class);  
+        XFireProxyFactory factory = new XFireProxyFactory(XFireFactory.newInstance().getXFire());  
+        String url = "http://localhost:8080/webservice/HelloService";  
+        SmsService it = (SmsService)factory.create(service, url);  
+        int b = it.sayHello("javalinjx");  
+    }
+```
+##CXF客户端调用
+```
+JaxWsProxyFactoryBean factory1 = new JaxWsProxyFactoryBean();  
+factory1.setServiceClass(UaAuthInterfaces.class);  
+        factory1.setAddress("http://localhost:8080/webservices/HelloService");  
+        UaAuthInterfaces u = (UaAuthInterfaces) factory1.create();  
+                u.sayHello("javalinjx");
+```       

@@ -4,7 +4,7 @@
   <title><![CDATA[枫中畅游]]></title>
   <link href="http://davylin.github.io/atom.xml" rel="self"/>
   <link href="http://davylin.github.io/"/>
-  <updated>2014-05-26T16:02:00+08:00</updated>
+  <updated>2014-05-27T15:06:01+08:00</updated>
   <id>http://davylin.github.io/</id>
   <author>
     <name><![CDATA[Davy Lin]]></name>
@@ -12,6 +12,75 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[基于Axis、XFire、CXF的Webservice客户端]]></title>
+    <link href="http://davylin.github.io/blog/ji-yu-axis%2C-xfire%2C-cxfde-webserviceke-hu-duan/"/>
+    <updated>2014-05-27T14:59:03+08:00</updated>
+    <id>http://davylin.github.io/blog/ji-yu-axis,-xfire,-cxfde-webserviceke-hu-duan</id>
+    <content type="html"><![CDATA[<h2>Axis客户端调用 webservice</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>URL endpointURL = new URL("http://localhost:8080/webservice/HelloService");  
+</span><span class='line'>            String requestText = "javalinjx"  
+</span><span class='line'>            Service service = new Service();  
+</span><span class='line'>            Call call = (Call) service.createCall();  
+</span><span class='line'>            call.setTargetEndpointAddress(endpointURL);  
+</span><span class='line'>            call.setOperationName("sayHello");  
+</span><span class='line'>            call.addParameter("xml", XMLType.XSD_STRING, ParameterMode.IN);  
+</span><span class='line'>            call.setReturnClass(String.class);  
+</span><span class='line'>            call.setReturnType(XMLType.XSD_STRING);// 设置返回类型  
+</span><span class='line'>            Object [] obj = new Object[]{ requestText };  
+</span><span class='line'>            String result = (String) call.invoke(obj);  
+</span><span class='line'> ```
+</span><span class='line'> 
+</span><span class='line'>##XFire客户端调用
+</span><span class='line'> </span></code></pre></td></tr></table></div></figure>
+
+
+<p>public void call() throws Exception {</p>
+
+<pre><code>    Service service = new ObjectServiceFactory().create(HelloService.class);  
+    XFireProxyFactory factory = new XFireProxyFactory(XFireFactory.newInstance().getXFire());  
+    String url = "http://localhost:8080/webservice/HelloService";  
+    SmsService it = (SmsService)factory.create(service, url);  
+    int b = it.sayHello("javalinjx");  
+}  
+</code></pre>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'> 
+</span><span class='line'>##CXF客户端调用
+</span><span class='line'> </span></code></pre></td></tr></table></div></figure>
+
+
+<p>JaxWsProxyFactoryBean factory1 = new JaxWsProxyFactoryBean();<br/>
+factory1.setServiceClass(UaAuthInterfaces.class);</p>
+
+<pre><code>    factory1.setAddress("http://localhost:8080/webservices/HelloService");  
+    UaAuthInterfaces u = (UaAuthInterfaces) factory1.create();  
+            u.sayHello("javalinjx");  
+</code></pre>
+
+<p>&#8220;`</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[grep and find]]></title>

@@ -4,7 +4,7 @@ title: "M1 professional training"
 date: 2014-06-19 22:36:50 +0800
 comments: true
 tags: other life
-categories: 
+categories: life
 ---
 昨天过来南京参加公司级的M1经理人培训，希望借此机会，了解公司管理人的发展计划以及职业管理的知识和技能。昨天一过来，向同学了解了南京的相关景点后，就匆忙赶完传说中的夫子庙。
 

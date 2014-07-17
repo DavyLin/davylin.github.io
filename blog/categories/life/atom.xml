@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Tag: other | 枫中畅游]]></title>
-  <link href="http://davylin.github.io/blog/tags/other/atom.xml" rel="self"/>
+  <title><![CDATA[Category: life | 枫中畅游]]></title>
+  <link href="http://davylin.github.io/blog/categories/life/atom.xml" rel="self"/>
   <link href="http://davylin.github.io/"/>
   <updated>2014-07-17T10:08:07+08:00</updated>
   <id>http://davylin.github.io/</id>
@@ -43,19 +43,6 @@
 培训虽然累点，总算还是有点收获的，还要坚持两天。但是今天发生了一件事，让我心碎啊。老婆送给我的天梭表在培训快结束的时候，跟同事的手碰到一起了，镜面破了。。当时我想到的是，完了，回去要挨骂了。</p>
 
 <p>晚上又补老姐打来的电话给烦到了，脾气顿时爆发了，再也忍不住了。是气自己的不小心，也是气老姐的不努力，现在外甥女的入学还是个未知数。。真是超级郁闷啊。。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[My first octopress blog]]></title>
-    <link href="http://davylin.github.io/blog/my-first-octopress-blog/"/>
-    <updated>2014-04-09T15:04:27+08:00</updated>
-    <id>http://davylin.github.io/blog/my-first-octopress-blog</id>
-    <content type="html"><![CDATA[<h3>&mdash;Setting up this blog</h3>
-
-<p>Apparently I&rsquo;m using <a href="http://octopress.org/"><code>Octopress</code></a>to power this blog.Many thanks for the nice framework that save me a lot of time to get up to speed.I probably wouldn&rsquo;t have decided to move my blog here in the first place if there weren&rsquo;t ready-to-use solutions for lazy people like me.</p>
-
-<p>Anyway, here’s the link to my old blog: <a href="http://javalinjx.iteye.com/">http://javalinjx.iteye.com/</a></p>
 ]]></content>
   </entry>
   

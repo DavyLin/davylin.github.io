@@ -5,11 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Tag: concurrence - 枫中畅游</title>
+  <title>A Note of Programming Clojure - 枫中畅游</title>
   <meta name="author" content="Davy Lin">
 
   
-  <meta name="description" content="Tag: concurrence">
+  <meta name="description" content="1.use 用来导入clojure.core命名空间 user&gt;(clojure.core/use 'clojure.core) 2.import导入java类 user&gt;(import '(java.io InputStream File))
+java.io.File 3. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://davylin.github.ioblog/tags/concurrence/">
+  <link rel="canonical" href="http://davylin.github.io/blog/a-note-of-programming-clojure/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -65,37 +66,187 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Tag: concurrence</h1>
+    
+      <h1 class="entry-title">A Note of Programming Clojure</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-07-23T11:02:19+08:00" pubdate data-updated="true">Jul 23<span>rd</span>, 2014</time>
+        
+        
+         | <a href="#comments">Comments</a>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
 
 
+<div class="entry-content"><p>1.use 用来导入clojure.core命名空间</p>
 
-  
-  <h2>2014</h2>
+<pre><code>user&gt;(clojure.core/use 'clojure.core)
+</code></pre>
 
-<article>
-  
-<h1><a href="/blog/countdownlatch/">CountDownLatch</a></h1>
-<time datetime="2014-05-10T15:29:21+08:00" pubdate><span class='month'>May</span> <span class='day'>10</span> <span class='year'>2014</span></time>
+<p>2.import导入java类</p>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/java/'>java</a></span>
-</footer>
+<pre><code>user&gt;(import '(java.io InputStream File))
+java.io.File
+</code></pre>
 
+<p>3.require引入clj到当前命名空间</p>
 
-</article>
+<pre><code>user&gt;(require 'clojure.string)
+nil
+</code></pre>
 
+<p>4.查看信息</p>
+
+<pre><code>user&gt;(find-doc "ns-")
+</code></pre>
+
+<p>5.解构</p>
+
+<pre><code>user&gt;(let [[x y] [1 2 3]] 
+            [x y])
+[1 2]
+user&gt; (greet-author-2 [fname {:first-name}]
+            (println "hello, " fname))
+; Evaluation aborted.
+user&gt; (let [[_ _ z] [1 2 3]]
+    z)
+3
+user&gt; (let [[_ _ z] [1 2 3]]
+    _)
+2
+user&gt; (require '[clojure.string :as str])
+nil
+user&gt; (let [[x y :as coords] [1 2 3 4 5 6]]
+        (str "x: " x ", y: " y ", total dimensions " (count                 coords)))
+"x: 1, y: 2, total dimensions 6"
+</code></pre>
+
+<p>6.常用数据类型</p>
+
+<pre><code>Keyword   :tag, :doc
+List     (1 2 3), (pringln "foo")
+Map  {:name "bill", :age 42}
+Set  #{:snap  :crackle  :pop}
+Symbol    user/foo,
+          java.lang.String
+Vector   [1 2 3]
+</code></pre>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Davy Lin</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-07-23T11:02:19+08:00" pubdate data-updated="true">Jul 23<span>rd</span>, 2014</time>
+      
+
+
+    </p>
+    <p class="meta">
+      Tags: 
+
+<span class="categories">
+  
+    <a class='category' href='/blog/tags/clojure/'>clojure</a>
+  
+</span>
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://davylin.github.io/blog/a-note-of-programming-clojure/" data-via="javalinjx" data-counturl="http://davylin.github.io/blog/a-note-of-programming-clojure/" >Tweet</a>
+  
+  
+    <script type="text/javascript" charset="utf-8">
+    (function(){
+      var _w = 72 , _h = 16;
+      var param = {
+        url:location.href,
+        type:'3',
+        count:'1', /**是否显示分享数，1显示(可选)*/
+        appkey:'', /**您申请的应用appkey,显示分享来源(可选)*/
+        title:"http://davylin.github.io/blog/a-note-of-programming-clojure/",/**分享的文字内容(可选，默认为所在页面的title)*/
+        pic:'', /**分享图片的路径(可选)*/
+        ralateUid:"2150445074", /**关联用户的UID，分享微博会@该用户(可选)*/
+    	language:'zh_cn', /**设置语言，zh_cn|zh_tw(可选)*/
+        rnd:new Date().valueOf()
+      }
+      var temp = [];
+      for( var p in param ){
+        temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )
+      }
+      document.write('<iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&') + '" width="'+ _w+'" height="'+_h+'"></iframe>')
+    })()
+    </script>
+    
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/android-dev-framework/" title="Previous Post: Android Dev Framework">&laquo; Android Dev Framework</a>
+      
+      
+    </p>
+  </footer>
 </article>
 
+
+   <section>
+     <h1>Comments</h1>
+     <div id="comments" aria-live="polite"><!-- Doushuo Comment BEGIN -->
+<div class="ds-thread" data-title=""></div>
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"davylin"};
+  (function() {
+     var ds = document.createElement('script');
+     ds.type = 'text/javascript';ds.async = true;
+     ds.src = 'http://static.duoshuo.com/embed.js';
+     ds.charset = 'UTF-8';
+     (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+<!-- Duoshuo Comment END -->
+</div>
+   </section>
 
 </div>
 

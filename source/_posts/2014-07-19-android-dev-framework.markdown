@@ -4,7 +4,7 @@ title: "Android Dev Framework"
 date: 2014-07-19 10:44:37 +0800
 comments: true
 tags: android java
-categories: 
+categories: android
 ---
 ![Android Dev Framework](http://img0.ph.126.net/YQAPaRu_RPoCf4I88UBQzA==/6597848220890969307.jpg)
 

@@ -4,7 +4,7 @@ title: "A Note of Programming Clojure"
 date: 2014-07-23 11:02:19 +0800
 comments: true
 tags: clojure
-categories: 
+categories: clojure
 ---
 1.use 用来导入clojure.core命名空间
 

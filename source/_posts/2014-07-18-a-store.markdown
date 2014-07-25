@@ -4,7 +4,7 @@ title: "A store"
 date: 2014-07-18 16:09:20 +0800
 comments: true
 tags: other life
-categories: 
+categories: life
 ---
 ***--来源于互联网的小故事，虽然可能是某些人丰富想象力的创作，但我觉得挺有意思的，在这里做个记录***
 

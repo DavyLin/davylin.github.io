@@ -25,7 +25,7 @@ Github真是一个好地方，相信很多程序员们都知道！大家在上�
 	Resolving deltas: 100% (1249/1249), done.
 	From https://github.com/***
  	* [new branch]      master     -> remoteProjectName/master
-	➜  /volumes/hdd/work/ideaprojects/opensrc/projectName git:(master) >git checkout -b 	remoteProjectName remoteProjectName/	master
+	➜  /volumes/hdd/work/ideaprojects/opensrc/projectName git:(master) >git checkout -b 	remoteProjectName remoteProjectName/master
 	Branch remoteProjectName set up to track remote branch master from remoteProjectName.
 	Switched to a new branch 'remoteProjectName'
 	➜  /volumes/hdd/work/ideaprojects/opensrc/projectName git:(remoteProjectName) >git branch -a
@@ -37,7 +37,7 @@ Github真是一个好地方，相信很多程序员们都知道！大家在上�
 	➜  /volumes/hdd/work/ideaprojects/opensrc/projectName git:(remoteProjectName) >git checkout 	master
 	Switched to branch 'master'
 	Your branch is up-to-date with 'origin/master'.
-	➜  /volumes/hdd/work/ideaprojects/opensrc/projectName git:(master) >git merge 	remoteProjectName/master
+	➜  /volumes/hdd/work/ideaprojects/opensrc/projectName git:(master) >git merge	remoteProjectName/master
 	Updating cf96d07..edbec5a
 	Fast-forward
  	.gitignore                                                        |   8 +-

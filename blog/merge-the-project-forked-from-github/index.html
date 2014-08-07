@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: clojure - 枫中畅游</title>
+  <title>Merge the project forked from github - 枫中畅游</title>
   <meta name="author" content="Davy Lin">
 
   
-  <meta name="description" content="Category: clojure">
+  <meta name="description" content="Github真是一个好地方，相信很多程序员们都知道！大家在上面可能都有多多少少的个人项目。我们常常会关注自己兴趣以及xx大牛的项目，甚至于fork牛人们的项目，慢慢研究。但是牛人们的步伐，岂是偶等可以追逐的，他们可能一天commit很多次，这样就会导致我们刚刚fork的代码已经不是最新的了， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://davylin.github.ioblog/categories/clojure/">
+  <link rel="canonical" href="http://davylin.github.io/blog/merge-the-project-forked-from-github/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -65,37 +65,196 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Category: clojure</h1>
+    
+      <h1 class="entry-title">Merge the project forked from github</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-08-07T17:24:38+08:00" pubdate data-updated="true">Aug 7<span>th</span>, 2014</time>
+        
+        
+         | <a href="#comments">Comments</a>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
 
 
+<div class="entry-content"><p>Github真是一个好地方，相信很多程序员们都知道！大家在上面可能都有多多少少的个人项目。我们常常会关注自己兴趣以及xx大牛的项目，甚至于fork牛人们的项目，慢慢研究。但是牛人们的步伐，岂是偶等可以追逐的，他们可能一天<code>commit</code>很多次，这样就会导致我们刚刚<code>fork</code>的代码已经不是最新的了，那现在我们就来看下如何更新到原作者的最新代码。</p>
 
-  
-  <h2>2014</h2>
+<p>下面就不费话了，直接上代码了，projectName为你的项目名，操作过程如下：</p>
 
-<article>
-  
-<h1><a href="/blog/a-note-of-programming-clojure/">A Note of Programming Clojure</a></h1>
-<time datetime="2014-07-23T11:02:19+08:00" pubdate><span class='month'>Jul</span> <span class='day'>23</span> <span class='year'>2014</span></time>
+<pre><code>/volumes/hdd/work/ideaprojects/opensrc/projectName git:(master) &gt;git branch -a
+  * master
+remotes/origin/HEAD -&gt; origin/master
+remotes/origin/master
+➜  /volumes/hdd/work/ideaprojects/opensrc/projectName git:(master) &gt;git remote add    remoteProjectName   https://github.com/***.git
+➜  /volumes/hdd/work/ideaprojects/opensrc/projectName git:(master) &gt;ls
+readme    resources src       test      testlibs  web
+➜  /volumes/hdd/work/ideaprojects/opensrc/projectName git:(master) &gt;git fetch remoteProjectName
+remote: Counting objects: 2840, done.
+remote: Compressing objects: 100% (1109/1109), done.
+remote: Total 2840 (delta 1249), reused 2761 (delta 1185)
+Receiving objects: 100% (2840/2840), 10.48 MiB | 668.00 KiB/s, done.
+Resolving deltas: 100% (1249/1249), done.
+From https://github.com/***
+* [new branch]      master     -&gt; remoteProjectName/master
+➜  /volumes/hdd/work/ideaprojects/opensrc/projectName git:(master) &gt;git checkout -b   remoteProjectName remoteProjectName/    master
+Branch remoteProjectName set up to track remote branch master from remoteProjectName.
+Switched to a new branch 'remoteProjectName'
+➜  /volumes/hdd/work/ideaprojects/opensrc/projectName git:(remoteProjectName) &gt;git branch -a
+master
+* remoteProjectName
+remotes/origin/HEAD -&gt; origin/master
+remotes/origin/master
+remotes/remoteProjectName/master
+➜  /volumes/hdd/work/ideaprojects/opensrc/projectName git:(remoteProjectName) &gt;git checkout   master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+➜  /volumes/hdd/work/ideaprojects/opensrc/projectName git:(master) &gt;git merge     remoteProjectName/master
+Updating cf96d07..edbec5a
+Fast-forward
+.gitignore                                                        |   8 +-
+readme                                                            |  40 +-
+req.txt                                                           |   2 +
+...
+...
+...
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/clojure/'>clojure</a></span>
-</footer>
+➜  /volumes/hdd/work/ideaprojects/opensrc/projectName git:(master) &gt;
+➜  /volumes/hdd/work/ideaprojects/opensrc/projectName git:(master) &gt;
+➜  /volumes/hdd/work/ideaprojects/opensrc/projectName git:(master) &gt;ls
+readme     req.txt    ***        
+➜  /volumes/hdd/work/ideaprojects/opensrc/projectName git:(master) &gt;git push origin master
+Counting objects: 2844, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (1045/1045), done.
+Writing objects: 100% (2841/2841), 10.48 MiB | 282.00 KiB/s, done.
+Total 2841 (delta 1250), reused 2840 (delta 1249)
+To git@github.com:DavyLin/***.git
+cf96d07..edbec5a  master -&gt; master
+</code></pre>
 
-
-</article>
-
+<p>  到这里就完成了更新代码的操作，想想<code>Git</code>还真是强大，<code>Github</code>真心好:)</p>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Davy Lin</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-08-07T17:24:38+08:00" pubdate data-updated="true">Aug 7<span>th</span>, 2014</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/git/'>Git</a>
+  
+</span>
+
+
+    </p>
+    <p class="meta">
+      Tags: 
+
+<span class="categories">
+  
+    <a class='category' href='/blog/tags/git/'>git</a>, <a class='category' href='/blog/tags/linux/'>linux</a>
+  
+</span>
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://davylin.github.io/blog/merge-the-project-forked-from-github/" data-via="javalinjx" data-counturl="http://davylin.github.io/blog/merge-the-project-forked-from-github/" >Tweet</a>
+  
+  
+    <script type="text/javascript" charset="utf-8">
+    (function(){
+      var _w = 72 , _h = 16;
+      var param = {
+        url:location.href,
+        type:'3',
+        count:'1', /**是否显示分享数，1显示(可选)*/
+        appkey:'', /**您申请的应用appkey,显示分享来源(可选)*/
+        title:"http://davylin.github.io/blog/merge-the-project-forked-from-github/",/**分享的文字内容(可选，默认为所在页面的title)*/
+        pic:'', /**分享图片的路径(可选)*/
+        ralateUid:"2150445074", /**关联用户的UID，分享微博会@该用户(可选)*/
+    	language:'zh_cn', /**设置语言，zh_cn|zh_tw(可选)*/
+        rnd:new Date().valueOf()
+      }
+      var temp = [];
+      for( var p in param ){
+        temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )
+      }
+      document.write('<iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&') + '" width="'+ _w+'" height="'+_h+'"></iframe>')
+    })()
+    </script>
+    
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/a-note-of-programming-clojure/" title="Previous Post: A Note of Programming Clojure">&laquo; A Note of Programming Clojure</a>
+      
+      
+    </p>
+  </footer>
 </article>
 
+
+   <section>
+     <h1>Comments</h1>
+     <div id="comments" aria-live="polite"><!-- Doushuo Comment BEGIN -->
+<div class="ds-thread" data-title=""></div>
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"davylin"};
+  (function() {
+     var ds = document.createElement('script');
+     ds.type = 'text/javascript';ds.async = true;
+     ds.src = 'http://static.duoshuo.com/embed.js';
+     ds.charset = 'UTF-8';
+     (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+<!-- Duoshuo Comment END -->
+</div>
+   </section>
 
 </div>
 

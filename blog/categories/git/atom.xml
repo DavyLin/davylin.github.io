@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Tag: linux | 枫中畅游]]></title>
-  <link href="http://davylin.github.io/blog/tags/linux/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Git | 枫中畅游]]></title>
+  <link href="http://davylin.github.io/blog/categories/git/atom.xml" rel="self"/>
   <link href="http://davylin.github.io/"/>
   <updated>2014-08-07T18:01:08+08:00</updated>
   <id>http://davylin.github.io/</id>
@@ -74,74 +74,6 @@ cf96d07..edbec5a  master -&gt; master
 </code></pre>
 
 <p>  到这里就完成了更新代码的操作，想想<code>Git</code>还真是强大，<code>Github</code>真心好:)</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[grep and find]]></title>
-    <link href="http://davylin.github.io/blog/grep-and-find/"/>
-    <updated>2014-05-25T17:54:49+08:00</updated>
-    <id>http://davylin.github.io/blog/grep-and-find</id>
-    <content type="html"><![CDATA[<h2>grep</h2>
-
-<h3>1.从文件中查找关键词</h3>
-
-<p><strong>grep &lsquo;linux&rsquo; text.txt //查找包含 linux的关键词</strong></p>
-
-<p><code>
-[root@localhost ~]# grep 'root' /etc/group
-root:x:0:root
-bin:x:1:root,bin,daemon
-</code></p>
-
-<h3>2.从多个文件中查找关键词</h3>
-
-<p><code>
-[root@localhost ~]# grep 'root' /etc/group /etc/my.cnf
-/etc/group:root:x:0:root
-/etc/my.cnf:user = root
-</code></p>
-
-<h3>3.查找当前目录下以及下辖子目录下所有包含str字符串的文件,会列出文件名.以及该行的内容.以及行号</h3>
-
-<p><strong>-n是打印行号，-r是在子目录也要查询</strong></p>
-
-<p><code>
-grep -n "str" -r ./
-</code>
-<strong>用 -i 搜索的时候可以忽略大小写</strong></p>
-
-<p><strong>利用 -r 来完成所有的子目录下面执行相应的查找</strong></p>
-
-<p><strong>用-l是打印所有的结果</strong></p>
-
-<p><code>
-grep -ril 'str' ./
-</code></p>
-
-<h2>find 是查找文件的常用命令</h2>
-
-<h3>1.查找在 /etc 目录下所有文件名中含有 mail 的文件</h3>
-
-<p><code>
-[root@localhost ]# find /etc/ -name '*mail*'
-/etc/mail.rc
-/etc/rc.d/rc5.d/K30sendmail
-/etc/rc.d/rc4.d/K30sendmail
-</code></p>
-
-<h3>2.查找文件大小超过指定值的文件</h3>
-
-<p><code>
-[root@localhost ]# find ./ -type f -size +100M
-./test.sql
-</code></p>
-
-<h3>3.最近几天被修改过的文件</h3>
-
-<p><code>
-find . -mtime -2
-</code></p>
 ]]></content>
   </entry>
   

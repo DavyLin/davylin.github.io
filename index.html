@@ -9,8 +9,7 @@
   <meta name="author" content="Davy Lin">
 
   
-  <meta name="description" content="1.use 用来导入clojure.core命名空间 user&gt;(clojure.core/use 'clojure.core) 2.import导入java类 user&gt;(import '(java.io InputStream File))
-java.io.File 3. &hellip;">
+  <meta name="description" content="Github真是一个好地方，相信很多程序员们都知道！大家在上面可能都有多多少少的个人项目。我们常常会关注自己兴趣以及xx大牛的项目，甚至于fork牛人们的项目，慢慢研究。但是牛人们的步伐，岂是偶等可以追逐的，他们可能一天commit很多次，这样就会导致我们刚刚fork的代码已经不是最新的了， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -67,6 +66,100 @@ java.io.File 3. &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/merge-the-project-forked-from-github/">Merge the project forked from github</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-08-07T17:24:38+08:00" pubdate data-updated="true">Aug 7<span>th</span>, 2014</time>
+        
+        
+         | <a href="/blog/merge-the-project-forked-from-github/#comments">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Github真是一个好地方，相信很多程序员们都知道！大家在上面可能都有多多少少的个人项目。我们常常会关注自己兴趣以及xx大牛的项目，甚至于fork牛人们的项目，慢慢研究。但是牛人们的步伐，岂是偶等可以追逐的，他们可能一天<code>commit</code>很多次，这样就会导致我们刚刚<code>fork</code>的代码已经不是最新的了，那现在我们就来看下如何更新到原作者的最新代码。</p>
+
+<p>下面就不费话了，直接上代码了，projectName为你的项目名，操作过程如下：</p>
+
+<pre><code>/volumes/hdd/work/ideaprojects/opensrc/projectName git:(master) &gt;git branch -a
+  * master
+remotes/origin/HEAD -&gt; origin/master
+remotes/origin/master
+➜  /volumes/hdd/work/ideaprojects/opensrc/projectName git:(master) &gt;git remote add    remoteProjectName   https://github.com/***.git
+➜  /volumes/hdd/work/ideaprojects/opensrc/projectName git:(master) &gt;ls
+readme    resources src       test      testlibs  web
+➜  /volumes/hdd/work/ideaprojects/opensrc/projectName git:(master) &gt;git fetch remoteProjectName
+remote: Counting objects: 2840, done.
+remote: Compressing objects: 100% (1109/1109), done.
+remote: Total 2840 (delta 1249), reused 2761 (delta 1185)
+Receiving objects: 100% (2840/2840), 10.48 MiB | 668.00 KiB/s, done.
+Resolving deltas: 100% (1249/1249), done.
+From https://github.com/***
+* [new branch]      master     -&gt; remoteProjectName/master
+➜  /volumes/hdd/work/ideaprojects/opensrc/projectName git:(master) &gt;git checkout -b   remoteProjectName remoteProjectName/    master
+Branch remoteProjectName set up to track remote branch master from remoteProjectName.
+Switched to a new branch 'remoteProjectName'
+➜  /volumes/hdd/work/ideaprojects/opensrc/projectName git:(remoteProjectName) &gt;git branch -a
+master
+* remoteProjectName
+remotes/origin/HEAD -&gt; origin/master
+remotes/origin/master
+remotes/remoteProjectName/master
+➜  /volumes/hdd/work/ideaprojects/opensrc/projectName git:(remoteProjectName) &gt;git checkout   master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+➜  /volumes/hdd/work/ideaprojects/opensrc/projectName git:(master) &gt;git merge     remoteProjectName/master
+Updating cf96d07..edbec5a
+Fast-forward
+.gitignore                                                        |   8 +-
+readme                                                            |  40 +-
+req.txt                                                           |   2 +
+...
+...
+...
+
+➜  /volumes/hdd/work/ideaprojects/opensrc/projectName git:(master) &gt;
+➜  /volumes/hdd/work/ideaprojects/opensrc/projectName git:(master) &gt;
+➜  /volumes/hdd/work/ideaprojects/opensrc/projectName git:(master) &gt;ls
+readme     req.txt    ***        
+➜  /volumes/hdd/work/ideaprojects/opensrc/projectName git:(master) &gt;git push origin master
+Counting objects: 2844, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (1045/1045), done.
+Writing objects: 100% (2841/2841), 10.48 MiB | 282.00 KiB/s, done.
+Total 2841 (delta 1250), reused 2840 (delta 1249)
+To git@github.com:DavyLin/***.git
+cf96d07..edbec5a  master -&gt; master
+</code></pre>
+
+<p>  到这里就完成了更新代码的操作，想想<code>Git</code>还真是强大，<code>Github</code>真心好:)</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -766,50 +859,9 @@ java堆是垃圾收集器管理的主要区域，因此很多时候也被称做�
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/my-first-octopress-blog/">My first octopress blog</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-04-09T15:04:27+08:00" pubdate data-updated="true">Apr 9<span>th</span>, 2014</time>
-        
-        
-         | <a href="/blog/my-first-octopress-blog/#comments">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h3>&mdash;Setting up this blog</h3>
-
-<p>Apparently I&rsquo;m using <a href="http://octopress.org/"><code>Octopress</code></a>to power this blog.Many thanks for the nice framework that save me a lot of time to get up to speed.I probably wouldn&rsquo;t have decided to move my blog here in the first place if there weren&rsquo;t ready-to-use solutions for lazy people like me.</p>
-
-<p>Anyway, here’s the link to my old blog: <a href="http://javalinjx.iteye.com/">http://javalinjx.iteye.com/</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
+    
+      <a class="prev" href="/blog/page/2/">&larr; Older</a>
     
     <a href="/blog/archives">Blog Archives</a>
     
@@ -833,6 +885,10 @@ java堆是垃圾收集器管理的主要区域，因此很多时候也被称做�
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/merge-the-project-forked-from-github/">Merge the project forked from github</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/a-note-of-programming-clojure/">A Note of Programming Clojure</a>
       </li>
     
@@ -846,10 +902,6 @@ java堆是垃圾收集器管理的主要区域，因此很多时候也被称做�
     
       <li class="post">
         <a href="/blog/this-is-life/">This is life</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/m1-professional-training/">M1 professional training</a>
       </li>
     
   </ul>
@@ -882,7 +934,7 @@ java堆是垃圾收集器管理的主要区域，因此很多时候也被称做�
 
 <section>
   <h1>Tag Cloud</h1>
-    <span id="tag-cloud"><embed type='application/x-shockwave-flash' src='/javascripts/tagcloud.swf'width='100%' height='250' bgcolor='#fdf6e3' id='tagcloudflash' name='tagcloudflash' quality='high' allowscriptaccess='always'flashvars="tcolor=0x00aa00&amp;tcolor2=0x00dd00&amp;hicolor=0xff3333&amp;tspeed=100&amp;distr=true&amp;mode=tags&amp;tagcloud=%3Ctags%3E%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Fandroid%27+style%3D%27font-size%3A+20.0%25%27%3Eandroid%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Fclojure%27+style%3D%27font-size%3A+20.0%25%27%3Eclojure%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Fconcurrence%27+style%3D%27font-size%3A+20.0%25%27%3Econcurrence%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Fjava%27+style%3D%27font-size%3A+50.0%25%27%3Ejava%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Fjvm%27+style%3D%27font-size%3A+20.0%25%27%3Ejvm%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Flife%27+style%3D%27font-size%3A+40.0%25%27%3Elife%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Flinux%27+style%3D%27font-size%3A+20.0%25%27%3Elinux%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Fother%27+style%3D%27font-size%3A+50.0%25%27%3Eother%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Fshell%27+style%3D%27font-size%3A+20.0%25%27%3Eshell%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Fsoa%27+style%3D%27font-size%3A+20.0%25%27%3Esoa%3C%2Fa%3E+%3C%2Ftags%3E"></span>
+    <span id="tag-cloud"><embed type='application/x-shockwave-flash' src='/javascripts/tagcloud.swf'width='100%' height='250' bgcolor='#fdf6e3' id='tagcloudflash' name='tagcloudflash' quality='high' allowscriptaccess='always'flashvars="tcolor=0x00aa00&amp;tcolor2=0x00dd00&amp;hicolor=0xff3333&amp;tspeed=100&amp;distr=true&amp;mode=tags&amp;tagcloud=%3Ctags%3E%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Fandroid%27+style%3D%27font-size%3A+20.0%25%27%3Eandroid%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Fclojure%27+style%3D%27font-size%3A+20.0%25%27%3Eclojure%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Fconcurrence%27+style%3D%27font-size%3A+20.0%25%27%3Econcurrence%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Fgit%27+style%3D%27font-size%3A+20.0%25%27%3Egit%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Fjava%27+style%3D%27font-size%3A+50.0%25%27%3Ejava%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Fjvm%27+style%3D%27font-size%3A+20.0%25%27%3Ejvm%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Flife%27+style%3D%27font-size%3A+40.0%25%27%3Elife%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Flinux%27+style%3D%27font-size%3A+30.0%25%27%3Elinux%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Fother%27+style%3D%27font-size%3A+50.0%25%27%3Eother%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Fshell%27+style%3D%27font-size%3A+20.0%25%27%3Eshell%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Fsoa%27+style%3D%27font-size%3A+20.0%25%27%3Esoa%3C%2Fa%3E+%3C%2Ftags%3E"></span>
 </section>
 
 

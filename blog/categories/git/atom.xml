@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Git | 枫中畅游]]></title>
   <link href="http://davylin.github.io/blog/categories/git/atom.xml" rel="self"/>
   <link href="http://davylin.github.io/"/>
-  <updated>2014-08-07T18:01:08+08:00</updated>
+  <updated>2014-08-07T18:07:38+08:00</updated>
   <id>http://davylin.github.io/</id>
   <author>
     <name><![CDATA[Davy Lin]]></name>
@@ -37,7 +37,7 @@ Receiving objects: 100% (2840/2840), 10.48 MiB | 668.00 KiB/s, done.
 Resolving deltas: 100% (1249/1249), done.
 From https://github.com/***
 * [new branch]      master     -&gt; remoteProjectName/master
-➜  /volumes/hdd/work/ideaprojects/opensrc/projectName git:(master) &gt;git checkout -b   remoteProjectName remoteProjectName/    master
+➜  /volumes/hdd/work/ideaprojects/opensrc/projectName git:(master) &gt;git checkout -b   remoteProjectName remoteProjectName/master
 Branch remoteProjectName set up to track remote branch master from remoteProjectName.
 Switched to a new branch 'remoteProjectName'
 ➜  /volumes/hdd/work/ideaprojects/opensrc/projectName git:(remoteProjectName) &gt;git branch -a
@@ -49,7 +49,7 @@ remotes/remoteProjectName/master
 ➜  /volumes/hdd/work/ideaprojects/opensrc/projectName git:(remoteProjectName) &gt;git checkout   master
 Switched to branch 'master'
 Your branch is up-to-date with 'origin/master'.
-➜  /volumes/hdd/work/ideaprojects/opensrc/projectName git:(master) &gt;git merge     remoteProjectName/master
+➜  /volumes/hdd/work/ideaprojects/opensrc/projectName git:(master) &gt;git merge remoteProjectName/master
 Updating cf96d07..edbec5a
 Fast-forward
 .gitignore                                                        |   8 +-

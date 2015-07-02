@@ -4,7 +4,7 @@
   <title><![CDATA[枫中畅游]]></title>
   <link href="http://davylin.github.io/atom.xml" rel="self"/>
   <link href="http://davylin.github.io/"/>
-  <updated>2015-05-15T13:41:05+08:00</updated>
+  <updated>2015-07-02T10:37:05+08:00</updated>
   <id>http://davylin.github.io/</id>
   <author>
     <name><![CDATA[Davy Lin]]></name>
@@ -143,7 +143,7 @@ Vector   [1 2 3]
     <link href="http://davylin.github.io/blog/android-dev-framework/"/>
     <updated>2014-07-19T10:44:37+08:00</updated>
     <id>http://davylin.github.io/blog/android-dev-framework</id>
-    <content type="html"><![CDATA[<p><img src="http://img0.ph.126.net/YQAPaRu_RPoCf4I88UBQzA==/6597848220890969307.jpg" alt="Android Dev Framework" /></p>
+    <content type="html"><![CDATA[<p><img src="../images/android_framework.png" alt="Android Dev Framework" /></p>
 
 <p>这两天的任务主要是研究公司一部门提供的内部的Android开发框架。于是就用mindnode画了一个简单的核心类图。做为自己后续学习查看。</p>
 

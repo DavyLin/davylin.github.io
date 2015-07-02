@@ -6,7 +6,7 @@ comments: true
 tags: android java
 categories: android
 ---
-![Android Dev Framework](http://img0.ph.126.net/YQAPaRu_RPoCf4I88UBQzA==/6597848220890969307.jpg)
+![Android Dev Framework](../images/android_framework.png)
 
 这两天的任务主要是研究公司一部门提供的内部的Android开发框架。于是就用mindnode画了一个简单的核心类图。做为自己后续学习查看。
 

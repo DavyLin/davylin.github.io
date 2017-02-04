@@ -1,0 +1,122 @@
+---
+layout: post
+title: "Centos Mongo 安装配置"
+date: 2015-12-19 21:54:23 +0800
+comments: true
+tags: mongo 
+categories: database
+---
+
+**1. 创建 /etc/yum.repos.d/mongodb-org-3.0.repo**
+
+```
+[mongodb-org-3.0]
+name=MongoDB Repository
+baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/3.0/x86_64/
+gpgcheck=0
+enabled=1
+```
+**2. yum安装mongo**
+
+`sudo yum install -y mongodb-org`
+
+或者 指定版本
+
+`sudo yum install -y mongodb-org-3.0.7 mongodb-org-server-3.0.7 mongodb-org-shell-3.0.7 mongodb-org-mongos-3.0.7 mongodb-org-tools-3.0.7`
+
+为了阻止以后更新，你可能需要修改/etc/yum.conf文件，添加配置：
+
+`exclude=mongodb-org,mongodb-org-server,mongodb-org-shell,mongodb-org-mongos,mongodb-org-tools`
+
+**3. dissable SELinux 防火樯**
+
+`vi /etc/selinux/config`
+
+修改：`SELINUX=disabled` 
+
+**4. 配置mongod.conf**
+   
+默认文件是`/etc/mongod.conf`
+
+复制一份，修改配置中的 data，log 等属性
+注意：要把`bind_ip`注释掉，不然只支持本地连接、不过生产环境建议开启，可能会安全一些，或者配置相应的地址，当然还可以修改端口，起用认证，毕竟数据安全很重要
+
+**5. 设置开机启动**
+
+```
+sudo service mongod start
+sudo chkconfig mongod on
+sudo service mongod stop // 停止
+sudo service mongod restart // 重启
+```
+
+**6. 卸载**
+
+```
+sudo yum erase $(rpm -qa | grep mongodb-org)
+sudo rm -r /var/log/mongodb
+sudo rm -r /var/lib/mongo
+```
+
+**7. Mongo 迁移**
+
+- 导出：
+`mongoexport --port 27017 --db zhibird --collection Subject_M --out ./Subject_M.json`
+- 导入：
+`mongoimport --port 27017 --db zhibird --collection Subject_M --file ./Subject_M.json`
+
+- 当然也可以使用 `mongodump` 和 `mongorestore` 命令进行导入导出
+
+**8. ReplSet Config (复制集配置)**
+
+- 分别修改所有实例的`mongod.conf`配置文件，增加`replSetName=rs0` 
+- 然后分别使用`mongod -f mongod.conf`命令启动 mongo
+- 或者直接启动，例如，首先创建三个不同的实例位置 ，分别启动，再统一配置
+  `mkdir -p /srv/mongodb/rs0-0 /srv/mongodb/rs0-1 /srv/mongodb/rs0-2`
+  `mongod --port 27017 --dbpath /srv/mongodb/rs0-0 --replSet rs0 --smallfiles --oplogSize 128 (端口默认为27017)` 
+- 连接其中一台mongo，使用`mongo --port port`
+- 在`mongo shell`中：
+
+  ```
+  rsconf = {
+           _id: "rs0",
+           members: [
+                      {
+                       _id: 0,
+                       host: "<hostname>:port"
+                      }
+                    ]
+         }
+  ```
+- 使用`rs.initiate( rsconf )`初始化replSet配置
+- 使用`rs.add("<hostname>:port1")`
+      `rs.add("<hostname>:port2")`添加其他两台信息
+
+**备注：**
+
+```
+rs.initiate()
+rs.conf()
+rs.reconfig()
+rs.add()         
+rs.status()
+```
+
+
+
+**9. mongo-connector（同步mongo数据到ES的工具）**
+
+其中`config.json` 在 `mongo-connector` 的配置下，修改`namespace`配置（默认配置亦可）；
+在终端下执行如下命令，即可启用数据复制，开始从mongo数据导出到ES中：
+```
+nohup mongo-connector -c config.json --auto-commit-interval=20 -m localhost:27017 -d elastic_doc_manager -t localhost:9200 &   
+```
+
+**10. mongo shell 执行脚本**
+
+- 直接shell下执行js文件，使用`mongo 127.0.0.1:27017/zhibird random.js`
+
+- 也可以使用`–eval`参数
+  `mongo 127.0.0.1:3003/test –eval “db.test.find().forEach(printjson);”`
+  
+   `–eval`参数后面直接跟一个js语句

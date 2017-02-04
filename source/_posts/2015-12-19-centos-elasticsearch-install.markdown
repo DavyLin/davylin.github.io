@@ -1,0 +1,29 @@
+---
+layout: post
+title: "Elasticsearch 安装指南"
+date: 2015-12-19 21:53:46 +0800
+comments: true
+tags: elasticsearch nosql
+categories: database
+---
+
+*1. 下载安装包*
+
+*2. 修改config配置文件*
+
+*3. 运行 ./bin/elasticsearch*
+
+*4. 验证：curl 'http://localhost:9200/?pretty'*
+
+*5. 关闭：curl -XPOST 'http://localhost:9200/_shutdown'*
+
+*6. 安装head plugin*
+
+Running as a plugin of ElasticSearch (this is the preferred method)
+
+`elasticsearch/bin/plugin -install mobz/elasticsearch-head`
+
+浏览器打开`http://localhost:9200/_plugin/head/`查看是否成功安装
+
+
+

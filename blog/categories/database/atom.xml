@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: database | 枫中畅游]]></title>
+  <link href="http://davylin.github.io/blog/categories/database/atom.xml" rel="self"/>
+  <link href="http://davylin.github.io/"/>
+  <updated>2017-02-04T15:43:47+08:00</updated>
+  <id>http://davylin.github.io/</id>
+  <author>
+    <name><![CDATA[Davy Lin]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Centos Mongo 安装配置]]></title>
+    <link href="http://davylin.github.io/blog/centos-mongo-install/"/>
+    <updated>2015-12-19T21:54:23+08:00</updated>
+    <id>http://davylin.github.io/blog/centos-mongo-install</id>
+    <content type="html"><![CDATA[<p><strong>1. 创建 /etc/yum.repos.d/mongodb-org-3.0.repo</strong></p>
+
+<p><code>
+[mongodb-org-3.0]
+name=MongoDB Repository
+baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/3.0/x86_64/
+gpgcheck=0
+enabled=1
+</code>
+<strong>2. yum安装mongo</strong></p>
+
+<p><code>sudo yum install -y mongodb-org</code></p>
+
+<p>或者 指定版本</p>
+
+<p><code>sudo yum install -y mongodb-org-3.0.7 mongodb-org-server-3.0.7 mongodb-org-shell-3.0.7 mongodb-org-mongos-3.0.7 mongodb-org-tools-3.0.7</code></p>
+
+<p>为了阻止以后更新，你可能需要修改/etc/yum.conf文件，添加配置：</p>
+
+<p><code>exclude=mongodb-org,mongodb-org-server,mongodb-org-shell,mongodb-org-mongos,mongodb-org-tools</code></p>
+
+<p><strong>3. dissable SELinux 防火樯</strong></p>
+
+<p><code>vi /etc/selinux/config</code></p>
+
+<p>修改：<code>SELINUX=disabled</code></p>
+
+<p><strong>4. 配置mongod.conf</strong></p>
+
+<p>默认文件是<code>/etc/mongod.conf</code></p>
+
+<p>复制一份，修改配置中的 data，log 等属性
+注意：要把<code>bind_ip</code>注释掉，不然只支持本地连接、不过生产环境建议开启，可能会安全一些，或者配置相应的地址，当然还可以修改端口，起用认证，毕竟数据安全很重要</p>
+
+<p><strong>5. 设置开机启动</strong></p>
+
+<p><code>
+sudo service mongod start
+sudo chkconfig mongod on
+sudo service mongod stop // 停止
+sudo service mongod restart // 重启
+</code></p>
+
+<p><strong>6. 卸载</strong></p>
+
+<p><code>
+sudo yum erase $(rpm -qa | grep mongodb-org)
+sudo rm -r /var/log/mongodb
+sudo rm -r /var/lib/mongo
+</code></p>
+
+<p><strong>7. Mongo 迁移</strong></p>
+
+<ul>
+<li>导出：
+<code>mongoexport --port 27017 --db zhibird --collection Subject_M --out ./Subject_M.json</code></li>
+<li><p>导入：
+<code>mongoimport --port 27017 --db zhibird --collection Subject_M --file ./Subject_M.json</code></p></li>
+<li><p>当然也可以使用 <code>mongodump</code> 和 <code>mongorestore</code> 命令进行导入导出</p></li>
+</ul>
+
+
+<p><strong>8. ReplSet Config (复制集配置)</strong></p>
+
+<ul>
+<li>分别修改所有实例的<code>mongod.conf</code>配置文件，增加<code>replSetName=rs0</code></li>
+<li>然后分别使用<code>mongod -f mongod.conf</code>命令启动 mongo</li>
+<li>或者直接启动，例如，首先创建三个不同的实例位置 ，分别启动，再统一配置
+<code>mkdir -p /srv/mongodb/rs0-0 /srv/mongodb/rs0-1 /srv/mongodb/rs0-2</code>
+<code>mongod --port 27017 --dbpath /srv/mongodb/rs0-0 --replSet rs0 --smallfiles --oplogSize 128 (端口默认为27017)</code></li>
+<li>连接其中一台mongo，使用<code>mongo --port port</code></li>
+<li><p>在<code>mongo shell</code>中：</p>
+
+<p><code>
+rsconf = {
+         _id: "rs0",
+         members: [
+                    {
+                     _id: 0,
+                     host: "&lt;hostname&gt;:port"
+                    }
+                  ]
+       }
+</code></p></li>
+<li>使用<code>rs.initiate( rsconf )</code>初始化replSet配置</li>
+<li>使用<code>rs.add("&lt;hostname&gt;:port1")</code>
+    <code>rs.add("&lt;hostname&gt;:port2")</code>添加其他两台信息</li>
+</ul>
+
+
+<p><strong>备注：</strong></p>
+
+<p><code>
+rs.initiate()
+rs.conf()
+rs.reconfig()
+rs.add()         
+rs.status()
+</code></p>
+
+<p><strong>9. mongo-connector（同步mongo数据到ES的工具）</strong></p>
+
+<p>其中<code>config.json</code> 在 <code>mongo-connector</code> 的配置下，修改<code>namespace</code>配置（默认配置亦可）；
+在终端下执行如下命令，即可启用数据复制，开始从mongo数据导出到ES中：
+<code>
+nohup mongo-connector -c config.json --auto-commit-interval=20 -m localhost:27017 -d elastic_doc_manager -t localhost:9200 &amp;   
+</code></p>
+
+<p><strong>10. mongo shell 执行脚本</strong></p>
+
+<ul>
+<li><p>直接shell下执行js文件，使用<code>mongo 127.0.0.1:27017/zhibird random.js</code></p></li>
+<li><p>也可以使用<code>–eval</code>参数
+<code>mongo 127.0.0.1:3003/test –eval “db.test.find().forEach(printjson);”</code></p>
+
+<p> <code>–eval</code>参数后面直接跟一个js语句</p></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Elasticsearch 安装指南]]></title>
+    <link href="http://davylin.github.io/blog/centos-elasticsearch-install/"/>
+    <updated>2015-12-19T21:53:46+08:00</updated>
+    <id>http://davylin.github.io/blog/centos-elasticsearch-install</id>
+    <content type="html"><![CDATA[<p><em>1. 下载安装包</em></p>
+
+<p><em>2. 修改config配置文件</em></p>
+
+<p><em>3. 运行 ./bin/elasticsearch</em></p>
+
+<p><em>4. 验证：curl &lsquo;<a href="http://localhost:9200/?pretty">http://localhost:9200/?pretty</a>&rsquo;</em></p>
+
+<p><em>5. 关闭：curl -XPOST &lsquo;<a href="http://localhost:9200/_shutdown">http://localhost:9200/_shutdown</a>&rsquo;</em></p>
+
+<p><em>6. 安装head plugin</em></p>
+
+<p>Running as a plugin of ElasticSearch (this is the preferred method)</p>
+
+<p><code>elasticsearch/bin/plugin -install mobz/elasticsearch-head</code></p>
+
+<p>浏览器打开<code>http://localhost:9200/_plugin/head/</code>查看是否成功安装</p>
+]]></content>
+  </entry>
+  
+</feed>

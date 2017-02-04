@@ -9,7 +9,8 @@
   <meta name="author" content="Davy Lin">
 
   
-  <meta name="description" content="Github真是一个好地方，相信很多程序员们都知道！大家在上面可能都有多多少少的个人项目。我们常常会关注自己兴趣以及xx大牛的项目，甚至于fork牛人们的项目，慢慢研究。但是牛人们的步伐，岂是偶等可以追逐的，他们可能一天commit很多次，这样就会导致我们刚刚fork的代码已经不是最新的了， &hellip;">
+  <meta name="description" content="转眼一年又过去了！大家都很早写好总结和展望了，可是我迟迟未动手，只因为我比较懒。。 回顾 2016，真是最幸福的一年，最主要是迎来我的小宝宝，哈哈！ 当然也实现了一些小目标： 跑了一个半程马拉松，虽然是第一次，但还是成功完赛，并取得了一枚小奖牌；
+负责的教育资讯类产品成功上线， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -67,6 +68,523 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2016-personal-summary/">回顾 2016，展望 2017</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-02-04T11:02:31+08:00" pubdate data-updated="true">Feb 4<span>th</span>, 2017</time>
+        
+        
+         | <a href="/blog/2016-personal-summary/#comments">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>转眼一年又过去了！大家都很早写好总结和展望了，可是我迟迟未动手，只因为我比较懒。。</p>
+
+<p>回顾 2016，真是最幸福的一年，最主要是迎来我的小宝宝，哈哈！</p>
+
+<h3>当然也实现了一些小目标：</h3>
+
+<ul>
+<li><p>跑了一个半程马拉松，虽然是第一次，但还是成功完赛，并取得了一枚小奖牌；</p></li>
+<li><p>负责的教育资讯类产品成功上线，虽然目前用户量还不具规模，但也算是小有成就了，希望可以继续变得越来越好！</p></li>
+</ul>
+
+
+<h3>2017 准备给自己定几个小目标：</h3>
+
+<ul>
+<li><p>看 10 本以上技术书，clojure、go、ruby 语言可以投入使用！</p></li>
+<li><p>写 12 篇以上较好的博文；</p></li>
+<li><p>争取参加一场技术交流，希望可以去昆山 leancloud 看看老朋友！</p></li>
+<li><p>去魔都走一趟，表示还没有去过:(</p></li>
+<li><p>继续完成马拉松，成绩提高到 2 个小时左右</p></li>
+<li><p>考个架构师吧，英语培训，达到交流水平，阅读无障碍！</p></li>
+<li><p>把一块腹肌练成 6 块。</p></li>
+</ul>
+
+
+<h4>小目标暂定7个，如果都实现了，再追加一个小目标，比如挣他一个亿:)</h4>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/centos-mongo-install/">Centos Mongo 安装配置</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-12-19T21:54:23+08:00" pubdate data-updated="true">Dec 19<span>th</span>, 2015</time>
+        
+        
+         | <a href="/blog/centos-mongo-install/#comments">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><strong>1. 创建 /etc/yum.repos.d/mongodb-org-3.0.repo</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[mongodb-org-3.0]
+</span><span class='line'>name=MongoDB Repository
+</span><span class='line'>baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/3.0/x86_64/
+</span><span class='line'>gpgcheck=0
+</span><span class='line'>enabled=1</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>2. yum安装mongo</strong></p>
+
+<p><code>sudo yum install -y mongodb-org</code></p>
+
+<p>或者 指定版本</p>
+
+<p><code>sudo yum install -y mongodb-org-3.0.7 mongodb-org-server-3.0.7 mongodb-org-shell-3.0.7 mongodb-org-mongos-3.0.7 mongodb-org-tools-3.0.7</code></p>
+
+<p>为了阻止以后更新，你可能需要修改/etc/yum.conf文件，添加配置：</p>
+
+<p><code>exclude=mongodb-org,mongodb-org-server,mongodb-org-shell,mongodb-org-mongos,mongodb-org-tools</code></p>
+
+<p><strong>3. dissable SELinux 防火樯</strong></p>
+
+<p><code>vi /etc/selinux/config</code></p>
+
+<p>修改：<code>SELINUX=disabled</code></p>
+
+<p><strong>4. 配置mongod.conf</strong></p>
+
+<p>默认文件是<code>/etc/mongod.conf</code></p>
+
+<p>复制一份，修改配置中的 data，log 等属性
+注意：要把<code>bind_ip</code>注释掉，不然只支持本地连接、不过生产环境建议开启，可能会安全一些，或者配置相应的地址，当然还可以修改端口，起用认证，毕竟数据安全很重要</p>
+
+<p><strong>5. 设置开机启动</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo service mongod start
+</span><span class='line'>sudo chkconfig mongod on
+</span><span class='line'>sudo service mongod stop // 停止
+</span><span class='line'>sudo service mongod restart // 重启</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>6. 卸载</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo yum erase $(rpm -qa | grep mongodb-org)
+</span><span class='line'>sudo rm -r /var/log/mongodb
+</span><span class='line'>sudo rm -r /var/lib/mongo</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>7. Mongo 迁移</strong></p>
+
+<ul>
+<li>导出：
+<code>mongoexport --port 27017 --db zhibird --collection Subject_M --out ./Subject_M.json</code></li>
+<li><p>导入：
+<code>mongoimport --port 27017 --db zhibird --collection Subject_M --file ./Subject_M.json</code></p></li>
+<li><p>当然也可以使用 <code>mongodump</code> 和 <code>mongorestore</code> 命令进行导入导出</p></li>
+</ul>
+
+
+<p><strong>8. ReplSet Config (复制集配置)</strong></p>
+
+<ul>
+<li>分别修改所有实例的<code>mongod.conf</code>配置文件，增加<code>replSetName=rs0</code></li>
+<li>然后分别使用<code>mongod -f mongod.conf</code>命令启动 mongo</li>
+<li>或者直接启动，例如，首先创建三个不同的实例位置 ，分别启动，再统一配置
+<code>mkdir -p /srv/mongodb/rs0-0 /srv/mongodb/rs0-1 /srv/mongodb/rs0-2</code>
+<code>mongod --port 27017 --dbpath /srv/mongodb/rs0-0 --replSet rs0 --smallfiles --oplogSize 128 (端口默认为27017)</code></li>
+<li>连接其中一台mongo，使用<code>mongo --port port</code></li>
+<li><p>在<code>mongo shell</code>中：</p>
+
+<p><code>
+rsconf = {
+         _id: "rs0",
+         members: [
+                    {
+                     _id: 0,
+                     host: "&lt;hostname&gt;:port"
+                    }
+                  ]
+       }
+</code></p></li>
+<li>使用<code>rs.initiate( rsconf )</code>初始化replSet配置</li>
+<li>使用<code>rs.add("&lt;hostname&gt;:port1")</code>
+    <code>rs.add("&lt;hostname&gt;:port2")</code>添加其他两台信息</li>
+</ul>
+
+
+<p><strong>备注：</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rs.initiate()
+</span><span class='line'>rs.conf()
+</span><span class='line'>rs.reconfig()
+</span><span class='line'>rs.add()         
+</span><span class='line'>rs.status()</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>9. mongo-connector（同步mongo数据到ES的工具）</strong></p>
+
+<p>其中<code>config.json</code> 在 <code>mongo-connector</code> 的配置下，修改<code>namespace</code>配置（默认配置亦可）；
+在终端下执行如下命令，即可启用数据复制，开始从mongo数据导出到ES中：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>nohup mongo-connector -c config.json --auto-commit-interval=20 -m localhost:27017 -d elastic_doc_manager -t localhost:9200 &   </span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>10. mongo shell 执行脚本</strong></p>
+
+<ul>
+<li><p>直接shell下执行js文件，使用<code>mongo 127.0.0.1:27017/zhibird random.js</code></p></li>
+<li><p>也可以使用<code>–eval</code>参数
+<code>mongo 127.0.0.1:3003/test –eval “db.test.find().forEach(printjson);”</code></p>
+
+<p> <code>–eval</code>参数后面直接跟一个js语句</p></li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/centos-elasticsearch-install/">Elasticsearch 安装指南</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-12-19T21:53:46+08:00" pubdate data-updated="true">Dec 19<span>th</span>, 2015</time>
+        
+        
+         | <a href="/blog/centos-elasticsearch-install/#comments">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><em>1. 下载安装包</em></p>
+
+<p><em>2. 修改config配置文件</em></p>
+
+<p><em>3. 运行 ./bin/elasticsearch</em></p>
+
+<p><em>4. 验证：curl &lsquo;<a href="http://localhost:9200/?pretty">http://localhost:9200/?pretty</a>&rsquo;</em></p>
+
+<p><em>5. 关闭：curl -XPOST &lsquo;<a href="http://localhost:9200/_shutdown">http://localhost:9200/_shutdown</a>&rsquo;</em></p>
+
+<p><em>6. 安装head plugin</em></p>
+
+<p>Running as a plugin of ElasticSearch (this is the preferred method)</p>
+
+<p><code>elasticsearch/bin/plugin -install mobz/elasticsearch-head</code></p>
+
+<p>浏览器打开<code>http://localhost:9200/_plugin/head/</code>查看是否成功安装</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/centos-vsftpd-install/">centos vsftpd的安装配置</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-12-19T21:53:07+08:00" pubdate data-updated="true">Dec 19<span>th</span>, 2015</time>
+        
+        
+         | <a href="/blog/centos-vsftpd-install/#comments">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><strong>1. yum install vsftpd</strong></p>
+
+<p><strong>2. 配置/etc/vsftpd/vsftpd.conf</strong></p>
+
+<ul>
+<li>配置参考如下：</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>anonymous_enable=NO
+</span><span class='line'>local_enable=YES
+</span><span class='line'>write_enable=YES
+</span><span class='line'>local_umask=022
+</span><span class='line'>dirmessage_enable=YES
+</span><span class='line'>xferlog_enable=YES
+</span><span class='line'>connect_from_port_20=YES
+</span><span class='line'>ascii_upload_enable=YES
+</span><span class='line'>ascii_download_enable=YES
+</span><span class='line'>chroot_local_user=YES
+</span><span class='line'>chroot_list_enable=YES
+</span><span class='line'>chroot_list_file=/etc/vsftpd/chroot_list
+</span><span class='line'>listen=YES
+</span><span class='line'>pam_service_name=vsftpd
+</span><span class='line'>userlist_enable=YES
+</span><span class='line'>tcp_wrappers=YES
+</span><span class='line'>use_localtime=YES
+</span><span class='line'>allow_writeable_chroot=YES</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>3. 配置iptables策略，开放 20，21，22等端口，默认21</strong></p>
+
+<p><strong>4. systemctl start vsftpd.service</strong></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/centos-mysql-install/">Mysql安装配置</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-12-19T21:52:27+08:00" pubdate data-updated="true">Dec 19<span>th</span>, 2015</time>
+        
+        
+         | <a href="/blog/centos-mysql-install/#comments">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><ul>
+<li>原来是rpm安装，检查并卸载</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rpm -qa|grep -i mysql
+</span><span class='line'>rpm -ev MySQL-service-5.6.25-1.el7.x86_64
+</span><span class='line'>rpm -ev MySQL-client-5.6.25-1.el7.x86_64</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>原来是yum安装，检查并卸载
+<code>rpm -qa|grep mysql</code></li>
+</ul>
+
+
+<p>一般输出内容如下：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>mysql-community-release-el7-5.noarch
+</span><span class='line'>mysql-community-client-5.7.7-0.3.rc.el7.x86_64
+</span><span class='line'>mysql-community-libs-5.7.7-0.3.rc.el7.x86_64
+</span><span class='line'>mysql-community-server-5.7.7-0.3.rc.el7.x86_64
+</span><span class='line'>mysql-community-common-5.7.7-0.3.rc.el7.x86_64
+</span><span class='line'>mysql-community-libs-compat-5.7.7-0.3.rc.el7.x86_64</span></code></pre></td></tr></table></div></figure>
+
+
+<p>执行卸载命令<code>yum remove mysql-community-release-el7-5.noarch</code></p>
+
+<h4>安装说明</h4>
+
+<p><strong>0、先建mysql用户,mysql组，然后执行命令安装mysql</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rpm -ivh MySQL-server-5.6.25-1.el7.x86_64.rpm
+</span><span class='line'>rpm -ivh MySQL-client-5.6.25-1.el7.x86_64.rpm</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>1、你可以自己弄个<code>cnf</code>配置文件，里面配置改好，命名随便，比如<code>my_3306.cnf</code></strong></p>
+
+<p><strong>2、mysql的目录配置好，<code>cnf</code>放到目录下</strong></p>
+
+<p><strong>3、进行初始化<code>mysql_install_db</code>命令初始化</strong></p>
+
+<p><strong>4、<code>mysqld_safe</code>启动mysql</strong></p>
+
+<h4>安装详细步骤</h4>
+
+<p><strong>0、执行命令安装mysql（见上面安装说明）</strong>
+<strong>1、配置my.cnf文件</strong></p>
+
+<p>一般我会安装在<code>/data/mysql/3306/my_3306.cnf</code>这个位置</p>
+
+<p><strong>2、安装目录初始化</strong></p>
+
+<p><code>mysql_install_db --user=mysql --basedir=/usr --datadir=/data/mysql/3306/data --defaults-extra-file=/data/mysql/3306/my_3306.cnf</code></p>
+
+<p><strong>3、启动服务</strong></p>
+
+<p><code>mysqld_safe --defaults-extra-file=/data/mysql/3306/my_3306.cnf &amp;</code></p>
+
+<p><strong>4、停止服务</strong></p>
+
+<p><code>mysqladmin -uroot -p -S /data/mysql/3306/mysql_3306.sock shutdown</code></p>
+
+<h4>配置数据账户：</h4>
+
+<p><strong>1.mysql -uroot -h127.0.0.1 -P3306</strong></p>
+
+<p><strong>2.修改密码 set password=PASSWORD(&lsquo;root&rsquo;);</strong></p>
+
+<p><strong>3. 增加账号</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>grant all on *.* to 'davylin'@'%' identified by 'davylin';
+</span><span class='line'>
+</span><span class='line'>flush privileges; </span></code></pre></td></tr></table></div></figure>
+
+
+<h4>停止服务</h4>
+
+<p><code>mysqladmin -uroot -p -S /data/mysql/3306/mysql_3306.sock shutdown</code></p>
+
+<h4>开机自动启动（rc.local方式）</h4>
+
+<p><code>vi /etc/rc.d/rc.local</code>最后一行增加</p>
+
+<p><code>export JAVA_HOME=/opt/jdk1.7.0_79</code> // 需要依赖jdk的服务，比如tomcat</p>
+
+<p><code>mysqld_safe --defaults-extra-file=/data/mysql/3306/my_3306.cnf &amp;</code></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -424,442 +942,6 @@ Vector   [1 2 3]
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/m1-professional-training/">M1 professional training</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-06-19T22:36:50+08:00" pubdate data-updated="true">Jun 19<span>th</span>, 2014</time>
-        
-        
-         | <a href="/blog/m1-professional-training/#comments">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>昨天过来南京参加公司级的M1经理人培训，希望借此机会，了解公司管理人的发展计划以及职业管理的知识和技能。昨天一过来，向同学了解了南京的相关景点后，就匆忙赶完传说中的夫子庙。</p>
-
-<p><strong><code>夫子庙</code></strong>，5A级景区，不知道其他地方的人评价如何，我真没发现有什么特别好的地方。只不过是比我们那边的古建筑规模大了点。传说的秦淮河畔，真心感觉不出什么，也许是我的文化底蕴不够吧：）
-培训虽然累点，总算还是有点收获的，还要坚持两天。但是今天发生了一件事，让我心碎啊。老婆送给我的天梭表在培训快结束的时候，跟同事的手碰到一起了，镜面破了。。当时我想到的是，完了，回去要挨骂了。</p>
-
-<p>晚上又补老姐打来的电话给烦到了，脾气顿时爆发了，再也忍不住了。是气自己的不小心，也是气老姐的不努力，现在外甥女的入学还是个未知数。。真是超级郁闷啊。。</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/ji-yu-axis%2C-xfire%2C-cxfde-webserviceke-hu-duan/">基于Axis、XFire、CXF的Webservice客户端</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-05-27T14:59:03+08:00" pubdate data-updated="true">May 27<span>th</span>, 2014</time>
-        
-        
-         | <a href="/blog/ji-yu-axis%2C-xfire%2C-cxfde-webserviceke-hu-duan/#comments">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>Axis客户端调用 webservice</h2>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>URL endpointURL = new URL("http://localhost:8080/webservice/HelloService");  
-</span><span class='line'>            String requestText = "javalinjx"  
-</span><span class='line'>            Service service = new Service();  
-</span><span class='line'>            Call call = (Call) service.createCall();  
-</span><span class='line'>            call.setTargetEndpointAddress(endpointURL);  
-</span><span class='line'>            call.setOperationName("sayHello");  
-</span><span class='line'>            call.addParameter("xml", XMLType.XSD_STRING, ParameterMode.IN);  
-</span><span class='line'>            call.setReturnClass(String.class);  
-</span><span class='line'>            call.setReturnType(XMLType.XSD_STRING);// 设置返回类型  
-</span><span class='line'>            Object [] obj = new Object[]{ requestText };  
-</span><span class='line'>            String result = (String) call.invoke(obj);</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>XFire客户端调用</h2>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>public void call() throws Exception {  
-</span><span class='line'>        Service service = new ObjectServiceFactory().create(HelloService.class);  
-</span><span class='line'>        XFireProxyFactory factory = new XFireProxyFactory(XFireFactory.newInstance().getXFire());  
-</span><span class='line'>        String url = "http://localhost:8080/webservice/HelloService";  
-</span><span class='line'>        SmsService it = (SmsService)factory.create(service, url);  
-</span><span class='line'>        int b = it.sayHello("javalinjx");  
-</span><span class='line'>    }</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>CXF客户端调用</h2>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>JaxWsProxyFactoryBean factory1 = new JaxWsProxyFactoryBean();  
-</span><span class='line'>factory1.setServiceClass(UaAuthInterfaces.class);  
-</span><span class='line'>        factory1.setAddress("http://localhost:8080/webservices/HelloService");  
-</span><span class='line'>        UaAuthInterfaces u = (UaAuthInterfaces) factory1.create();  
-</span><span class='line'>                u.sayHello("javalinjx");</span></code></pre></td></tr></table></div></figure>
-
-
-<p></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/grep-and-find/">grep and find</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-05-25T17:54:49+08:00" pubdate data-updated="true">May 25<span>th</span>, 2014</time>
-        
-        
-         | <a href="/blog/grep-and-find/#comments">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>grep</h2>
-
-<h3>1.从文件中查找关键词</h3>
-
-<p><strong>grep &lsquo;linux&rsquo; text.txt //查找包含 linux的关键词</strong></p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>[root@localhost ~]# grep 'root' /etc/group
-</span><span class='line'>root:x:0:root
-</span><span class='line'>bin:x:1:root,bin,daemon</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>2.从多个文件中查找关键词</h3>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>[root@localhost ~]# grep 'root' /etc/group /etc/my.cnf
-</span><span class='line'>/etc/group:root:x:0:root
-</span><span class='line'>/etc/my.cnf:user = root</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>3.查找当前目录下以及下辖子目录下所有包含str字符串的文件,会列出文件名.以及该行的内容.以及行号</h3>
-
-<p><strong>-n是打印行号，-r是在子目录也要查询</strong></p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>grep -n "str" -r ./</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>用 -i 搜索的时候可以忽略大小写</strong></p>
-
-<p><strong>利用 -r 来完成所有的子目录下面执行相应的查找</strong></p>
-
-<p><strong>用-l是打印所有的结果</strong></p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>grep -ril 'str' ./</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>find 是查找文件的常用命令</h2>
-
-<h3>1.查找在 /etc 目录下所有文件名中含有 mail 的文件</h3>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>[root@localhost ]# find /etc/ -name '*mail*'
-</span><span class='line'>/etc/mail.rc
-</span><span class='line'>/etc/rc.d/rc5.d/K30sendmail
-</span><span class='line'>/etc/rc.d/rc4.d/K30sendmail</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>2.查找文件大小超过指定值的文件</h3>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>[root@localhost ]# find ./ -type f -size +100M
-</span><span class='line'>./test.sql</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>3.最近几天被修改过的文件</h3>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>find . -mtime -2 </span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/countdownlatch/">CountDownLatch</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-05-10T15:29:21+08:00" pubdate data-updated="true">May 10<span>th</span>, 2014</time>
-        
-        
-         | <a href="/blog/countdownlatch/#comments">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h3>同步工具类之闭锁-CountDownLatch</h3>
-
-<p><em>闭锁</em>是一种同步工具类，可以延迟线程的进度直到其到达终止状态。闭锁的作用相当于一扇门：在闭锁到达结束状态之前，这扇门一直是关闭的，并且没有
-任何线程能通过，当到达结束状态时，这扇门会打开并允许所有的线程通过。当闭锁到达结束状态后，将不会再改变状态，因此这扇门将永远保持打开状态。
-闭锁可以用来确保某些活动直到其他活动都完成后才继续执行。</p>
-
-<p><strong><code>CountDownLatch</code></strong>是一种灵活的闭锁实现，可以在上述各种情况中使用，它可以使一个或多个线程等待一组事件发生。闭锁状态包括一个计数器，该计数器
-被初始化为一个正数，表示需要等待的事件数量。<code>countDown</code>方法递减计数器，表示有一个事件已经发生了，而await方法等待计数器达到零，这表示所有
-需要等待的事件都已经发生。如果计数器的值非零，那么<code>await</code>会一直阻塞直到计数器为零，或者等待中的线程中断，或者等待超时。</p>
-
-<pre><code>public class TestHarness {  
-    public long timeTasks(int nthreads, final Runnable task) throws InterruptedException {  
-        final CountDownLatch startGate = new CountDownLatch(1);  
-        final CountDownLatch endGate = new CountDownLatch(nthreads);  
-
-        for (int i = 0; i &lt; nthreads; i++) {  
-        Thread t = new Thread(){  
-            @Override  
-            public void run() {  
-                try{  
-                    startGate.await();  
-                    try{  
-                        task.run();  
-                    }finally {  
-                        endGate.countDown();  
-                    }  
-                } catch (InterruptedException ignored) {}  
-            }  
-        };  
-        t.start();  
-        }  
-
-        long start = System.nanoTime();  
-        startGate.countDown();  
-        endGate.await();  
-        long end = System.nanoTime();  
-        return end-start;  
-    }  
-}  
-</code></pre>
-
-<p><code>startGate</code>计数器的初始值为1，而<code>endGate</code>计数器的初始值为工作线程的数量。每个工作线程首先要做的就是在startGate上等待，从而确保所有线程都就绪后
-才开始执行。而每个线程要做的最后一件事情是将调用<code>endGate</code>的<code>countDown</code>方法减1，这能使主线程高效地等待直到所有工作线程都执行完成，因此可以更准确
-地统计所消耗的时间</p>
-
-<p><strong>ps. 为什么要在上例中使用闭锁，而不是在线程创建后就立即启动？或许，我们希望测试n个线程并发执行某个任务时需要的时间。如果在创建线程后立即启动
-它们，那么先启动的线程将“领先”后启动的线程，并且活跃线程数量会随着时间的推移而增加或减少，竞争程度也在不断发生变化。</strong></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/a-note-of-understanding-the-jvm/">A note of Understanding the JVM</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-04-11T13:05:48+08:00" pubdate data-updated="true">Apr 11<span>th</span>, 2014</time>
-        
-        
-         | <a href="/blog/a-note-of-understanding-the-jvm/#comments">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><hr />
-
-<h2>java内存区域和内存溢出异常</h2>
-
-<h3>运行时数据区域</h3>
-
-<ul>
-<li>程序计数器（Program Counter Register）</li>
-<li>Java虚拟机栈（Java Virtual Machine Stacks）</li>
-<li>本地方法栈（Native Method Stacks）</li>
-<li>Java堆（Java Heap）</li>
-<li>方法区（Method Area）
-
-<ul>
-<li>运行时常量池（Runtime Constant Pool）</li>
-</ul>
-</li>
-<li>另：直接内存</li>
-</ul>
-
-
-<hr />
-
-<h3>程序计数器</h3>
-
-<p>程序计数器是一块较小的内存空间，它的作用可以看做是当前线程所执行的字节码的行号指示器。字节码解释器工作时就是通过改变这个计数器的值来选取下一条需要执行的字节码指令，分支、循环、跳转、异常处理、线程恢复等都需要它来完成。java虚拟机的多线程切换后需要恢复到正确的执行位置都需要一个独立的程序计数器，各线程之间的计数器互不影响，独立存储，所以这类内存区域为“线程私有”的内存。
-如果线程正在执行的是一个java方法，这个计数器记录的是正在执行的虚拟机字节码指令的地址；如果正在执行的是Native方法，这个计数器值则为空（Undefined）。此内存区域是唯一一个在java虚拟机规范中没有规定任何OutOfMemoryError情况的区域。</p>
-
-<h3>Java虚拟机栈</h3>
-
-<p>与程序计数器一样，java虚拟机栈也是线程私有的，它的生命周期与线程相同。它描述的是java方法执行的内存模型：每个方法被执行的时候都会同时创建一个栈帧(Stack Frame)用于存储局部变量表、操作栈、动态链接、方法出口等信息。
-经常有人把java内存区分为堆内存(heap)和栈内存(stack)，这种分法比较粗糙.而所指的&#8221;栈&#8221;就是现在讲的虚拟机栈，或者说是虚拟机栈中的局部变量表部分。
-局部变量表存放了编译期可知的各种基本数据类型（boolean、byte、char、short、int、float、long、double）、对象引用（reference类型，它不等同于对象本身，根据不同的虚拟机实现，它可能是一个指向对象超始地址的引用指针，也可能指向一个代表对象的句柄或者其他与此对象相关的位置）和returnAddress类型（指向了一条字节码指令的地址）。
-在java虚拟机规范中，对这个区域规定了两种异常状况：如果线程请求的栈深度大于虚拟机所允许的深度，将抛出StackOverflowError异常；如果虚拟机栈可以动态扩展，当扩展时无法申请到足够的内存时会抛出OutOfMemoryError异常。</p>
-
-<h3>本地方法栈</h3>
-
-<p>本地方法栈与虚拟机栈所发挥的作用是非常相似的，其区别不过是虚拟机栈为虚拟机执行java方法（也就是字节码）服务，而本地方法栈则是为虚拟机使用到的Native方法服务。同理，本地方法栈也会招聘StackOverflowError和OutOfMemoryError异常。</p>
-
-<h3>Java堆</h3>
-
-<p>java堆是java虚拟机所管理的内存中最大的一块。java堆是被所有线程共享的一块内存区域，在虚拟机启动时创建。
-所有的对象实例以及数据都要在堆上分配，但是随着jit编译器的发展与逃逸分析技术的逐渐成熟，栈上分配、标量替换优化技术将会导致一些微妙的变化发生，所有的对象都分配在堆上也渐渐变得不是那么“绝对”了。
-java堆是垃圾收集器管理的主要区域，因此很多时候也被称做“GC堆”（Garbage Collected Heap）.如果从内存回收的角度看，现在收集器基本都是采用分代收集算法，所以java堆中还可以细分为：新生代和老年代；再细致一点的有Eden空间、From Survivor空间、To Survivor空间等。当然Java堆中的内存分配不够时，将会抛出常见的OutOfMemoryError异常。</p>
-
-<h3>方法区</h3>
-
-<p>方法区(Method Area)与java堆一样，是各个线程共享的内存区域，它用于存储已被虚拟机加载的类信息、常量、静态变量、即时编译器编译后的代码等数据。虽然java虚拟机规范把方法区描述为堆的一个逻辑部分，但是它却有一个别名叫做Non-Heap（非堆），目前应该是与java堆区分开来。
-根据java虚拟机规范的规定，当方法区无法满足内存分配需求时，将抛出OutOfMemoryError异常。</p>
-
-<ul>
-<li><p>运行时常量池</p>
-
-<p>  运行时常量池（Runtime Constant Pool）是方法区的一部分。Class文件中除了有类的版本、字段、方法、接口等描述等信息外，还有一项信息是常量池（Constant pool Table）,用于存放编译期生成的各种字面量和符号引用，这部分内容将在类加载后存放到方法区的运行时常量池中。
-运行时常量池相对于Class文件常量池的另外一个重要特征是具备动态性，java语言并不要求常量一定只能在编译期产生，也就是并非预置入class文件中常量池的内容才能进入方法区运行时常量池，运行期间也可能将新的常量放入池中，这种特性被开发人员利用得比较多的便是String类的intern()方法。自然，常量池无法申请到内存时也会抛出OutOfMemoryError异常。</p></li>
-</ul>
-
-
-<h3>对象访问</h3>
-
-<h4>主流的访问有两种：使用句柄和直接指针</h4>
-
-<p>1.如果使用句柄访问方式，java堆中将会划分出一块内存来作为句柄池，reference中存储的就是对象的句柄地址，而句柄中包含了对象实例数据和类型数据各自的具体地址信息。</p>
-
-<p>2.如果使用直接指针访问方式，java堆对象的布局中就必须考虑如何放置访问类型数据的相关信息，reference中直接存储的就是对象地址。</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -886,23 +968,23 @@ java堆是垃圾收集器管理的主要区域，因此很多时候也被称做�
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/merge-the-project-forked-from-github/">Merge the project forked from github</a>
+        <a href="/blog/2016-personal-summary/">回顾 2016，展望 2017</a>
       </li>
     
       <li class="post">
-        <a href="/blog/a-note-of-programming-clojure/">A Note of Programming Clojure</a>
+        <a href="/blog/centos-mongo-install/">Centos Mongo 安装配置</a>
       </li>
     
       <li class="post">
-        <a href="/blog/android-dev-framework/">Android Dev Framework</a>
+        <a href="/blog/centos-elasticsearch-install/">Elasticsearch 安装指南</a>
       </li>
     
       <li class="post">
-        <a href="/blog/a-store/">A store</a>
+        <a href="/blog/centos-vsftpd-install/">centos vsftpd的安装配置</a>
       </li>
     
       <li class="post">
-        <a href="/blog/this-is-life/">This is life</a>
+        <a href="/blog/centos-mysql-install/">Mysql安装配置</a>
       </li>
     
   </ul>
@@ -935,7 +1017,7 @@ java堆是垃圾收集器管理的主要区域，因此很多时候也被称做�
 
 <section>
   <h1>Tag Cloud</h1>
-    <span id="tag-cloud"><embed type='application/x-shockwave-flash' src='/javascripts/tagcloud.swf'width='100%' height='250' bgcolor='#fdf6e3' id='tagcloudflash' name='tagcloudflash' quality='high' allowscriptaccess='always'flashvars="tcolor=0x00aa00&amp;tcolor2=0x00dd00&amp;hicolor=0xff3333&amp;tspeed=100&amp;distr=true&amp;mode=tags&amp;tagcloud=%3Ctags%3E%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Fandroid%27+style%3D%27font-size%3A+20.0%25%27%3Eandroid%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Fclojure%27+style%3D%27font-size%3A+20.0%25%27%3Eclojure%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Fconcurrence%27+style%3D%27font-size%3A+20.0%25%27%3Econcurrence%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Fgit%27+style%3D%27font-size%3A+20.0%25%27%3Egit%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Fjava%27+style%3D%27font-size%3A+50.0%25%27%3Ejava%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Fjvm%27+style%3D%27font-size%3A+20.0%25%27%3Ejvm%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Flife%27+style%3D%27font-size%3A+40.0%25%27%3Elife%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Flinux%27+style%3D%27font-size%3A+30.0%25%27%3Elinux%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Fother%27+style%3D%27font-size%3A+50.0%25%27%3Eother%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Fshell%27+style%3D%27font-size%3A+20.0%25%27%3Eshell%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Fsoa%27+style%3D%27font-size%3A+20.0%25%27%3Esoa%3C%2Fa%3E+%3C%2Ftags%3E"></span>
+    <span id="tag-cloud"><embed type='application/x-shockwave-flash' src='/javascripts/tagcloud.swf'width='100%' height='250' bgcolor='#fdf6e3' id='tagcloudflash' name='tagcloudflash' quality='high' allowscriptaccess='always'flashvars="tcolor=0x00aa00&amp;tcolor2=0x00dd00&amp;hicolor=0xff3333&amp;tspeed=100&amp;distr=true&amp;mode=tags&amp;tagcloud=%3Ctags%3E%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Fandroid%27+style%3D%27font-size%3A+20.0%25%27%3Eandroid%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Fcentos%27+style%3D%27font-size%3A+20.0%25%27%3Ecentos%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Fclojure%27+style%3D%27font-size%3A+20.0%25%27%3Eclojure%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Fconcurrence%27+style%3D%27font-size%3A+20.0%25%27%3Econcurrence%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Fdatabase%27+style%3D%27font-size%3A+20.0%25%27%3Edatabase%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Felasticsearch%27+style%3D%27font-size%3A+20.0%25%27%3Eelasticsearch%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Fgit%27+style%3D%27font-size%3A+20.0%25%27%3Egit%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Fjava%27+style%3D%27font-size%3A+50.0%25%27%3Ejava%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Fjvm%27+style%3D%27font-size%3A+20.0%25%27%3Ejvm%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Flife%27+style%3D%27font-size%3A+50.0%25%27%3Elife%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Flinux%27+style%3D%27font-size%3A+30.0%25%27%3Elinux%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Fmongo%27+style%3D%27font-size%3A+20.0%25%27%3Emongo%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Fmysql%27+style%3D%27font-size%3A+20.0%25%27%3Emysql%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Fnosql%27+style%3D%27font-size%3A+20.0%25%27%3Enosql%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Fother%27+style%3D%27font-size%3A+50.0%25%27%3Eother%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Fshell%27+style%3D%27font-size%3A+20.0%25%27%3Eshell%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Fsoa%27+style%3D%27font-size%3A+20.0%25%27%3Esoa%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Fvsftpd%27+style%3D%27font-size%3A+20.0%25%27%3Evsftpd%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fdavylin.github.io%2Fblog%2Ftags%2Fwork%27+style%3D%27font-size%3A+20.0%25%27%3Ework%3C%2Fa%3E+%3C%2Ftags%3E"></span>
 </section>
 
 
@@ -993,7 +1075,7 @@ java堆是垃圾收集器管理的主要区域，因此很多时候也被称做�
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2015 - Davy Lin -
+  Copyright &copy; 2017 - Davy Lin -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 

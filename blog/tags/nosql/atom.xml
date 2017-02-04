@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Tag: nosql | 枫中畅游]]></title>
+  <link href="http://davylin.github.io/blog/tags/nosql/atom.xml" rel="self"/>
+  <link href="http://davylin.github.io/"/>
+  <updated>2017-02-04T15:43:47+08:00</updated>
+  <id>http://davylin.github.io/</id>
+  <author>
+    <name><![CDATA[Davy Lin]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Elasticsearch 安装指南]]></title>
+    <link href="http://davylin.github.io/blog/centos-elasticsearch-install/"/>
+    <updated>2015-12-19T21:53:46+08:00</updated>
+    <id>http://davylin.github.io/blog/centos-elasticsearch-install</id>
+    <content type="html"><![CDATA[<p><em>1. 下载安装包</em></p>
+
+<p><em>2. 修改config配置文件</em></p>
+
+<p><em>3. 运行 ./bin/elasticsearch</em></p>
+
+<p><em>4. 验证：curl &lsquo;<a href="http://localhost:9200/?pretty">http://localhost:9200/?pretty</a>&rsquo;</em></p>
+
+<p><em>5. 关闭：curl -XPOST &lsquo;<a href="http://localhost:9200/_shutdown">http://localhost:9200/_shutdown</a>&rsquo;</em></p>
+
+<p><em>6. 安装head plugin</em></p>
+
+<p>Running as a plugin of ElasticSearch (this is the preferred method)</p>
+
+<p><code>elasticsearch/bin/plugin -install mobz/elasticsearch-head</code></p>
+
+<p>浏览器打开<code>http://localhost:9200/_plugin/head/</code>查看是否成功安装</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: mysql | 枫中畅游]]></title>
+  <link href="http://davylin.github.io/blog/categories/mysql/atom.xml" rel="self"/>
+  <link href="http://davylin.github.io/"/>
+  <updated>2017-02-04T15:43:47+08:00</updated>
+  <id>http://davylin.github.io/</id>
+  <author>
+    <name><![CDATA[Davy Lin]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Mysql安装配置]]></title>
+    <link href="http://davylin.github.io/blog/centos-mysql-install/"/>
+    <updated>2015-12-19T21:52:27+08:00</updated>
+    <id>http://davylin.github.io/blog/centos-mysql-install</id>
+    <content type="html"><![CDATA[<ul>
+<li>原来是rpm安装，检查并卸载</li>
+</ul>
+
+
+<p><code>
+rpm -qa|grep -i mysql
+rpm -ev MySQL-service-5.6.25-1.el7.x86_64
+rpm -ev MySQL-client-5.6.25-1.el7.x86_64
+</code>
+&ndash; 原来是yum安装，检查并卸载
+<code>rpm -qa|grep mysql</code></p>
+
+<p>一般输出内容如下：</p>
+
+<p><code>
+mysql-community-release-el7-5.noarch
+mysql-community-client-5.7.7-0.3.rc.el7.x86_64
+mysql-community-libs-5.7.7-0.3.rc.el7.x86_64
+mysql-community-server-5.7.7-0.3.rc.el7.x86_64
+mysql-community-common-5.7.7-0.3.rc.el7.x86_64
+mysql-community-libs-compat-5.7.7-0.3.rc.el7.x86_64
+</code>
+执行卸载命令<code>yum remove mysql-community-release-el7-5.noarch</code></p>
+
+<h4>安装说明</h4>
+
+<p><strong>0、先建mysql用户,mysql组，然后执行命令安装mysql</strong></p>
+
+<p><code>
+rpm -ivh MySQL-server-5.6.25-1.el7.x86_64.rpm
+rpm -ivh MySQL-client-5.6.25-1.el7.x86_64.rpm
+</code></p>
+
+<p><strong>1、你可以自己弄个<code>cnf</code>配置文件，里面配置改好，命名随便，比如<code>my_3306.cnf</code></strong></p>
+
+<p><strong>2、mysql的目录配置好，<code>cnf</code>放到目录下</strong></p>
+
+<p><strong>3、进行初始化<code>mysql_install_db</code>命令初始化</strong></p>
+
+<p><strong>4、<code>mysqld_safe</code>启动mysql</strong></p>
+
+<h4>安装详细步骤</h4>
+
+<p><strong>0、执行命令安装mysql（见上面安装说明）</strong>
+<strong>1、配置my.cnf文件</strong></p>
+
+<p>一般我会安装在<code>/data/mysql/3306/my_3306.cnf</code>这个位置</p>
+
+<p><strong>2、安装目录初始化</strong></p>
+
+<p><code>mysql_install_db --user=mysql --basedir=/usr --datadir=/data/mysql/3306/data --defaults-extra-file=/data/mysql/3306/my_3306.cnf</code></p>
+
+<p><strong>3、启动服务</strong></p>
+
+<p><code>mysqld_safe --defaults-extra-file=/data/mysql/3306/my_3306.cnf &amp;</code></p>
+
+<p><strong>4、停止服务</strong></p>
+
+<p><code>mysqladmin -uroot -p -S /data/mysql/3306/mysql_3306.sock shutdown</code></p>
+
+<h4>配置数据账户：</h4>
+
+<p><strong>1.mysql -uroot -h127.0.0.1 -P3306</strong></p>
+
+<p><strong>2.修改密码 set password=PASSWORD(&lsquo;root&rsquo;);</strong></p>
+
+<p><strong>3. 增加账号</strong></p>
+
+<p>```
+grant all on <em>.</em> to &lsquo;davylin&rsquo;@&lsquo;%&rsquo; identified by &lsquo;davylin&rsquo;;</p>
+
+<p>flush privileges;
+```</p>
+
+<h4>停止服务</h4>
+
+<p><code>mysqladmin -uroot -p -S /data/mysql/3306/mysql_3306.sock shutdown</code></p>
+
+<h4>开机自动启动（rc.local方式）</h4>
+
+<p><code>vi /etc/rc.d/rc.local</code>最后一行增加</p>
+
+<p><code>export JAVA_HOME=/opt/jdk1.7.0_79</code> // 需要依赖jdk的服务，比如tomcat</p>
+
+<p><code>mysqld_safe --defaults-extra-file=/data/mysql/3306/my_3306.cnf &amp;</code></p>
+]]></content>
+  </entry>
+  
+</feed>

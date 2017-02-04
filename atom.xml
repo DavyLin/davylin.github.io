@@ -4,7 +4,7 @@
   <title><![CDATA[枫中畅游]]></title>
   <link href="http://davylin.github.io/atom.xml" rel="self"/>
   <link href="http://davylin.github.io/"/>
-  <updated>2015-07-02T10:37:05+08:00</updated>
+  <updated>2017-02-04T15:43:47+08:00</updated>
   <id>http://davylin.github.io/</id>
   <author>
     <name><![CDATA[Davy Lin]]></name>
@@ -12,6 +12,373 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[回顾 2016，展望 2017]]></title>
+    <link href="http://davylin.github.io/blog/2016-personal-summary/"/>
+    <updated>2017-02-04T11:02:31+08:00</updated>
+    <id>http://davylin.github.io/blog/2016-personal-summary</id>
+    <content type="html"><![CDATA[<p>转眼一年又过去了！大家都很早写好总结和展望了，可是我迟迟未动手，只因为我比较懒。。</p>
+
+<p>回顾 2016，真是最幸福的一年，最主要是迎来我的小宝宝，哈哈！</p>
+
+<h3>当然也实现了一些小目标：</h3>
+
+<ul>
+<li><p>跑了一个半程马拉松，虽然是第一次，但还是成功完赛，并取得了一枚小奖牌；</p></li>
+<li><p>负责的教育资讯类产品成功上线，虽然目前用户量还不具规模，但也算是小有成就了，希望可以继续变得越来越好！</p></li>
+</ul>
+
+
+<h3>2017 准备给自己定几个小目标：</h3>
+
+<ul>
+<li><p>看 10 本以上技术书，clojure、go、ruby 语言可以投入使用！</p></li>
+<li><p>写 12 篇以上较好的博文；</p></li>
+<li><p>争取参加一场技术交流，希望可以去昆山 leancloud 看看老朋友！</p></li>
+<li><p>去魔都走一趟，表示还没有去过:(</p></li>
+<li><p>继续完成马拉松，成绩提高到 2 个小时左右</p></li>
+<li><p>考个架构师吧，英语培训，达到交流水平，阅读无障碍！</p></li>
+<li><p>把一块腹肌练成 6 块。</p></li>
+</ul>
+
+
+<h4>小目标暂定7个，如果都实现了，再追加一个小目标，比如挣他一个亿:)</h4>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Centos Mongo 安装配置]]></title>
+    <link href="http://davylin.github.io/blog/centos-mongo-install/"/>
+    <updated>2015-12-19T21:54:23+08:00</updated>
+    <id>http://davylin.github.io/blog/centos-mongo-install</id>
+    <content type="html"><![CDATA[<p><strong>1. 创建 /etc/yum.repos.d/mongodb-org-3.0.repo</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[mongodb-org-3.0]
+</span><span class='line'>name=MongoDB Repository
+</span><span class='line'>baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/3.0/x86_64/
+</span><span class='line'>gpgcheck=0
+</span><span class='line'>enabled=1</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>2. yum安装mongo</strong></p>
+
+<p><code>sudo yum install -y mongodb-org</code></p>
+
+<p>或者 指定版本</p>
+
+<p><code>sudo yum install -y mongodb-org-3.0.7 mongodb-org-server-3.0.7 mongodb-org-shell-3.0.7 mongodb-org-mongos-3.0.7 mongodb-org-tools-3.0.7</code></p>
+
+<p>为了阻止以后更新，你可能需要修改/etc/yum.conf文件，添加配置：</p>
+
+<p><code>exclude=mongodb-org,mongodb-org-server,mongodb-org-shell,mongodb-org-mongos,mongodb-org-tools</code></p>
+
+<p><strong>3. dissable SELinux 防火樯</strong></p>
+
+<p><code>vi /etc/selinux/config</code></p>
+
+<p>修改：<code>SELINUX=disabled</code></p>
+
+<p><strong>4. 配置mongod.conf</strong></p>
+
+<p>默认文件是<code>/etc/mongod.conf</code></p>
+
+<p>复制一份，修改配置中的 data，log 等属性
+注意：要把<code>bind_ip</code>注释掉，不然只支持本地连接、不过生产环境建议开启，可能会安全一些，或者配置相应的地址，当然还可以修改端口，起用认证，毕竟数据安全很重要</p>
+
+<p><strong>5. 设置开机启动</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo service mongod start
+</span><span class='line'>sudo chkconfig mongod on
+</span><span class='line'>sudo service mongod stop // 停止
+</span><span class='line'>sudo service mongod restart // 重启</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>6. 卸载</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo yum erase $(rpm -qa | grep mongodb-org)
+</span><span class='line'>sudo rm -r /var/log/mongodb
+</span><span class='line'>sudo rm -r /var/lib/mongo</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>7. Mongo 迁移</strong></p>
+
+<ul>
+<li>导出：
+<code>mongoexport --port 27017 --db zhibird --collection Subject_M --out ./Subject_M.json</code></li>
+<li><p>导入：
+<code>mongoimport --port 27017 --db zhibird --collection Subject_M --file ./Subject_M.json</code></p></li>
+<li><p>当然也可以使用 <code>mongodump</code> 和 <code>mongorestore</code> 命令进行导入导出</p></li>
+</ul>
+
+
+<p><strong>8. ReplSet Config (复制集配置)</strong></p>
+
+<ul>
+<li>分别修改所有实例的<code>mongod.conf</code>配置文件，增加<code>replSetName=rs0</code></li>
+<li>然后分别使用<code>mongod -f mongod.conf</code>命令启动 mongo</li>
+<li>或者直接启动，例如，首先创建三个不同的实例位置 ，分别启动，再统一配置
+<code>mkdir -p /srv/mongodb/rs0-0 /srv/mongodb/rs0-1 /srv/mongodb/rs0-2</code>
+<code>mongod --port 27017 --dbpath /srv/mongodb/rs0-0 --replSet rs0 --smallfiles --oplogSize 128 (端口默认为27017)</code></li>
+<li>连接其中一台mongo，使用<code>mongo --port port</code></li>
+<li><p>在<code>mongo shell</code>中：</p>
+
+<p><code>
+rsconf = {
+         _id: "rs0",
+         members: [
+                    {
+                     _id: 0,
+                     host: "&lt;hostname&gt;:port"
+                    }
+                  ]
+       }
+</code></p></li>
+<li>使用<code>rs.initiate( rsconf )</code>初始化replSet配置</li>
+<li>使用<code>rs.add("&lt;hostname&gt;:port1")</code>
+    <code>rs.add("&lt;hostname&gt;:port2")</code>添加其他两台信息</li>
+</ul>
+
+
+<p><strong>备注：</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rs.initiate()
+</span><span class='line'>rs.conf()
+</span><span class='line'>rs.reconfig()
+</span><span class='line'>rs.add()         
+</span><span class='line'>rs.status()</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>9. mongo-connector（同步mongo数据到ES的工具）</strong></p>
+
+<p>其中<code>config.json</code> 在 <code>mongo-connector</code> 的配置下，修改<code>namespace</code>配置（默认配置亦可）；
+在终端下执行如下命令，即可启用数据复制，开始从mongo数据导出到ES中：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>nohup mongo-connector -c config.json --auto-commit-interval=20 -m localhost:27017 -d elastic_doc_manager -t localhost:9200 &   </span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>10. mongo shell 执行脚本</strong></p>
+
+<ul>
+<li><p>直接shell下执行js文件，使用<code>mongo 127.0.0.1:27017/zhibird random.js</code></p></li>
+<li><p>也可以使用<code>–eval</code>参数
+<code>mongo 127.0.0.1:3003/test –eval “db.test.find().forEach(printjson);”</code></p>
+
+<p> <code>–eval</code>参数后面直接跟一个js语句</p></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Elasticsearch 安装指南]]></title>
+    <link href="http://davylin.github.io/blog/centos-elasticsearch-install/"/>
+    <updated>2015-12-19T21:53:46+08:00</updated>
+    <id>http://davylin.github.io/blog/centos-elasticsearch-install</id>
+    <content type="html"><![CDATA[<p><em>1. 下载安装包</em></p>
+
+<p><em>2. 修改config配置文件</em></p>
+
+<p><em>3. 运行 ./bin/elasticsearch</em></p>
+
+<p><em>4. 验证：curl &lsquo;<a href="http://localhost:9200/?pretty">http://localhost:9200/?pretty</a>&rsquo;</em></p>
+
+<p><em>5. 关闭：curl -XPOST &lsquo;<a href="http://localhost:9200/_shutdown">http://localhost:9200/_shutdown</a>&rsquo;</em></p>
+
+<p><em>6. 安装head plugin</em></p>
+
+<p>Running as a plugin of ElasticSearch (this is the preferred method)</p>
+
+<p><code>elasticsearch/bin/plugin -install mobz/elasticsearch-head</code></p>
+
+<p>浏览器打开<code>http://localhost:9200/_plugin/head/</code>查看是否成功安装</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[centos vsftpd的安装配置]]></title>
+    <link href="http://davylin.github.io/blog/centos-vsftpd-install/"/>
+    <updated>2015-12-19T21:53:07+08:00</updated>
+    <id>http://davylin.github.io/blog/centos-vsftpd-install</id>
+    <content type="html"><![CDATA[<p><strong>1. yum install vsftpd</strong></p>
+
+<p><strong>2. 配置/etc/vsftpd/vsftpd.conf</strong></p>
+
+<ul>
+<li>配置参考如下：</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>anonymous_enable=NO
+</span><span class='line'>local_enable=YES
+</span><span class='line'>write_enable=YES
+</span><span class='line'>local_umask=022
+</span><span class='line'>dirmessage_enable=YES
+</span><span class='line'>xferlog_enable=YES
+</span><span class='line'>connect_from_port_20=YES
+</span><span class='line'>ascii_upload_enable=YES
+</span><span class='line'>ascii_download_enable=YES
+</span><span class='line'>chroot_local_user=YES
+</span><span class='line'>chroot_list_enable=YES
+</span><span class='line'>chroot_list_file=/etc/vsftpd/chroot_list
+</span><span class='line'>listen=YES
+</span><span class='line'>pam_service_name=vsftpd
+</span><span class='line'>userlist_enable=YES
+</span><span class='line'>tcp_wrappers=YES
+</span><span class='line'>use_localtime=YES
+</span><span class='line'>allow_writeable_chroot=YES</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>3. 配置iptables策略，开放 20，21，22等端口，默认21</strong></p>
+
+<p><strong>4. systemctl start vsftpd.service</strong></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Mysql安装配置]]></title>
+    <link href="http://davylin.github.io/blog/centos-mysql-install/"/>
+    <updated>2015-12-19T21:52:27+08:00</updated>
+    <id>http://davylin.github.io/blog/centos-mysql-install</id>
+    <content type="html"><![CDATA[<ul>
+<li>原来是rpm安装，检查并卸载</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rpm -qa|grep -i mysql
+</span><span class='line'>rpm -ev MySQL-service-5.6.25-1.el7.x86_64
+</span><span class='line'>rpm -ev MySQL-client-5.6.25-1.el7.x86_64</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>原来是yum安装，检查并卸载
+<code>rpm -qa|grep mysql</code></li>
+</ul>
+
+
+<p>一般输出内容如下：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>mysql-community-release-el7-5.noarch
+</span><span class='line'>mysql-community-client-5.7.7-0.3.rc.el7.x86_64
+</span><span class='line'>mysql-community-libs-5.7.7-0.3.rc.el7.x86_64
+</span><span class='line'>mysql-community-server-5.7.7-0.3.rc.el7.x86_64
+</span><span class='line'>mysql-community-common-5.7.7-0.3.rc.el7.x86_64
+</span><span class='line'>mysql-community-libs-compat-5.7.7-0.3.rc.el7.x86_64</span></code></pre></td></tr></table></div></figure>
+
+
+<p>执行卸载命令<code>yum remove mysql-community-release-el7-5.noarch</code></p>
+
+<h4>安装说明</h4>
+
+<p><strong>0、先建mysql用户,mysql组，然后执行命令安装mysql</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rpm -ivh MySQL-server-5.6.25-1.el7.x86_64.rpm
+</span><span class='line'>rpm -ivh MySQL-client-5.6.25-1.el7.x86_64.rpm</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>1、你可以自己弄个<code>cnf</code>配置文件，里面配置改好，命名随便，比如<code>my_3306.cnf</code></strong></p>
+
+<p><strong>2、mysql的目录配置好，<code>cnf</code>放到目录下</strong></p>
+
+<p><strong>3、进行初始化<code>mysql_install_db</code>命令初始化</strong></p>
+
+<p><strong>4、<code>mysqld_safe</code>启动mysql</strong></p>
+
+<h4>安装详细步骤</h4>
+
+<p><strong>0、执行命令安装mysql（见上面安装说明）</strong>
+<strong>1、配置my.cnf文件</strong></p>
+
+<p>一般我会安装在<code>/data/mysql/3306/my_3306.cnf</code>这个位置</p>
+
+<p><strong>2、安装目录初始化</strong></p>
+
+<p><code>mysql_install_db --user=mysql --basedir=/usr --datadir=/data/mysql/3306/data --defaults-extra-file=/data/mysql/3306/my_3306.cnf</code></p>
+
+<p><strong>3、启动服务</strong></p>
+
+<p><code>mysqld_safe --defaults-extra-file=/data/mysql/3306/my_3306.cnf &amp;</code></p>
+
+<p><strong>4、停止服务</strong></p>
+
+<p><code>mysqladmin -uroot -p -S /data/mysql/3306/mysql_3306.sock shutdown</code></p>
+
+<h4>配置数据账户：</h4>
+
+<p><strong>1.mysql -uroot -h127.0.0.1 -P3306</strong></p>
+
+<p><strong>2.修改密码 set password=PASSWORD(&lsquo;root&rsquo;);</strong></p>
+
+<p><strong>3. 增加账号</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>grant all on *.* to 'davylin'@'%' identified by 'davylin';
+</span><span class='line'>
+</span><span class='line'>flush privileges; </span></code></pre></td></tr></table></div></figure>
+
+
+<h4>停止服务</h4>
+
+<p><code>mysqladmin -uroot -p -S /data/mysql/3306/mysql_3306.sock shutdown</code></p>
+
+<h4>开机自动启动（rc.local方式）</h4>
+
+<p><code>vi /etc/rc.d/rc.local</code>最后一行增加</p>
+
+<p><code>export JAVA_HOME=/opt/jdk1.7.0_79</code> // 需要依赖jdk的服务，比如tomcat</p>
+
+<p><code>mysqld_safe --defaults-extra-file=/data/mysql/3306/my_3306.cnf &amp;</code></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Merge the project forked from github]]></title>

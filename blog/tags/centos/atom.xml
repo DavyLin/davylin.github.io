@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Tag: centos | 枫中畅游]]></title>
+  <link href="http://davylin.github.io/blog/tags/centos/atom.xml" rel="self"/>
+  <link href="http://davylin.github.io/"/>
+  <updated>2017-02-04T15:43:47+08:00</updated>
+  <id>http://davylin.github.io/</id>
+  <author>
+    <name><![CDATA[Davy Lin]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[centos vsftpd的安装配置]]></title>
+    <link href="http://davylin.github.io/blog/centos-vsftpd-install/"/>
+    <updated>2015-12-19T21:53:07+08:00</updated>
+    <id>http://davylin.github.io/blog/centos-vsftpd-install</id>
+    <content type="html"><![CDATA[<p><strong>1. yum install vsftpd</strong></p>
+
+<p><strong>2. 配置/etc/vsftpd/vsftpd.conf</strong></p>
+
+<ul>
+<li>配置参考如下：</li>
+</ul>
+
+
+<p><code>
+anonymous_enable=NO
+local_enable=YES
+write_enable=YES
+local_umask=022
+dirmessage_enable=YES
+xferlog_enable=YES
+connect_from_port_20=YES
+ascii_upload_enable=YES
+ascii_download_enable=YES
+chroot_local_user=YES
+chroot_list_enable=YES
+chroot_list_file=/etc/vsftpd/chroot_list
+listen=YES
+pam_service_name=vsftpd
+userlist_enable=YES
+tcp_wrappers=YES
+use_localtime=YES
+allow_writeable_chroot=YES
+</code></p>
+
+<p><strong>3. 配置iptables策略，开放 20，21，22等端口，默认21</strong></p>
+
+<p><strong>4. systemctl start vsftpd.service</strong></p>
+]]></content>
+  </entry>
+  
+</feed>

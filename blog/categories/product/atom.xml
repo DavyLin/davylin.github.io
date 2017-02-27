@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: product | 枫中畅游]]></title>
+  <link href="http://davylin.github.io/blog/categories/product/atom.xml" rel="self"/>
+  <link href="http://davylin.github.io/"/>
+  <updated>2017-02-27T09:11:20+08:00</updated>
+  <id>http://davylin.github.io/</id>
+  <author>
+    <name><![CDATA[Davy Lin]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[学海密探]]></title>
+    <link href="http://davylin.github.io/blog/stuspy-product/"/>
+    <updated>2017-02-27T08:55:48+08:00</updated>
+    <id>http://davylin.github.io/blog/stuspy-product</id>
+    <content type="html"><![CDATA[<h2>一、应用简介</h2>
+
+<p>学海密探，揭秘中高考所有题型解题秘籍。
+为初高中各年级学生推送数学、物理、化学三门学科中高考经典题型的推导思路、解题秘籍、易错分析等方法技巧，并提供名校试卷在线学习、自助课程表、在线水平测试、在线教学等学习功能，以及个人空间、广场、赛事等互动功能。
+在学海中探索、培养学生的独立解题、独立思维能力，是学海密探追求的目标。</p>
+
+<h2>二、当前版本介绍</h2>
+
+<p>学海密探1.0.0版本。
+为初高中各年级学生免费推送数学、物理、化学三门学科中高考经典题型的推导思路、解题秘籍、易错分析等方法技巧，每周推送3-5次，每次5篇/科・年级。同时学生也可以向学海密探在线提交指定题型，经我们编辑推导思路、解题秘籍、易错分析等后推送给所有同年级学生学习。</p>
+
+<h2>三、App界面</h2>
+
+<p><img src="../images/image1.png" alt="image1" />
+<img src="../images/image2.png" alt="image2" />
+<img src="../images/image3.png" alt="image3" />
+<img src="../images/image4.png" alt="image4" />
+<img src="../images/image5.png" alt="image5" /></p>
+]]></content>
+  </entry>
+  
+</feed>

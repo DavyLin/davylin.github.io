@@ -13,14 +13,14 @@ categories: product
 在学海中探索、培养学生的独立解题、独立思维能力，是学海密探追求的目标。
 
 ## 二、当前版本介绍
-学海密探1.0.0版本。
-为初高中各年级学生免费推送数学、物理、化学三门学科中高考经典题型的推导思路、解题秘籍、易错分析等方法技巧，每周推送3-5次，每次5篇/科・年级。同时学生也可以向学海密探在线提交指定题型，经我们编辑推导思路、解题秘籍、易错分析等后推送给所有同年级学生学习。
+学海密探当前版本
+为初高中各年级学生免费推送数学、物理、化学三门学科中高考经典题型的推导思路、解题秘籍、易错分析等方法技巧，每周推送 3 - 5 次，每次 5 篇/科・年级。同时学生也可以向学海密探在线提交指定题型，经我们编辑推导思路、解题秘籍、易错分析等后推送给所有同年级学生学习。
 
 ## 三、App界面
 
-![image1](/images/image1.png)
-![image2](/images/image2.png)
-![image3](/images/image3.png)
-![image4](/images/image4.png)
-![image5](/images/image5.png)
+![image1](../../images/image1.png)
+![image2](../../images/image2.png)
+![image3](../../images/image3.png)
+![image4](../../images/image4.png)
+![image5](../../images/image5.png)
 

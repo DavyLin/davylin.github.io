@@ -1,0 +1,7 @@
+#+OPTIONS: TOC:nil ;关闭目录
+#+OPTIONS: NUM:nil ;关闭标题前面的数字
+#+OPTIONS: AUTHOR:nil ;不显示作者
+#+OPTIONS: TIMESTAMP:nil ;不显示创建时间
+
+ * 2022年1月
+- My first org mode  blog;

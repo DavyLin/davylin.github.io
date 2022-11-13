@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: 
-
-Sitemap: http://davylin.github.io/sitemap.xml 

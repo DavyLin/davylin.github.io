@@ -8,20 +8,16 @@
 #+begin_logo
 Kinhung Communications,PLI
 #+end_logo
-[[./images/me.png]]
+[[./images/me.jpeg]]
 
 I am a programmer at ylkj.com, i have 14 years of
 software development experience and 3 years of
 marathon running experience.
-• I live in Taijiang,FuZhou,FuJian in china.
-• My major programming languages are Java/
-JavaScript.Also I'm interested in Clojure/Go, Scheme
-and Rust etc.
-• During past 14 years, I've developed enterprise
-applications, web applications, mobile applications
-etc.I'm a faithful user of Mac with 10 years of
-experience.
-• I am here to record my program, life, investment.
+I live in Taijiang,FuZhou,FuJian in china.
+My major programming languages are Java/JavaScript.Also I'm interested in Clojure/Go, Scheme and Rust etc.
+During past 14 years, I've developed enterprise applications, web applications, mobile applications etc.
+I'm a faithful user of Mac with 10 years of experience.
+I am here to record my program, life, investment.
 
 Links:
 [[https://github.com/davylin][github]]

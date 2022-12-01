@@ -1,152 +1,42 @@
-#+TITLE: Seth Morabito
+#+TITLE: Kinhung Lam
 #+OPTIONS: toc:nil num:nil author:nil
 #+OPTIONS: date:nil
 #+STARTUP: showall inlineimages
 
 #+BEGIN_resumecontact
-web@loomcom.com \bullet
-[[https://github.com/sethm/][github]] \bullet
-[[https://www.linkedin.com/in/sethmorabito][linkedin]] \bullet
-[[https://loomcom.com][homepage]]
+linjxljx@gmail.com \bullet
+[[https://github.com/davylin/][github]] \bullet
+[[https://www.linkedin.cn/incareer/in/davy-lin-4a084260][linkedin]] \bullet
+[[https://kinhung.me][homepage]]
 #+END_resumecontact
 
 * Profile
 
-Accomplished, passionate, driven and creative software engineer with
-extensive experience solving problems at every level of the
-development lifecycle, from requirements analysis to deployment.
-Strong team player with a love of the craft and a constant desire to
-explore, create, and solve.  Comfortable working in both small and
-large systems.  Core skills center around back end software for
-Internet applications, object-oriented design, test driven
-development, tool development, and API design. Never happy standing
-still.
+I am a programmer at ylkj.com, i have 14 years of
+software development experience and 3 years of
+marathon running experience.
+• I live in Taijiang,FuZhou,FuJian in china.
+• My major programming languages are Java/
+JavaScript.Also I'm interested in Clojure/Go, Scheme
+and Rust etc.
+• During past 14 years, I've developed enterprise
+applications, web applications, mobile applications
+etc.I'm a faithful user of Mac with 10 years of
+experience.
 
 * Core Skills
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: skills
 :END:
 
-- Languages :: Extensive professional experience with Java, Rust, C,
+- Languages :: Extensive professional experience with Java, Rust, Clojure,
   and Ruby. Other work and personal project experience with Python,
-  JavaScript, and C++.
-- Technologies :: Linux, Docker, Apache Kafka, InfluxDB, Vertica,
-  PostgreSQL, MariaDB.
+  JavaScript.
+- Technologies :: Linux, Mac, Docker, Android, iOS, Vertica,
+  MySQL, MariaDB.
 - Fundamentals :: Network & Web, Stream Processing, Object-Oriented
   Design, Functional Programming, Test-Driven Development,
   Continuous Delivery, Virtualization.
 
 * Work Experience
 
-** Akamai Technologies
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: work-experience
-:END:
-*** /Senior Software Engineer II/
-*** November 2017 \ndash March 2022
-
-- Designed and built a Rust application that reuses existing C++
-  libraries and handles consuming over 10,000 Apache Kafka messages
-  per second, providing near real-time monitoring of our network's
-  provisioned state.
-
-- Engineered a Kafka Streams data aggregation and event detection
-  system that allows our customers to message their subscribers about
-  potential threats, and allows our network to gracefully handle
-  data center fail-over.
-
-** Nominum (acquired by Akamai in 2017)
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: work-experience
-:END:
-*** Senior Staff Engineer
-*** October 2013 \ndash November 2017
-
-DNS-based threat detection and prevention system.
-
-- Designed a lock-free data structure to hold hundreds of thousands of
-  URLs in our HTTP proxy, reducing memory footprint and improving
-  response time.
-
-- Built a customer reporting solution using HPE Vertica and InfluxDB
-  capable of sustained ingest of thousands of rows per second.
-
-- Designed and built a RADIUS and DHCP IP Address change tracking
-  system capable of handling over 20,000 IP Address changes per
-  second.
-
-** Glyde Corporation
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: work-experience
-:END:
-*** /Senior Software Engineer/
-*** December 2007 \ndash July 2013
-
-Innovative Consumer-to-Consumer marketplace.
-
-- Designed and built a fraud detection and prevention system that
-  reduced fraudulent activity by 80% and significantly increased
-  customer satisfaction.
-
-- Spearheaded integration of the Glyde Marketplace with PayPal (payment
-  and withdrawal), and Twilio (SMS messaging).
-
-- Implemented a cohort analysis system to analyze buying and selling
-  patterns to improve business strategy decision making.
-
-** Stanford University
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: work-experience
-:END:
-*** /Software Engineer/
-*** May 2004 \ndash December 2007
-
-Software Engineer with the LOCKSS Program at Stanford University.
-LOCKSS ("Lots of Copies Keep Stuff Safe") is an Open Source,
-distributed, peer-to-peer digital content preservation system used by
-libraries world-wide to preserve digital journals.
-
-- Architected and implemented major portions of the new LOCKSS
-  peer-to-peer polling protocol (LCAP V3), resulting in a ten-fold
-  improvement in content auditing and repair efficiency over the
-  previous implementation.
-
-- Created a complete testing environment in Python for stress and
-  integration testing of the LOCKSS Network.
-
-- Designed and built a dynamic Java plugin extension system for
-  automatically finding and updating running LOCKSS systems with new
-  functionality.
-
-* Personal Projects
-** [[./3b2/emulator.html][AT&T 3B2/400 Simulator]]
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: personal-project
-:END:
-
-The 3B2 was a small, multi-user UNIX computer introduced in 1984 by
-AT&T.  It was the primary porting platform for UNIX System V Release
-3, but has since faded into obscurity. I built a full system simulator
-to allow running unmodified UNIX SVR3 software for historical
-preservation. This project involved a tremendous amount of reverse
-engineering both hardware and software, as internals documentation was
-unavailable. Additionally, WE32100 assembler and disassemblers had to
-be written from scratch. It is released as part of the SIMH historical
-computer simulation framework.
-
-** [[https://github.com/sethm/symon][Symon 6502 Emulator]]
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: personal-project
-:END:
-
-Symon is an 8-bit system emulator, including full emulation of the
-6502 CPU, 6551 ACIA, 6522 PIA, 6525 CRT controller, RAM, and ROM. It
-is released under the MIT Open Source license.
-
-* Education
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: education
-:END:
-** Cornell University
-
-Linguistics (1992-1995)

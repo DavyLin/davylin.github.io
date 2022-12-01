@@ -1,15 +1,14 @@
 #+AUTHOR: kinhung
 #+EMAIL: linjxljx@gmail.com
 #+DATE: <2022-11-13 Sun>
-#+TITLE: Kinhung Communications,Program,Life,Emotion
+#+TITLE: Kinhung Communications,PLE
 #+OPTIONS: title: nil
 #+STARTUP: showall
 
 #+begin_logo
 Kinhung Communications,Program,Life,Emotion
 #+end_logo
-
-[[./images/my-images.jpeg]]
+[[./images/me.png]]
 
 I am a programmer at ylkj.com, i have 14 years of
 software development experience and 3 years of
@@ -22,8 +21,11 @@ and Rust etc.
 applications, web applications, mobile applications
 etc.I'm a faithful user of Mac with 10 years of
 experience.
-• links: Github(DavyLin) Email(linjxljx@gmail.com)
-WeChat:(kinhung_lam)
+
+Links:
+[[https://github.com/davylin]][github]
+[[linjxljx@gmail.com]][email]
+http://weibo.com/u/2150445074[weibo]
 
 In addition to the various [[./portfolio/index.org][projects]] hosted here, I maintain
 [[./blog/index.org][a long-running weblog]], and [[./resume.org][my resume is available here]].

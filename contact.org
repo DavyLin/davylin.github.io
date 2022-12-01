@@ -1,5 +1,5 @@
-#+EMAIL: web@loomcom.com
-#+DATE: <2018-07-06 Fri>
+#+EMAIL: linjxljx@gmail.com
+#+DATE: <2022-12-01 Thur>
 #+TITLE: Contact
 #+STARTUP: showall
 #+STARTUP: inlineimages
@@ -7,19 +7,8 @@
 I lurk about in many places on the Internet. This is a short list of
 easy ways to get a hold of me.
 
-- Email :: [[mailto:web@loomcom.com][web@loomcom.com]]
+- Email :: [[mailto:web@loomcom.com][linjxljx@gmail.com]]
 
-- Mastodon :: [[https://mastodon.sdf.org/@twylo][@twylo@mastodon.sdf.org]]
+- Github :: [[https://github.com/davylin][github.com/davylin]]
 
-- Github :: [[https://github.com/sethm][github.com/sethm]]
-
-- LinkedIn :: [[https://www.linkedin.com/in/sethmorabito/][sethmorabito]]
-
-- IRC :: I'm on IRC's [[https://oftc.net][OFTC]] and [[https://libera.chat][Libera Chat]] networks as =twylo=.
-
-- Post :: If all else fails, the US Post Office will see it through:\\
-          \\
-          /Seth Morabito/\\
-          /PO BOX 1337/\\
-          /Poulsbo, WA 98370/\\
-          /USA/
+- LinkedIn :: [[https://www.linkedin.cn/incareer/in/davy-lin-4a084260][davylin]]

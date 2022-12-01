@@ -3,8 +3,8 @@
 * [[file:/Users/jianxionglin/spaces/personal/org/blog/sitemap.org][Sitemap]]
 :PROPERTIES:
 :RSS_PERMALINK: sitemap.html
-:PUBDATE:  2022-11-13 21:04:04
+:PUBDATE:  2022-12-01 14:37:26
 :EMAIL:    web@gmail.com
 :AUTHOR:   Kinhung Lam
-:ID:       81DE98A6-21AA-433C-9E19-7B260BABF7F6
+:ID:       49AC98A0-3962-45E1-A49F-2F28C1A50C18
 :END:

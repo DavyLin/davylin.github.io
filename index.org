@@ -8,7 +8,7 @@
 #+begin_logo
 Kinhung Communications,Program,Life,Emotion
 #+end_logo
-[[./images/me.png]]
+[[./images/my-images.jpeg]]
 
 I am a programmer at ylkj.com, i have 14 years of
 software development experience and 3 years of

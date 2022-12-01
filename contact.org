@@ -12,3 +12,5 @@ easy ways to get a hold of me.
 - Github :: [[https://github.com/davylin][github.com/davylin]]
 
 - LinkedIn :: [[https://www.linkedin.cn/incareer/in/davy-lin-4a084260][davylin]]
+
+- Weibo :: [[http://weibo.com/u/2150445074][javalinjx]]

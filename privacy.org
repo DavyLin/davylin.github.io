@@ -1,0 +1,17 @@
+#+TITLE:  Privacy Policy
+#+AUTHOR: Seth Morabito
+#+EMAIL:  web@loomcom.com
+#+DATE:   <2021-10-13 Wed 14:35>
+#+STARTUP: showall inlineimages
+#+OPTIONS: toc:nil num:nil
+
+This site does not use cookies of any kind. It also does not use any
+third parties to track any data or metrics about visits or visitors.
+
+Default nginx logging is enabled. This means that requests are logged,
+including originating IP address, time, and resource requested. This
+data is used /only/ for debugging purposes, and is regularly rolled
+over and old logs deleted. This data is never shared with anyone.
+
+- /Initial Version:/ 13 October, 2021
+- /Last Updated:/ 13 October, 2021

@@ -1,0 +1,15 @@
+#+AUTHOR: Seth Morabito
+#+EMAIL:  web@loomcom.com
+#+TITLE:  Page Not Found
+#+DATE:   <2019-01-14 Mon 09:45>
+#+STARTUP: showall inlineimages
+
+** Oops...
+
+The page you're looking for could not be found. However, that's most
+likely our fault, not yours.
+
+Most likely, the page you want is still here, it's just been moved.
+
+Please visit [[./index.org][the main webpage]] or
+[[../blog/index.org][the weblog]] to find what you're looking for.

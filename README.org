@@ -1,0 +1,12 @@
+#+AUTHOR: Seth Morabito
+#+EMAIL: web@loomcom.com
+#+DATE: <2018-07-06 Fri>
+
+* Loom Communications Homepage
+
+This is the org-mode source for the Loom Communications home page.
+
+* Copyright
+
+Copyright 1995–2020, Seth J. Morabito <web@loomcom.com>. All Rights
+Reserved.

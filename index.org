@@ -1,7 +1,29 @@
-#+OPTIONS: TOC:nil ;关闭目录
-#+OPTIONS: NUM:nil ;关闭标题前面的数字
-#+OPTIONS: AUTHOR:nil ;不显示作者
-#+OPTIONS: TIMESTAMP:nil ;不显示创建时间
+#+AUTHOR: kinhung
+#+EMAIL: linjxljx@gmail.com
+#+DATE: <2022-11-13 Sun>
+#+TITLE: Kinhung Communications,Program,Life,Emotion
+#+OPTIONS: title: nil
+#+STARTUP: showall
 
- * 2022年1月
-- My first org mode  blog;
+#+begin_logo
+Kinhung Communications,Program,Life,Emotion
+#+end_logo
+
+[[./images/my-images.jpeg]]
+
+I am a programmer at ylkj.com, i have 14 years of
+software development experience and 3 years of
+marathon running experience.
+• I live in Taijiang,FuZhou,FuJian in china.
+• My major programming languages are Java/
+JavaScript.Also I'm interested in Clojure/Go, Scheme
+and Rust etc.
+• During past 14 years, I've developed enterprise
+applications, web applications, mobile applications
+etc.I'm a faithful user of Mac with 10 years of
+experience.
+• links: Github(DavyLin) Email(linjxljx@gmail.com)
+WeChat:(kinhung_lam)
+
+In addition to the various [[./portfolio/index.org][projects]] hosted here, I maintain
+[[./blog/index.org][a long-running weblog]], and [[./resume.org][my resume is available here]].

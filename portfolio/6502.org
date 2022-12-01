@@ -1,0 +1,49 @@
+#+EMAIL: web@loomcom.com
+#+DATE: <2018-07-09 Mon>
+#+TITLE: A 6502 Home-Brew Computer
+#+STARTUP: showall
+#+STARTUP: inlineimages
+
+
+Thanks to a burgeoning interest in electronics, I’ve become very
+interested in designing and building my own computer. I chose the 6502
+out of familiarity and nostalgia. It was at the heart of my two
+favorite computers, the Commodore 64 (in a slightly modified version
+called the 6510) and the Apple ][. It’s a favorite of hobbyists, and
+there’s a ton of software targeted to it. Plus, it’s just very easy to
+design around.
+
+* Form Factor
+
+- Composed of two half-eurocard (80mm x 100mm) boards; one CPU and
+  memory, one I/O. The design is constrained to such a small area
+  because of the tool I’ve decided to use for PCB layout, CadSoft
+  Eagle freeware version.
+- Fully buffered bus available on each stack, for easy expansion.
+- Boards are connected using standard 0.1” (2.54mm) SIP headers, à-la
+  Arduino shields
+
+* CPU
+
+- Synertek SY6502B.
+- 1MHz Crystal Oscillator (The CPU is capable of running at 3MHz, but
+  I only had a 1MHz 6551 on hand).
+
+* Memory
+
+- 32KB NEC µPD43256AC-10L SRAM (32K x 8).
+- 32KB ST 27C512 UV EPROM (64K x 8. Only the lower 16K is used), with
+  a simple monitor program and 6502 Enhanced Basic.
+- Simple 74HC00 or 4000 series address decoding glue logic.
+
+* IO
+
+- Rockwell R6522A VIA — two 8-bit parallel I/O lines.
+- Rockwell R6551 ACIA — one serial I/O line, 50 to 19,200 baud.
+- MAX232 RS-232 voltage converter.
+- 1.8432 crystal.
+
+* Documents
+
+- Loomcom SBC Memory Map, Version 1.01 ([[https://archives.loomcom.com/projects/6502/6502_bus.pdf][PDF]]) ([[https://archives.loomcom.com/projects/6502/6502_bus.gif][GIF]]).
+- [[https://archives.loomcom.com/projects/6502/65xxx.lbr][6502 Eagle Library]].

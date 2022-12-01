@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2022-12-01 四 14:26 -->
+<meta charset="utf-8" />
+<title>A 6502 Home-Brew Computer</title>
+<meta name="author" content="Kinhung Lam" />
+<meta name="generator" content="Org Mode" />
+<meta name="twitter:site" content="@twylo" />
+<meta name="twitter:creator" content="@twylo" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="me" href="https://weibo.com/u/2150445074" />
+<link rel="icon" type="image/png" href="/images/icon/favicon-32x32.png" />
+<link rel="apple-touch-icon-precomposed" href="/images/icon/apple-touch-icon.png" />
+<link rel="alternate" type="application/rss+xml" title="Weblog RSS Feed" href="/blog/rss.xml" />
+<link rel="stylesheet" type="text/css" href="/res/faces.css">
+<link rel="stylesheet" type="text/css" href="/res/style.css">
+</head>
+<body>
+<div id="preamble" class="status">
+<a class="skip-nav-link" href="#content">
+  Skip navigation
+</a>
+<nav>
+  <div class="navitem"><a href="/">Home</a></div>
+  <div class="navitem"><a href="/blog/">Weblog</a></div>
+  <div class="navitem"><a href="/portfolio/">Portfolio</a></div>
+  <div class="navitem"><a href="/resume.html">Resume</a></div>
+  <div class="navitem"><a href="/contact.html">Contact</a></div>
+</nav>
+</div>
+<div id="content" class="content">
+<header>
+<h1 class="title">A 6502 Home-Brew Computer</h1>
+</header><p>
+Thanks to a burgeoning interest in electronics, I’ve become very
+interested in designing and building my own computer. I chose the 6502
+out of familiarity and nostalgia. It was at the heart of my two
+favorite computers, the Commodore 64 (in a slightly modified version
+called the 6510) and the Apple ][. It’s a favorite of hobbyists, and
+there’s a ton of software targeted to it. Plus, it’s just very easy to
+design around.
+</p>
+
+<div id="outline-container-orgc15dddc" class="outline-2">
+<h2 id="orgc15dddc">Form Factor</h2>
+<div class="outline-text-2" id="text-orgc15dddc">
+<ul class="org-ul">
+<li>Composed of two half-eurocard (80mm x 100mm) boards; one CPU and
+memory, one I/O. The design is constrained to such a small area
+because of the tool I’ve decided to use for PCB layout, CadSoft
+Eagle freeware version.</li>
+<li>Fully buffered bus available on each stack, for easy expansion.</li>
+<li>Boards are connected using standard 0.1” (2.54mm) SIP headers, à-la
+Arduino shields</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org7807f1e" class="outline-2">
+<h2 id="org7807f1e">CPU</h2>
+<div class="outline-text-2" id="text-org7807f1e">
+<ul class="org-ul">
+<li>Synertek SY6502B.</li>
+<li>1MHz Crystal Oscillator (The CPU is capable of running at 3MHz, but
+I only had a 1MHz 6551 on hand).</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgaa4264c" class="outline-2">
+<h2 id="orgaa4264c">Memory</h2>
+<div class="outline-text-2" id="text-orgaa4264c">
+<ul class="org-ul">
+<li>32KB NEC µPD43256AC-10L SRAM (32K x 8).</li>
+<li>32KB ST 27C512 UV EPROM (64K x 8. Only the lower 16K is used), with
+a simple monitor program and 6502 Enhanced Basic.</li>
+<li>Simple 74HC00 or 4000 series address decoding glue logic.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org6360a1e" class="outline-2">
+<h2 id="org6360a1e">IO</h2>
+<div class="outline-text-2" id="text-org6360a1e">
+<ul class="org-ul">
+<li>Rockwell R6522A VIA — two 8-bit parallel I/O lines.</li>
+<li>Rockwell R6551 ACIA — one serial I/O line, 50 to 19,200 baud.</li>
+<li>MAX232 RS-232 voltage converter.</li>
+<li>1.8432 crystal.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org17656a1" class="outline-2">
+<h2 id="org17656a1">Documents</h2>
+<div class="outline-text-2" id="text-org17656a1">
+<ul class="org-ul">
+<li>Loomcom SBC Memory Map, Version 1.01 (<a href="https://archives.loomcom.com/projects/6502/6502_bus.pdf">PDF</a>) (<a href="https://archives.loomcom.com/projects/6502/6502_bus.gif">GIF</a>).</li>
+<li><a href="https://archives.loomcom.com/projects/6502/65xxx.lbr">6502 Eagle Library</a>.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<div id="footer">
+Proudly <a href="https://blog.kinhung.me/blog/0110_emacs_blogging_for_fun_and_profit.html">published</a> with <a href="https://www.gnu.org/software/emacs/">Emacs</a> and <a href="https://orgmode.org/">Org Mode</a>. This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> License. <a href="https://blog.kinhung.me/privacy.html">Privacy Policy</a></div>
+</div>
+</body>
+</html>

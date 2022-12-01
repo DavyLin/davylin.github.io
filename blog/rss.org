@@ -4,7 +4,7 @@
 :PROPERTIES:
 :RSS_PERMALINK: sitemap.html
 :PUBDATE:  2022-12-01 14:37:26
-:EMAIL:    web@gmail.com
-:AUTHOR:   Kinhung Lam
-:ID:       49AC98A0-3962-45E1-A49F-2F28C1A50C18
+:EMAIL:    linjxljx@gmail.com
+:AUTHOR:   kinhung lam
+:ID:       5AA45E9E-053B-4B50-8ADA-28A293AB0AAD
 :END:

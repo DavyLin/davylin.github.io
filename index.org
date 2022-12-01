@@ -1,4 +1,4 @@
-#+AUTHOR: kinhung
+#+AUTHOR: kinhung lam
 #+EMAIL: linjxljx@gmail.com
 #+DATE: <2022-11-13 Sun>
 #+TITLE: Kinhung Communications,PLE
@@ -23,9 +23,9 @@ etc.I'm a faithful user of Mac with 10 years of
 experience.
 
 Links:
-[[https://github.com/davylin]][github]
-[[linjxljx@gmail.com]][email]
-http://weibo.com/u/2150445074[weibo]
+[[https://github.com/davylin][github]]
+[[http://weibo.com/u/2150445074][weibo]]
+[[https://www.linkedin.cn/incareer/in/davy-lin-4a084260][davylin]]
 
 In addition to the various [[./portfolio/index.org][projects]] hosted here, I maintain
 [[./blog/index.org][a long-running weblog]], and [[./resume.org][my resume is available here]].

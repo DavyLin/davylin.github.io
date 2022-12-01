@@ -2,7 +2,7 @@
 
 * [[file:sitemap.org][Sitemap]]
 #+begin_published
-Thursday, December  1, 2022 at  2:37 PM CST
+星期四, 十二月  1, 2022 at  2:37 下午 CST
 #+end_published
 
 -----

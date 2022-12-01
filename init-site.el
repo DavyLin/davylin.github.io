@@ -51,12 +51,12 @@
       (concat
        "<div id=\"footer\">\n"
        "Proudly "
-       "<a href=\"https://blog.kinhung.me/blog/0110_emacs_blogging_for_fun_and_profit.html\">published</a> with "
+       "<a href=\"https://kinhung.me/blog/0110_emacs_blogging_for_fun_and_profit.html\">published</a> with "
        "<a href=\"https://www.gnu.org/software/emacs/\">Emacs</a> and "
        "<a href=\"https://orgmode.org/\">Org Mode</a>. This work is licensed "
        "under a <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-sa/4.0/\">CC "
        "BY-SA 4.0</a> License. "
-       "<a href=\"https://blog.kinhung.me/privacy.html\">Privacy Policy</a>"
+       "<a href=\"https://kinhung.me/privacy.html\">Privacy Policy</a>"
        "</div>"))
 
 (defvar youtube-iframe-format
@@ -264,7 +264,7 @@ ENTRY is the entry to display. STYLE is one of `list' or
          :exclude "rss.*"
          :with-author t
          :author "kinhung lam"
-         :email "web@gmail.com"
+         :email "linjxljx@gmail.com"
          :with-creator nil
          :with-date t
          :section-numbers nil
@@ -275,7 +275,7 @@ ENTRY is the entry to display. STYLE is one of `list' or
          :html-html5-fancy t
          :html-metadata-timestamp-format "%A, %B %_d, %Y at %l:%M %p"
          :html-doctype "html5"
-         :html-link-home "https://blog.kinhung.me/"
+         :html-link-home "https://kinhung.me/"
          :html-link-use-abs-url nil
          :html-head ,kinhung/head
          :html-head-extra nil
@@ -298,8 +298,8 @@ ENTRY is the entry to display. STYLE is one of `list' or
         ("rss"
          :base-directory ,kinhung/blog-org-dir
          :base-extension "org"
-         :author "Kinhung Lam"
-         :email "web@gmail.com"
+         :author "kinhung lam"
+         :email "linjxljx@gmail.com"
          :with-author t
          :with-email t
          :recursive nil
@@ -330,8 +330,8 @@ ENTRY is the entry to display. STYLE is one of `list' or
          :with-drawers t
          :with-sub-superscript nil
          :with-author t
-         :author "Kinhung Lam"
-         :email "web@gmail.com"
+         :author "kinhung lam"
+         :email "linjxljx@gmail.com"
          :html-html5-fancy t
          :with-creator nil
          :with-date nil

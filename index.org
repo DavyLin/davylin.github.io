@@ -8,7 +8,7 @@
 #+begin_logo
 Kinhung Communications,PLI
 #+end_logo
-[[./images/my-images.jpeg]]
+[[./images/me.png]]
 
 I am a programmer at ylkj.com, i have 14 years of
 software development experience and 3 years of

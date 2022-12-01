@@ -1,5 +1,5 @@
-#+AUTHOR: Seth Morabito
-#+EMAIL: web@loomcom.com
+#+AUTHOR: Kinhung Lam
+#+EMAIL: linjxljx@gmail.com
 #+DATE: <2018-07-06 Fri>
 
 * Loom Communications Homepage
@@ -8,5 +8,5 @@ This is the org-mode source for the Loom Communications home page.
 
 * Copyright
 
-Copyright 1995–2020, Seth J. Morabito <web@loomcom.com>. All Rights
+Copyright 2007–2022, Kinhung Lam. Morabito <linjxljx@gmail.com>. All Rights
 Reserved.

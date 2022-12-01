@@ -7,7 +7,7 @@
 I lurk about in many places on the Internet. This is a short list of
 easy ways to get a hold of me.
 
-- Email :: [[mailto:web@loomcom.com][linjxljx@gmail.com]]
+- Email :: [[mailto:linjxljx@gmail.com][linjxljx@gmail.com]]
 
 - Github :: [[https://github.com/davylin][github.com/davylin]]
 

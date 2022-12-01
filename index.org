@@ -1,12 +1,12 @@
 #+AUTHOR: kinhung lam
 #+EMAIL: linjxljx@gmail.com
 #+DATE: <2022-11-13 Sun>
-#+TITLE: Kinhung Communications,PLE
-#+OPTIONS: title: nil
+#+TITLE: Kinhung Communications,PLI
+#+OPTIONS: title:nil
 #+STARTUP: showall
 
 #+begin_logo
-Kinhung Communications,Program,Life,Emotion
+Kinhung Communications,PLI
 #+end_logo
 [[./images/my-images.jpeg]]
 
@@ -21,6 +21,7 @@ and Rust etc.
 applications, web applications, mobile applications
 etc.I'm a faithful user of Mac with 10 years of
 experience.
+• I am here to record my program, life, investment.
 
 Links:
 [[https://github.com/davylin][github]]

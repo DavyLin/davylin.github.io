@@ -14,8 +14,8 @@
 <link>/blog/</link>
 <description><![CDATA[]]></description>
 <language>en</language>
-<pubDate>Fri, 02 Dec 2022 16:17:52 +0800</pubDate>
-<lastBuildDate>Fri, 02 Dec 2022 16:17:52 +0800</lastBuildDate>
+<pubDate>Fri, 02 Dec 2022 16:23:15 +0800</pubDate>
+<lastBuildDate>Fri, 02 Dec 2022 16:23:15 +0800</lastBuildDate>
 <generator>Emacs 28.2 Org-mode 9.5.5</generator>
 <webMaster>linjxljx@gmail.com (kinhung lam)</webMaster>
 <image>
@@ -36,7 +36,7 @@
 ##Axis客户端调用 webservice
 </p>
 
-<pre class="example" id="org767c064">
+<pre class="example" id="orgc5eb562">
 URL endpointURL = new URL("http://localhost:8080/webservice/HelloService");  
             String requestText = "javalinjx"  
             Service service = new Service();  
@@ -99,7 +99,7 @@ Counter Register） * Java虚拟机栈（Java Virtual Machine Stacks） *
 1.use 用来导入clojure.core命名空间
 </p>
 
-<pre class="example" id="org645b479">
+<pre class="example" id="org5827647">
 user&gt;(clojure.core/use 'clojure.core)
 </pre>
 
@@ -107,7 +107,7 @@ user&gt;(clojure.core/use 'clojure.core)
 2.import导入java类
 </p>
 
-<pre class="example" id="org82f4f6b">
+<pre class="example" id="org62dfddc">
 user&gt;(import '(java.io InputStream File))
 java.io.File
 </pre>
@@ -116,7 +116,7 @@ java.io.File
 3.require引入clj到当前命名空间
 </p>
 
-<pre class="example" id="org1cca654">
+<pre class="example" id="org9bb19ef">
 user&gt;(require 'clojure.string)
 nil
 </pre>
@@ -149,7 +149,7 @@ nil
 需要等待的事件都已经发生。如果计数器的值非零，那么=await=会一直阻塞直到计数器为零，或者等待中的线程中断，或者等待超时。
 </p>
 
-<pre class="example" id="orgf7a2dbf">
+<pre class="example" id="org7d69828">
 public class TestHarness {  
     public long timeTasks(int nthreads, final Runnable task) throws InterruptedException {  
         final CountDownLatch startGate = new CountDownLatch(1);  
@@ -242,7 +242,7 @@ Running as a plugin of ElasticSearch (this is the preferred method)
 linux的关键词</b>
 </p>
 
-<pre class="example" id="org6dcea10">
+<pre class="example" id="org43c3f1c">
 [root@localhost ~]# grep 'root' /etc/group
 root:x:0:root
 bin:x:1:root,bin,daemon
@@ -252,7 +252,7 @@ bin:x:1:root,bin,daemon
 ###2.从多个文件中查找关键词
 </p>
 
-<pre class="example" id="orgcbc39c9">
+<pre class="example" id="orgdaf4704">
 [root@localhost ~]# grep 'root' /etc/group /etc/my.cnf
 /etc/group:root:x:0:root
 /etc/my.cnf:user = root
@@ -266,7 +266,7 @@ bin:x:1:root,bin,daemon
 <b>-n是打印行号，-r是在子目录也要查询</b>
 </p>
 
-<pre class="example" id="orgf5ac085">
+<pre class="example" id="org3cb6692">
 grep -n "str" -r ./
 </pre>
 
@@ -299,7 +299,7 @@ grep -n "str" -r ./
 </p>
 
 <p>
-回顾 2016，真是最幸福的一年，最主要是迎来我的小宝宝，哈哈！
+回顾 2016，哈哈！
 </p>
 
 <div id="outline-container-当然也实现了一些小目标" class="outline-4">
@@ -344,7 +344,7 @@ Github真是一个好地方，相信很多程序员们都知道！大家在上�
 <b>1. 创建 /etc/yum.repos.d/mongodb-org-3.0.repo</b>
 </p>
 
-<pre class="example" id="org3bbf1d0">
+<pre class="example" id="orgb76e8cf">
 [mongodb-org-3.0]
 name=MongoDB Repository
 baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/3.0/x86_64/
@@ -392,7 +392,7 @@ enabled=1
 原来是rpm安装，检查并卸载
 </p>
 
-<pre class="example" id="org5825ade">
+<pre class="example" id="orgb4ff256">
 rpm -qa|grep -i mysql
 rpm -ev MySQL-service-5.6.25-1.el7.x86_64
 rpm -ev MySQL-client-5.6.25-1.el7.x86_64
@@ -406,7 +406,7 @@ rpm -ev MySQL-client-5.6.25-1.el7.x86_64
 一般输出内容如下：
 </p>
 
-<pre class="example" id="org6919d46">
+<pre class="example" id="org60139bd">
 mysql-community-release-el7-5.noarch
 mysql-community-client-5.7.7-0.3.rc.el7.x86_64
 mysql-community-libs-5.7.7-0.3.rc.el7.x86_64
@@ -471,8 +471,8 @@ mysql-community-libs-compat-5.7.7-0.3.rc.el7.x86_64
 <guid isPermaLink="false">/blog/2014-04-09-my-first-octopress-blog.html</guid>
 <pubDate>Mon, 24 Mar 2014 18:19:00 +0800</pubDate>
 
-<description><![CDATA[<div id="outline-container-orgfcebe41" class="outline-4">
-<h4 id="orgfcebe41"><span class="section-number-4">12.0.1.</span> &#x2013;Setting up this blog</h4>
+<description><![CDATA[<div id="outline-container-orgf148160" class="outline-4">
+<h4 id="orgf148160"><span class="section-number-4">12.0.1.</span> &#x2013;Setting up this blog</h4>
 <div class="outline-text-4" id="text-12-0-1">
 <p>
 :CUSTOM<sub>ID</sub>: setting-up-this-blog
@@ -535,7 +535,7 @@ Anyway, here's the link to my old blog: <a href="http://javalinjx.iteye.com/">ht
 配置参考如下：
 </p>
 
-<pre class="example" id="org93c099d">
+<pre class="example" id="org30be55f">
 anonymous_enable=NO
 local_enable=YES
 write_enable=YES

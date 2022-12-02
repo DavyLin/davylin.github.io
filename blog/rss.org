@@ -6,7 +6,7 @@
 :PUBDATE:  2014-05-27 14:59:00
 :EMAIL:    linjxljx@gmail.com
 :AUTHOR:   kinhung lam
-:ID:       AD7B1887-32C1-4A53-A5F1-5F6A5FC6544B
+:ID:       85978FE6-2A7C-4935-9F3E-F9EC06D9A56D
 :END:
 ##Axis客户端调用 webservice
 
@@ -31,7 +31,7 @@
 :PUBDATE:  2014-04-11 13:05:00
 :EMAIL:    linjxljx@gmail.com
 :AUTHOR:   kinhung lam
-:ID:       746FAEAB-A9CB-4A8D-88BE-DB7450A9450D
+:ID:       76A3F555-F213-406A-9DEE-8A553FA87D1C
 :END:
 -----
 
@@ -55,7 +55,7 @@ Counter Register） * Java虚拟机栈（Java Virtual Machine Stacks） *
 :PUBDATE:  2014-07-23 11:02:00
 :EMAIL:    linjxljx@gmail.com
 :AUTHOR:   kinhung lam
-:ID:       4A690674-67BE-4E7E-B7F0-95D8B8501967
+:ID:       02BD0508-3B39-41BA-8314-1F9869EA5435
 :END:
 1.use 用来导入clojure.core命名空间
 
@@ -84,7 +84,7 @@ Counter Register） * Java虚拟机栈（Java Virtual Machine Stacks） *
 :PUBDATE:  2014-05-10 15:29:00
 :EMAIL:    linjxljx@gmail.com
 :AUTHOR:   kinhung lam
-:ID:       31314C87-5596-4D12-ACB0-2305794960D6
+:ID:       1BD5FB83-C178-4985-8D93-E6DCE483E547
 :END:
 ###同步工具类之闭锁-CountDownLatch
 
@@ -135,7 +135,7 @@ Counter Register） * Java虚拟机栈（Java Virtual Machine Stacks） *
 :PUBDATE:  2015-12-19 21:53:00
 :EMAIL:    linjxljx@gmail.com
 :AUTHOR:   kinhung lam
-:ID:       F7BEA3AD-C69A-4227-962D-E60D42AB56A3
+:ID:       8BD75B04-04DE-4B6A-88C2-85A018CF81F5
 :END:
 /1. 下载安装包/
 
@@ -160,7 +160,7 @@ Running as a plugin of ElasticSearch (this is the preferred method)
 :PUBDATE:  2014-05-25 17:54:00
 :EMAIL:    linjxljx@gmail.com
 :AUTHOR:   kinhung lam
-:ID:       8DC50638-D173-45F5-8DDF-5AB7FFC8C2D5
+:ID:       DAD4AC7D-5152-4782-8FA5-20D1DCAC7D23
 :END:
 ##grep ###1.从文件中查找关键词 *grep 'linux' text.txt //查找包含
 linux的关键词*
@@ -200,16 +200,16 @@ linux的关键词*
 :PUBDATE:  2017-02-04 11:02:00
 :EMAIL:    linjxljx@gmail.com
 :AUTHOR:   kinhung lam
-:ID:       4059AAA4-9CD7-4174-A2F3-B7F70BB6FDF2
+:ID:       E1E875DB-9395-490A-A3EB-2C20056BDFE1
 :END:
 转眼一年又过去了！大家都很早写好总结和展望了，可是我迟迟未动手，只因为我比较懒。。
 
-回顾 2016，真是最幸福的一年，最主要是迎来我的小宝宝，哈哈！
+回顾 2016，哈哈！
 
 *** 当然也实现了一些小目标：
 :PROPERTIES:
 :CUSTOM_ID: 当然也实现了一些小目标
-:ID:       035D1233-040E-4955-B50D-EC9ADEDF64E1
+:ID:       B144E144-8C24-4BF4-9661-E6123805F44B
 :END:
 跑了一个半程马拉松，虽然是第一次，但还是成功完赛，并取得了一枚小奖牌；
 负责的教育资讯类产品成功上线，虽然目前用户量还不具规模，但也算是小有成就了，希望可以继续变得越来越好！
@@ -221,7 +221,7 @@ linux的关键词*
 :PUBDATE:  2014-08-07 17:24:00
 :EMAIL:    linjxljx@gmail.com
 :AUTHOR:   kinhung lam
-:ID:       841124B5-01D8-4723-9FCF-D2552D3260F9
+:ID:       9467F7A3-C146-47CE-BB40-DD31269FACC0
 :END:
 Github真是一个好地方，相信很多程序员们都知道！大家在上面可能都有多多少少的个人项目。我们常常会关注自己兴趣以及xx大牛的项目，甚至于fork牛人们的项目，慢慢研究。但是牛人们的步伐，岂是偶等可以追逐的，他们可能一天=commit=很多次，这样就会导致我们刚刚=fork=的代码已经不是最新的了，那现在我们就来看下如何更新到原作者的最新代码。
 
@@ -232,7 +232,7 @@ Github真是一个好地方，相信很多程序员们都知道！大家在上�
 :PUBDATE:  2015-12-19 21:54:00
 :EMAIL:    linjxljx@gmail.com
 :AUTHOR:   kinhung lam
-:ID:       03DEE6CC-0394-47D6-A18B-2A7FFEEDF218
+:ID:       5AA0C500-F1C1-447D-ABD3-5B5ED01C1EE1
 :END:
 *1. 创建 /etc/yum.repos.d/mongodb-org-3.0.repo*
 
@@ -269,7 +269,7 @@ Github真是一个好地方，相信很多程序员们都知道！大家在上�
 :PUBDATE:  2015-12-19 21:52:00
 :EMAIL:    linjxljx@gmail.com
 :AUTHOR:   kinhung lam
-:ID:       DD812156-46AD-441A-B394-2CCE0DF8DD77
+:ID:       213737C1-87AC-44E5-BA05-1FA5EBAC711E
 :END:
 原来是rpm安装，检查并卸载
 
@@ -299,7 +299,7 @@ Github真是一个好地方，相信很多程序员们都知道！大家在上�
 :PUBDATE:  2014-07-18 16:09:00
 :EMAIL:    linjxljx@gmail.com
 :AUTHOR:   kinhung lam
-:ID:       01E48797-3182-406D-A340-33C4F2D00805
+:ID:       DB07F70F-6F78-46DB-A428-C9BA0246E867
 :END:
 */--来源于互联网的小故事，虽然可能是某些人丰富想象力的创作，但我觉得挺有意思的，在这里做个记录/*
 
@@ -324,11 +324,11 @@ Github真是一个好地方，相信很多程序员们都知道！大家在上�
 :PUBDATE:  2014-03-24 18:19:00
 :EMAIL:    linjxljx@gmail.com
 :AUTHOR:   kinhung lam
-:ID:       6D1D1137-55B3-41E0-BCCA-5B91FF15387E
+:ID:       E1EC3623-DCA4-49CA-9819-203667834933
 :END:
 *** --Setting up this blog
 :PROPERTIES:
-:ID:       201FE499-F424-4D3C-8ED6-C339E372CDDE
+:ID:       21D2EA6E-9BBF-4E24-B018-9F3D16BADD3B
 :END:
 
 :PROPERTIES:
@@ -347,7 +347,7 @@ Anyway, here's the link to my old blog: http://javalinjx.iteye.com/
 :PUBDATE:  2014-07-17 09:52:00
 :EMAIL:    linjxljx@gmail.com
 :AUTHOR:   kinhung lam
-:ID:       691D2414-69C5-4B1E-99CF-F8B6B7E8BB7B
+:ID:       A3221D30-68FF-4B61-8E6D-377C2CB79DC5
 :END:
 上周经历了一次沉重的心路历程，也许是我内心不够强大，也许是每个人遇到相同的问题都会如此反应。不过总的来说是有惊无险，心也就慢慢释然了。同事们都感觉到我的变化，从一个性格相对开朗到如突然间默不做声，大家都表现出对我的关心，但我却无法告诉他们自己的想法！虽然内心比较痛苦，但却充满着温暖，慢慢在安慰着自己。
 
@@ -362,7 +362,7 @@ Anyway, here's the link to my old blog: http://javalinjx.iteye.com/
 :PUBDATE:  2015-12-19 21:53:00
 :EMAIL:    linjxljx@gmail.com
 :AUTHOR:   kinhung lam
-:ID:       EBB556CC-5836-42CC-964B-7F12E74CC4BF
+:ID:       37D3D0BE-7491-4DD8-A825-830B518D065A
 :END:
 *1. yum install vsftpd*
 

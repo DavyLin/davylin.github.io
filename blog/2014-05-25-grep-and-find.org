@@ -1,0 +1,65 @@
+#+AUTHOR: Kinhung Lam
+#+EMAIL: linjxljx@gmail.com
+#+TITLE: Grep and Find
+#+DATE: <2014-05-25 Sun 17:54>
+
+##grep ###1.从文件中查找关键词 *grep 'linux' text.txt //查找包含
+linux的关键词*
+
+#+begin_example
+[root@localhost ~]# grep 'root' /etc/group
+root:x:0:root
+bin:x:1:root,bin,daemon
+#+end_example
+
+###2.从多个文件中查找关键词
+
+#+begin_example
+[root@localhost ~]# grep 'root' /etc/group /etc/my.cnf
+/etc/group:root:x:0:root
+/etc/my.cnf:user = root
+#+end_example
+
+###3.查找当前目录下以及下辖子目录下所有包含str字符串的文件,会列出文件名.以及该行的内容.以及行号
+
+*-n是打印行号，-r是在子目录也要查询*
+
+#+begin_example
+grep -n "str" -r ./
+#+end_example
+
+*用 -i 搜索的时候可以忽略大小写*
+
+*利用 -r 来完成所有的子目录下面执行相应的查找*
+
+*用-l是打印所有的结果*
+
+#+MORE_LINK:
+
+#+begin_example
+grep -ril 'str' ./
+#+end_example
+
+##find 是查找文件的常用命令
+
+###1.查找在 /etc 目录下所有文件名中含有 mail 的文件
+
+#+begin_example
+[root@localhost ]# find /etc/ -name '*mail*'
+/etc/mail.rc
+/etc/rc.d/rc5.d/K30sendmail
+/etc/rc.d/rc4.d/K30sendmail
+#+end_example
+
+###2.查找文件大小超过指定值的文件
+
+#+begin_example
+[root@localhost ]# find ./ -type f -size +100M
+./test.sql
+#+end_example
+
+###3.最近几天被修改过的文件
+
+#+begin_example
+find . -mtime -2 
+#+end_example

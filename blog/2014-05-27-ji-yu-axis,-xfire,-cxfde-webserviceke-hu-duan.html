@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 星期五, 十二月  2, 2022 at  3:40 下午 -->
+<meta charset="utf-8" />
+<title>A Client of Webservice by Axis/XFire/CXF</title>
+<meta name="author" content="Kinhung Lam" />
+<meta name="generator" content="Org Mode" />
+<meta name="twitter:site" content="@twylo" />
+<meta name="twitter:creator" content="@twylo" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="me" href="https://weibo.com/u/2150445074" />
+<link rel="icon" type="image/png" href="/images/icon/favicon-32x32.png" />
+<link rel="apple-touch-icon-precomposed" href="/images/icon/apple-touch-icon.png" />
+<link rel="alternate" type="application/rss+xml" title="Weblog RSS Feed" href="/blog/rss.xml" />
+<link rel="stylesheet" type="text/css" href="/res/faces.css">
+<link rel="stylesheet" type="text/css" href="/res/style.css">
+</head>
+<body>
+<div id="preamble" class="status">
+<a class="skip-nav-link" href="#content">
+  Skip navigation
+</a>
+<nav>
+  <div class="navitem"><a href="/">Home</a></div>
+  <div class="navitem"><a href="/blog/">Weblog</a></div>
+  <div class="navitem"><a href="/portfolio/">Portfolio</a></div>
+  <div class="navitem"><a href="/resume.html">Resume</a></div>
+  <div class="navitem"><a href="/contact.html">Contact</a></div>
+</nav>
+<div class="published">
+Published 星期二, 五月 27, 2014 at  2:59 下午
+</nav>
+</div>
+<div id="content" class="content">
+<header>
+<h1 class="title">A Client of Webservice by Axis/XFire/CXF</h1>
+</header><p>
+##Axis客户端调用 webservice
+</p>
+
+<pre class="example" id="orgc580030">
+URL endpointURL = new URL("http://localhost:8080/webservice/HelloService");  
+            String requestText = "javalinjx"  
+            Service service = new Service();  
+            Call call = (Call) service.createCall();  
+            call.setTargetEndpointAddress(endpointURL);  
+            call.setOperationName("sayHello");  
+            call.addParameter("xml", XMLType.XSD_STRING, ParameterMode.IN);  
+            call.setReturnClass(String.class);  
+            call.setReturnType(XMLType.XSD_STRING);// 设置返回类型  
+            Object [] obj = new Object[]{ requestText };  
+            String result = (String) call.invoke(obj);
+</pre>
+
+<p>
+##XFire客户端调用
+</p>
+
+<pre class="example" id="org5520edb">
+public void call() throws Exception {  
+        Service service = new ObjectServiceFactory().create(HelloService.class);  
+        XFireProxyFactory factory = new XFireProxyFactory(XFireFactory.newInstance().getXFire());  
+        String url = "http://localhost:8080/webservice/HelloService";  
+        SmsService it = (SmsService)factory.create(service, url);  
+        int b = it.sayHello("javalinjx");  
+    }
+</pre>
+
+<p>
+##CXF客户端调用
+</p>
+
+<pre class="example" id="org9e0d53d">
+JaxWsProxyFactoryBean factory1 = new JaxWsProxyFactoryBean();  
+factory1.setServiceClass(UaAuthInterfaces.class);  
+        factory1.setAddress("http://localhost:8080/webservices/HelloService");  
+        UaAuthInterfaces u = (UaAuthInterfaces) factory1.create();  
+                u.sayHello("javalinjx");
+</pre>
+</div>
+<div id="postamble" class="status">
+<div id="footer">
+Proudly <a href="https://kinhung.me/blog/0110_emacs_blogging_for_fun_and_profit.html">published</a> with <a href="https://www.gnu.org/software/emacs/">Emacs</a> and <a href="https://orgmode.org/">Org Mode</a>. This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> License. <a href="https://kinhung.me/privacy.html">Privacy Policy</a></div>
+</div>
+</body>
+</html>

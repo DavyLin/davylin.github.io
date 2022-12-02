@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2022-12-02 五 15:40 -->
+<!-- 星期五, 十二月  2, 2022 at  3:40 下午 -->
 <meta charset="utf-8" />
-<title>Kinhung Lam</title>
+<title>Elasticsearch installed tips</title>
+<meta name="author" content="Kinhung Lam" />
 <meta name="generator" content="Org Mode" />
 <meta name="twitter:site" content="@twylo" />
 <meta name="twitter:creator" content="@twylo" />
@@ -27,58 +28,48 @@
   <div class="navitem"><a href="/resume.html">Resume</a></div>
   <div class="navitem"><a href="/contact.html">Contact</a></div>
 </nav>
+<div class="published">
+Published 星期六, 十二月 19, 2015 at  9:53 下午
+</nav>
 </div>
 <div id="content" class="content">
 <header>
-<h1 class="title">Kinhung Lam</h1>
-</header><div class="resumecontact" id="org5912372">
-<p>
-linjxljx@gmail.com &bull;
-<a href="https://github.com/davylin/">github</a> &bull;
-<a href="https://www.linkedin.cn/incareer/in/davy-lin-4a084260">linkedin</a> &bull;
-<a href="https://kinhung.me">homepage</a>
+<h1 class="title">Elasticsearch installed tips</h1>
+</header><p>
+<i>1. 下载安装包</i>
 </p>
 
-</div>
-
-<div id="outline-container-org01901d6" class="outline-2">
-<h2 id="org01901d6">Profile</h2>
-<div class="outline-text-2" id="text-org01901d6">
 <p>
-I am a programmer at ylkj.com, i have 14 years of
-software development experience and 3 years of
-marathon running experience.
-• I live in Taijiang,FuZhou,FuJian in china.
-• My major programming languages are Java/
-JavaScript.Also I'm interested in Clojure/Go, Scheme
-and Rust etc.
-• During past 14 years, I've developed enterprise
-applications, web applications, mobile applications
-etc.I'm a faithful user of Mac with 10 years of
-experience.
+<i>2. 修改config配置文件</i>
 </p>
-</div>
-</div>
 
-<div id="outline-container-orga1926a9" class="outline-2 skills">
-<h2 id="orga1926a9">Core Skills</h2>
-<div class="outline-text-2" id="text-orga1926a9">
-<dl class="org-dl">
-<dt>Languages</dt><dd>Extensive professional experience with Java, Rust, Clojure,
-and Ruby. Other work and personal project experience with Python,
-JavaScript.</dd>
-<dt>Technologies</dt><dd>Linux, Mac, Docker, Android, iOS, Vertica,
-MySQL, MariaDB.</dd>
-<dt>Fundamentals</dt><dd>Network &amp; Web, Stream Processing, Object-Oriented
-Design, Functional Programming, Test-Driven Development,
-Continuous Delivery, Virtualization.</dd>
-</dl>
-</div>
-</div>
+<p>
+<i>3. 运行 ./bin/elasticsearch</i>
+</p>
 
-<div id="outline-container-org82e8883" class="outline-2">
-<h2 id="org82e8883">Work Experience</h2>
-</div>
+<p>
+<i>4. 验证：curl 'http://localhost:9200</i>?pretty'/
+</p>
+
+<p>
+<b>5. 关闭：curl -XPOST 'http://localhost:9200/_shutdown'</b>
+</p>
+
+<p>
+<i>6. 安装head plugin</i>
+</p>
+
+<p>
+Running as a plugin of ElasticSearch (this is the preferred method)
+</p>
+
+<p>
+<code>elasticsearch/bin/plugin -install mobz/elasticsearch-head</code>
+</p>
+
+<p>
+浏览器打开=<a href="http://localhost:9200/_plugin/head/=%E6%9F%A5%E7%9C%8B%E6%98%AF%E5%90%A6%E6%88%90%E5%8A%9F%E5%AE%89%E8%A3%85">http://localhost:9200/_plugin/head/=%E6%9F%A5%E7%9C%8B%E6%98%AF%E5%90%A6%E6%88%90%E5%8A%9F%E5%AE%89%E8%A3%85</a>
+</p>
 </div>
 <div id="postamble" class="status">
 <div id="footer">

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2022-12-02 五 15:40 -->
+<!-- 星期五, 十二月  2, 2022 at  3:40 下午 -->
 <meta charset="utf-8" />
-<title>&lrm;</title>
+<title>Grep and Find</title>
 <meta name="author" content="Kinhung Lam" />
 <meta name="generator" content="Org Mode" />
 <meta name="twitter:site" content="@twylo" />
@@ -28,27 +28,93 @@
   <div class="navitem"><a href="/resume.html">Resume</a></div>
   <div class="navitem"><a href="/contact.html">Contact</a></div>
 </nav>
+<div class="published">
+Published 星期日, 五月 25, 2014 at  5:54 下午
+</nav>
 </div>
 <div id="content" class="content">
-
-<div id="outline-container-org030ee0a" class="outline-2">
-<h2 id="org030ee0a">Loom Communications Homepage</h2>
-<div class="outline-text-2" id="text-org030ee0a">
-<p>
-This is the org-mode source for the Loom Communications home page.
+<header>
+<h1 class="title">Grep and Find</h1>
+</header><p>
+##grep ###1.从文件中查找关键词 <b>grep 'linux' text.txt //查找包含
+linux的关键词</b>
 </p>
-</div>
-</div>
 
-<div id="outline-container-org923d3b5" class="outline-2">
-<h2 id="org923d3b5">Copyright</h2>
-<div class="outline-text-2" id="text-org923d3b5">
+<pre class="example" id="orgf6b17b2">
+[root@localhost ~]# grep 'root' /etc/group
+root:x:0:root
+bin:x:1:root,bin,daemon
+</pre>
+
 <p>
-Copyright 2007–2022, Kinhung Lam. Morabito &lt;linjxljx@gmail.com&gt;. All Rights
-Reserved.
+###2.从多个文件中查找关键词
 </p>
-</div>
-</div>
+
+<pre class="example" id="org1b5d054">
+[root@localhost ~]# grep 'root' /etc/group /etc/my.cnf
+/etc/group:root:x:0:root
+/etc/my.cnf:user = root
+</pre>
+
+<p>
+###3.查找当前目录下以及下辖子目录下所有包含str字符串的文件,会列出文件名.以及该行的内容.以及行号
+</p>
+
+<p>
+<b>-n是打印行号，-r是在子目录也要查询</b>
+</p>
+
+<pre class="example" id="orgd843359">
+grep -n "str" -r ./
+</pre>
+
+<p>
+<b>用 -i 搜索的时候可以忽略大小写</b>
+</p>
+
+<p>
+<b>利用 -r 来完成所有的子目录下面执行相应的查找</b>
+</p>
+
+<p>
+<b>用-l是打印所有的结果</b>
+</p>
+
+<pre class="example" id="org072ef5d">
+grep -ril 'str' ./
+</pre>
+
+<p>
+##find 是查找文件的常用命令
+</p>
+
+<p>
+###1.查找在 /etc 目录下所有文件名中含有 mail 的文件
+</p>
+
+<pre class="example" id="orgf4478f2">
+[root@localhost ]# find /etc/ -name '*mail*'
+/etc/mail.rc
+/etc/rc.d/rc5.d/K30sendmail
+/etc/rc.d/rc4.d/K30sendmail
+</pre>
+
+<p>
+###2.查找文件大小超过指定值的文件
+</p>
+
+<pre class="example" id="org9c03814">
+[root@localhost ]# find ./ -type f -size +100M
+./test.sql
+</pre>
+
+<p>
+###3.最近几天被修改过的文件
+</p>
+
+<pre class="example" id="org943a433">
+find . -mtime -2 
+</pre>
 </div>
 <div id="postamble" class="status">
 <div id="footer">

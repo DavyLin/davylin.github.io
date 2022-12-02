@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2022-12-02 五 15:40 -->
+<!-- 星期五, 十二月  2, 2022 at  3:40 下午 -->
 <meta charset="utf-8" />
-<title>Kinhung Lam</title>
+<title>Clojure Programming</title>
+<meta name="author" content="Kinhung Lam" />
 <meta name="generator" content="Org Mode" />
 <meta name="twitter:site" content="@twylo" />
 <meta name="twitter:creator" content="@twylo" />
@@ -27,58 +28,84 @@
   <div class="navitem"><a href="/resume.html">Resume</a></div>
   <div class="navitem"><a href="/contact.html">Contact</a></div>
 </nav>
+<div class="published">
+Published 星期三, 七月 23, 2014 at 11:02 上午
+</nav>
 </div>
 <div id="content" class="content">
 <header>
-<h1 class="title">Kinhung Lam</h1>
-</header><div class="resumecontact" id="org5912372">
-<p>
-linjxljx@gmail.com &bull;
-<a href="https://github.com/davylin/">github</a> &bull;
-<a href="https://www.linkedin.cn/incareer/in/davy-lin-4a084260">linkedin</a> &bull;
-<a href="https://kinhung.me">homepage</a>
+<h1 class="title">Clojure Programming</h1>
+</header><p>
+1.use 用来导入clojure.core命名空间
 </p>
 
-</div>
+<pre class="example" id="orgffd390b">
+user&gt;(clojure.core/use 'clojure.core)
+</pre>
 
-<div id="outline-container-org01901d6" class="outline-2">
-<h2 id="org01901d6">Profile</h2>
-<div class="outline-text-2" id="text-org01901d6">
 <p>
-I am a programmer at ylkj.com, i have 14 years of
-software development experience and 3 years of
-marathon running experience.
-• I live in Taijiang,FuZhou,FuJian in china.
-• My major programming languages are Java/
-JavaScript.Also I'm interested in Clojure/Go, Scheme
-and Rust etc.
-• During past 14 years, I've developed enterprise
-applications, web applications, mobile applications
-etc.I'm a faithful user of Mac with 10 years of
-experience.
+2.import导入java类
 </p>
-</div>
-</div>
 
-<div id="outline-container-orga1926a9" class="outline-2 skills">
-<h2 id="orga1926a9">Core Skills</h2>
-<div class="outline-text-2" id="text-orga1926a9">
-<dl class="org-dl">
-<dt>Languages</dt><dd>Extensive professional experience with Java, Rust, Clojure,
-and Ruby. Other work and personal project experience with Python,
-JavaScript.</dd>
-<dt>Technologies</dt><dd>Linux, Mac, Docker, Android, iOS, Vertica,
-MySQL, MariaDB.</dd>
-<dt>Fundamentals</dt><dd>Network &amp; Web, Stream Processing, Object-Oriented
-Design, Functional Programming, Test-Driven Development,
-Continuous Delivery, Virtualization.</dd>
-</dl>
-</div>
-</div>
+<pre class="example" id="orgb362b76">
+user&gt;(import '(java.io InputStream File))
+java.io.File
+</pre>
 
-<div id="outline-container-org82e8883" class="outline-2">
-<h2 id="org82e8883">Work Experience</h2>
-</div>
+<p>
+3.require引入clj到当前命名空间
+</p>
+
+<pre class="example" id="orgbe71ed6">
+user&gt;(require 'clojure.string)
+nil
+</pre>
+
+<p>
+4.查看信息
+</p>
+
+<pre class="example" id="org8ec06fd">
+user&gt;(find-doc "ns-")
+</pre>
+
+<p>
+5.解构
+</p>
+
+<pre class="example" id="org5c12696">
+user&gt;(let [[x y] [1 2 3]] 
+            [x y])
+[1 2]
+user&gt; (greet-author-2 [fname {:first-name}]
+            (println "hello, " fname))
+; Evaluation aborted.
+user&gt; (let [[_ _ z] [1 2 3]]
+    z)
+3
+user&gt; (let [[_ _ z] [1 2 3]]
+    _)
+2
+user&gt; (require '[clojure.string :as str])
+nil
+user&gt; (let [[x y :as coords] [1 2 3 4 5 6]]
+        (str "x: " x ", y: " y ", total dimensions " (count                 coords)))
+"x: 1, y: 2, total dimensions 6"
+</pre>
+
+<p>
+6.常用数据类型
+</p>
+
+<pre class="example" id="org8477470">
+Keyword   :tag, :doc
+List     (1 2 3), (pringln "foo")
+Map  {:name "bill", :age 42}
+Set  #{:snap  :crackle  :pop}
+Symbol    user/foo,
+          java.lang.String
+Vector   [1 2 3]
+</pre>
 </div>
 <div id="postamble" class="status">
 <div id="footer">

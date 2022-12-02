@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 星期五, 十二月  2, 2022 at  3:40 下午 -->
+<meta charset="utf-8" />
+<title>Merge the project forked from github</title>
+<meta name="author" content="Kinhung Lam" />
+<meta name="generator" content="Org Mode" />
+<meta name="twitter:site" content="@twylo" />
+<meta name="twitter:creator" content="@twylo" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="me" href="https://weibo.com/u/2150445074" />
+<link rel="icon" type="image/png" href="/images/icon/favicon-32x32.png" />
+<link rel="apple-touch-icon-precomposed" href="/images/icon/apple-touch-icon.png" />
+<link rel="alternate" type="application/rss+xml" title="Weblog RSS Feed" href="/blog/rss.xml" />
+<link rel="stylesheet" type="text/css" href="/res/faces.css">
+<link rel="stylesheet" type="text/css" href="/res/style.css">
+</head>
+<body>
+<div id="preamble" class="status">
+<a class="skip-nav-link" href="#content">
+  Skip navigation
+</a>
+<nav>
+  <div class="navitem"><a href="/">Home</a></div>
+  <div class="navitem"><a href="/blog/">Weblog</a></div>
+  <div class="navitem"><a href="/portfolio/">Portfolio</a></div>
+  <div class="navitem"><a href="/resume.html">Resume</a></div>
+  <div class="navitem"><a href="/contact.html">Contact</a></div>
+</nav>
+<div class="published">
+Published 星期四, 八月  7, 2014 at  5:24 下午
+</nav>
+</div>
+<div id="content" class="content">
+<header>
+<h1 class="title">Merge the project forked from github</h1>
+</header><p>
+Github真是一个好地方，相信很多程序员们都知道！大家在上面可能都有多多少少的个人项目。我们常常会关注自己兴趣以及xx大牛的项目，甚至于fork牛人们的项目，慢慢研究。但是牛人们的步伐，岂是偶等可以追逐的，他们可能一天=commit=很多次，这样就会导致我们刚刚=fork=的代码已经不是最新的了，那现在我们就来看下如何更新到原作者的最新代码。
+</p>
+
+<p>
+下面就不费话了，直接上代码了，projectName为你的项目名，操作过程如下：
+</p>
+
+<p>
+#+begin_example
+/volumes/hdd/work/ideaprojects/opensrc/projectName git:(master) &gt;git branch -a
+</p>
+<ul class="org-ul">
+<li>master</li>
+</ul>
+<p>
+remotes/origin/HEAD -&gt; origin/master
+remotes/origin/master
+➜  /volumes/hdd/work/ideaprojects/opensrc/projectName git:(master) &gt;git remote add  remoteProjectName   <a href="https://github.com/***.git">https://github.com/***.git</a>
+➜  /volumes/hdd/work/ideaprojects/opensrc/projectName git:(master) &gt;ls
+readme    resources src       test      testlibs  web
+➜  /volumes/hdd/work/ideaprojects/opensrc/projectName git:(master) &gt;git fetch remoteProjectName
+remote: Counting objects: 2840, done.
+remote: Compressing objects: 100% (1109/1109), done.
+remote: Total 2840 (delta 1249), reused 2761 (delta 1185)
+Receiving objects: 100% (2840/2840), 10.48 MiB | 668.00 KiB/s, done.
+Resolving deltas: 100% (1249/1249), done.
+From <a href="https://github.com/">https://github.com/</a>***
+</p>
+<div id="outline-container-org2fe4cca" class="outline-2">
+<h2 id="org2fe4cca">[new branch]      master     -&gt; remoteProjectName/master</h2>
+<div class="outline-text-2" id="text-org2fe4cca">
+<p>
+➜  /volumes/hdd/work/ideaprojects/opensrc/projectName git:(master) &gt;git checkout -b     remoteProjectName remoteProjectName/master
+Branch remoteProjectName set up to track remote branch master from remoteProjectName.
+Switched to a new branch 'remoteProjectName'
+➜  /volumes/hdd/work/ideaprojects/opensrc/projectName git:(remoteProjectName) &gt;git branch -a
+master
+</p>
+</div>
+</div>
+<div id="outline-container-orgec62977" class="outline-2">
+<h2 id="orgec62977">remoteProjectName</h2>
+<div class="outline-text-2" id="text-orgec62977">
+<p>
+remotes/origin/HEAD -&gt; origin/master
+remotes/origin/master
+remotes/remoteProjectName/master
+➜  /volumes/hdd/work/ideaprojects/opensrc/projectName git:(remoteProjectName) &gt;git checkout     master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+➜  /volumes/hdd/work/ideaprojects/opensrc/projectName git:(master) &gt;git merge   remoteProjectName/master
+Updating cf96d07..edbec5a
+Fast-forward
+.gitignore                                                        |   8 +-
+readme                                                            |  40 +-
+req.txt                                                           |   2 +
+&#x2026;
+&#x2026;
+&#x2026;
+</p>
+
+<p>
+➜  /volumes/hdd/work/ideaprojects/opensrc/projectName git:(master) &gt;
+➜  /volumes/hdd/work/ideaprojects/opensrc/projectName git:(master) &gt;
+➜  /volumes/hdd/work/ideaprojects/opensrc/projectName git:(master) &gt;ls
+readme     req.txt    <b>*</b>        
+➜  /volumes/hdd/work/ideaprojects/opensrc/projectName git:(master) &gt;git push origin master
+Counting objects: 2844, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (1045/1045), done.
+Writing objects: 100% (2841/2841), 10.48 MiB | 282.00 KiB/s, done.
+Total 2841 (delta 1250), reused 2840 (delta 1249)
+To git@github.com:DavyLin/***.git
+cf96d07..edbec5a  master -&gt; master
+#+end_example
+</p>
+
+<p>
+到这里就完成了更新代码的操作，想想=Git=还真是强大，=Github=真心好:)
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<div id="footer">
+Proudly <a href="https://kinhung.me/blog/0110_emacs_blogging_for_fun_and_profit.html">published</a> with <a href="https://www.gnu.org/software/emacs/">Emacs</a> and <a href="https://orgmode.org/">Org Mode</a>. This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> License. <a href="https://kinhung.me/privacy.html">Privacy Policy</a></div>
+</div>
+</body>
+</html>

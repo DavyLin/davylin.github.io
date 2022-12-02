@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 星期五, 十二月  2, 2022 at  3:40 下午 -->
+<meta charset="utf-8" />
+<title>Mysql installed and configure</title>
+<meta name="author" content="Kinhung Lam" />
+<meta name="generator" content="Org Mode" />
+<meta name="twitter:site" content="@twylo" />
+<meta name="twitter:creator" content="@twylo" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="me" href="https://weibo.com/u/2150445074" />
+<link rel="icon" type="image/png" href="/images/icon/favicon-32x32.png" />
+<link rel="apple-touch-icon-precomposed" href="/images/icon/apple-touch-icon.png" />
+<link rel="alternate" type="application/rss+xml" title="Weblog RSS Feed" href="/blog/rss.xml" />
+<link rel="stylesheet" type="text/css" href="/res/faces.css">
+<link rel="stylesheet" type="text/css" href="/res/style.css">
+</head>
+<body>
+<div id="preamble" class="status">
+<a class="skip-nav-link" href="#content">
+  Skip navigation
+</a>
+<nav>
+  <div class="navitem"><a href="/">Home</a></div>
+  <div class="navitem"><a href="/blog/">Weblog</a></div>
+  <div class="navitem"><a href="/portfolio/">Portfolio</a></div>
+  <div class="navitem"><a href="/resume.html">Resume</a></div>
+  <div class="navitem"><a href="/contact.html">Contact</a></div>
+</nav>
+<div class="published">
+Published 星期六, 十二月 19, 2015 at  9:52 下午
+</nav>
+</div>
+<div id="content" class="content">
+<header>
+<h1 class="title">Mysql installed and configure</h1>
+</header><ul class="org-ul">
+<li>原来是rpm安装，检查并卸载</li>
+</ul>
+
+<pre class="example" id="org745ebac">
+rpm -qa|grep -i mysql
+rpm -ev MySQL-service-5.6.25-1.el7.x86_64
+rpm -ev MySQL-client-5.6.25-1.el7.x86_64
+</pre>
+
+<ul class="org-ul">
+<li>原来是yum安装，检查并卸载 <code>rpm -qa|grep mysql</code></li>
+</ul>
+
+<p>
+一般输出内容如下：
+</p>
+
+<pre class="example" id="org7ec559b">
+mysql-community-release-el7-5.noarch
+mysql-community-client-5.7.7-0.3.rc.el7.x86_64
+mysql-community-libs-5.7.7-0.3.rc.el7.x86_64
+mysql-community-server-5.7.7-0.3.rc.el7.x86_64
+mysql-community-common-5.7.7-0.3.rc.el7.x86_64
+mysql-community-libs-compat-5.7.7-0.3.rc.el7.x86_64
+</pre>
+
+<p>
+执行卸载命令=yum remove mysql-community-release-el7-5.noarch=
+</p>
+
+<p>
+####安装说明
+</p>
+
+<p>
+<b>0、先建mysql用户,mysql组，然后执行命令安装mysql</b>
+</p>
+
+<pre class="example" id="org64d535a">
+rpm -ivh MySQL-server-5.6.25-1.el7.x86_64.rpm
+rpm -ivh MySQL-client-5.6.25-1.el7.x86_64.rpm
+</pre>
+
+<p>
+<b>1、你可以自己弄个=cnf=配置文件，里面配置改好，命名随便，比如=my_3306.cnf=</b>
+</p>
+
+<p>
+<b>2、mysql的目录配置好，=cnf=放到目录下</b>
+</p>
+
+<p>
+<b>3、进行初始化=mysql_install_db=命令初始化</b>
+</p>
+
+<p>
+<b>4、=mysqld_safe=启动mysql</b>
+</p>
+
+<p>
+####安装详细步骤
+</p>
+
+<p>
+<b>0、执行命令安装mysql（见上面安装说明）</b> <b>1、配置my.cnf文件</b>
+</p>
+
+<p>
+一般我会安装在=/data/mysql/3306/my_3306.cnf=这个位置
+</p>
+
+<p>
+<b>2、安装目录初始化</b>
+</p>
+
+<p>
+<code>mysql_install_db --user=mysql --basedir=/usr --datadir=/data/mysql/3306/data --defaults-extra-file=/data/mysql/3306/my_3306.cnf</code>
+</p>
+
+<p>
+<b>3、启动服务</b>
+</p>
+
+<p>
+<code>mysqld_safe --defaults-extra-file=/data/mysql/3306/my_3306.cnf &amp;</code>
+</p>
+
+<p>
+<b>4、停止服务</b>
+</p>
+
+<p>
+<code>mysqladmin -uroot -p -S /data/mysql/3306/mysql_3306.sock shutdown</code>
+</p>
+
+<div id="outline-container-配置数据账户" class="outline-2">
+<h2 id="配置数据账户">配置数据账户：</h2>
+<div class="outline-text-2" id="text-配置数据账户">
+<p>
+<b>1.mysql -uroot -h127.0.0.1 -P3306</b>
+</p>
+
+<p>
+<b>2.修改密码 set password=PASSWORD('root');</b>
+</p>
+
+<p>
+<b>3. 增加账号</b>
+</p>
+
+<pre class="example" id="org4c856d2">
+grant all on *.* to 'davylin'@'%' identified by 'davylin';
+
+flush privileges; 
+</pre>
+</div>
+</div>
+
+<div id="outline-container-停止服务" class="outline-2">
+<h2 id="停止服务">停止服务</h2>
+<div class="outline-text-2" id="text-停止服务">
+<p>
+<code>mysqladmin -uroot -p -S /data/mysql/3306/mysql_3306.sock shutdown</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-开机自动启动rc.local方式" class="outline-2">
+<h2 id="开机自动启动rc.local方式">开机自动启动（rc.local方式）</h2>
+<div class="outline-text-2" id="text-开机自动启动rc.local方式">
+<p>
+=vi /etc/rc.d/rc.local=最后一行增加
+</p>
+
+<p>
+<code>export JAVA_HOME=/opt/jdk1.7.0_79</code> // 需要依赖jdk的服务，比如tomcat
+</p>
+
+<p>
+<code>mysqld_safe --defaults-extra-file=/data/mysql/3306/my_3306.cnf &amp;</code>
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<div id="footer">
+Proudly <a href="https://kinhung.me/blog/0110_emacs_blogging_for_fun_and_profit.html">published</a> with <a href="https://www.gnu.org/software/emacs/">Emacs</a> and <a href="https://orgmode.org/">Org Mode</a>. This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> License. <a href="https://kinhung.me/privacy.html">Privacy Policy</a></div>
+</div>
+</body>
+</html>

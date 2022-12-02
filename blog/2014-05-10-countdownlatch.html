@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 星期五, 十二月  2, 2022 at  3:40 下午 -->
+<meta charset="utf-8" />
+<title>CountDownLatch</title>
+<meta name="author" content="Kinhung Lam" />
+<meta name="generator" content="Org Mode" />
+<meta name="twitter:site" content="@twylo" />
+<meta name="twitter:creator" content="@twylo" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="me" href="https://weibo.com/u/2150445074" />
+<link rel="icon" type="image/png" href="/images/icon/favicon-32x32.png" />
+<link rel="apple-touch-icon-precomposed" href="/images/icon/apple-touch-icon.png" />
+<link rel="alternate" type="application/rss+xml" title="Weblog RSS Feed" href="/blog/rss.xml" />
+<link rel="stylesheet" type="text/css" href="/res/faces.css">
+<link rel="stylesheet" type="text/css" href="/res/style.css">
+</head>
+<body>
+<div id="preamble" class="status">
+<a class="skip-nav-link" href="#content">
+  Skip navigation
+</a>
+<nav>
+  <div class="navitem"><a href="/">Home</a></div>
+  <div class="navitem"><a href="/blog/">Weblog</a></div>
+  <div class="navitem"><a href="/portfolio/">Portfolio</a></div>
+  <div class="navitem"><a href="/resume.html">Resume</a></div>
+  <div class="navitem"><a href="/contact.html">Contact</a></div>
+</nav>
+<div class="published">
+Published 星期六, 五月 10, 2014 at  3:29 下午
+</nav>
+</div>
+<div id="content" class="content">
+<header>
+<h1 class="title">CountDownLatch</h1>
+</header><p>
+###同步工具类之闭锁-CountDownLatch
+</p>
+
+<p>
+/闭锁/是一种同步工具类，可以延迟线程的进度直到其到达终止状态。闭锁的作用相当于一扇门：在闭锁到达结束状态之前，这扇门一直是关闭的，并且没有
+任何线程能通过，当到达结束状态时，这扇门会打开并允许所有的线程通过。当闭锁到达结束状态后，将不会再改变状态，因此这扇门将永远保持打开状态。
+闭锁可以用来确保某些活动直到其他活动都完成后才继续执行。
+</p>
+
+<p>
+*=CountDownLatch=*是一种灵活的闭锁实现，可以在上述各种情况中使用，它可以使一个或多个线程等待一组事件发生。闭锁状态包括一个计数器，该计数器
+被初始化为一个正数，表示需要等待的事件数量。=countDown=方法递减计数器，表示有一个事件已经发生了，而await方法等待计数器达到零，这表示所有
+需要等待的事件都已经发生。如果计数器的值非零，那么=await=会一直阻塞直到计数器为零，或者等待中的线程中断，或者等待超时。
+</p>
+
+<pre class="example" id="org2c2b71b">
+public class TestHarness {  
+    public long timeTasks(int nthreads, final Runnable task) throws InterruptedException {  
+        final CountDownLatch startGate = new CountDownLatch(1);  
+        final CountDownLatch endGate = new CountDownLatch(nthreads);  
+
+        for (int i = 0; i &lt; nthreads; i++) {  
+        Thread t = new Thread(){  
+            @Override  
+            public void run() {  
+                try{  
+                    startGate.await();  
+                    try{  
+                        task.run();  
+                    }finally {  
+                        endGate.countDown();  
+                    }  
+                } catch (InterruptedException ignored) {}  
+            }  
+        };  
+        t.start();  
+        }  
+
+        long start = System.nanoTime();  
+        startGate.countDown();  
+        endGate.await();  
+        long end = System.nanoTime();  
+        return end-start;  
+    }  
+}  
+</pre>
+
+<p>
+=startGate=计数器的初始值为1，而=endGate=计数器的初始值为工作线程的数量。每个工作线程首先要做的就是在startGate上等待，从而确保所有线程都就绪后
+才开始执行。而每个线程要做的最后一件事情是将调用=endGate=的=countDown=方法减1，这能使主线程高效地等待直到所有工作线程都执行完成，因此可以更准确
+地统计所消耗的时间
+</p>
+
+<p>
+*ps.
+为什么要在上例中使用闭锁，而不是在线程创建后就立即启动？或许，我们希望测试n个线程并发执行某个任务时需要的时间。如果在创建线程后立即启动
+它们，那么先启动的线程将“领先”后启动的线程，并且活跃线程数量会随着时间的推移而增加或减少，竞争程度也在不断发生变化。*
+</p>
+</div>
+<div id="postamble" class="status">
+<div id="footer">
+Proudly <a href="https://kinhung.me/blog/0110_emacs_blogging_for_fun_and_profit.html">published</a> with <a href="https://www.gnu.org/software/emacs/">Emacs</a> and <a href="https://orgmode.org/">Org Mode</a>. This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> License. <a href="https://kinhung.me/privacy.html">Privacy Policy</a></div>
+</div>
+</body>
+</html>

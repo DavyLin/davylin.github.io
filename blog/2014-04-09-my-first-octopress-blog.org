@@ -1,0 +1,18 @@
+#+AUTHOR: Kinhung Lam
+#+EMAIL: linjxljx@gmail.com
+#+TITLE: Setting up this blog
+#+DATE: <2017-03-24 Fri 18:19>
+#+OPTIONS: ':t
+
+*** --Setting up this blog
+
+:PROPERTIES:
+:CUSTOM_ID: setting-up-this-blog
+:END:
+Apparently I'm using emacs org mode to power this
+blog.Many thanks for the nice framework that save me a lot of time to
+get up to speed.I probably wouldn't have decided to move my blog here in
+the first place if there weren't ready-to-use solutions for lazy people
+like me.
+
+Anyway, here's the link to my old blog: http://javalinjx.iteye.com/

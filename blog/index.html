@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Friday, December  2, 2022 at 11:36 AM -->
+<!-- 星期五, 十二月  2, 2022 at  3:40 下午 -->
 <meta charset="utf-8" />
 <title>Kinhung Lam ∴ A Weblog</title>
 <meta name="author" content="kinhung lam" />
@@ -33,12 +33,662 @@
 <header>
 <h1 class="title">Kinhung Lam ∴ A Weblog</h1>
 </header>
-<div id="outline-container-orgc725454" class="outline-2">
-<h2 id="orgc725454"><a href="sitemap.html">Sitemap</a></h2>
-<div class="outline-text-2" id="text-orgc725454">
-<div class="published" id="orge5ae4f6">
+<div id="outline-container-org540ca00" class="outline-2">
+<h2 id="org540ca00"><a href="sitemap.html">Sitemap</a></h2>
+<div class="outline-text-2" id="text-org540ca00">
+<div class="published" id="org425fcca">
 <p>
-Thursday, December  1, 2022 at  2:37 PM CST
+星期四, 十二月  1, 2022 at  2:37 下午 CST
+</p>
+
+</div>
+
+<hr>
+</div>
+</div>
+<div id="outline-container-org100ec96" class="outline-2">
+<h2 id="org100ec96"><a href="2014-04-09-my-first-octopress-blog.html">Setting up this blog</a></h2>
+<div class="outline-text-2" id="text-org100ec96">
+<div class="published" id="org9284b26">
+<p>
+星期五, 三月 24, 2017 at  6:19 下午 CST
+</p>
+
+</div>
+</div>
+<div id="outline-container-org2065006" class="outline-4">
+<h4 id="org2065006">&#x2013;Setting up this blog</h4>
+<div class="outline-text-4" id="text-org2065006">
+<p>
+:CUSTOM_ID: setting-up-this-blog
+</p>
+<p>
+Apparently I'm using emacs org mode to power this
+blog.Many thanks for the nice framework that save me a lot of time to
+get up to speed.I probably wouldn't have decided to move my blog here in
+the first place if there weren't ready-to-use solutions for lazy people
+like me.
+</p>
+
+<p>
+Anyway, here's the link to my old blog: <a href="http://javalinjx.iteye.com/">http://javalinjx.iteye.com/</a>
+</p>
+<hr>
+</div>
+</div>
+</div>
+<div id="outline-container-org5222d81" class="outline-2">
+<h2 id="org5222d81"><a href="2017-02-04-2016-personal-summary.html">Looking back on 2016 and looking forward to 2017</a></h2>
+<div class="outline-text-2" id="text-org5222d81">
+<div class="published" id="orgd93c307">
+<p>
+星期六, 二月  4, 2017 at 11:02 上午 CST
+</p>
+
+</div>
+<p>
+转眼一年又过去了！大家都很早写好总结和展望了，可是我迟迟未动手，只因为我比较懒。。
+</p>
+
+<p>
+回顾 2016，真是最幸福的一年，最主要是迎来我的小宝宝，哈哈！
+</p>
+</div>
+
+<div id="outline-container-当然也实现了一些小目标" class="outline-4">
+<h4 id="当然也实现了一些小目标">当然也实现了一些小目标：</h4>
+<div class="outline-text-4" id="text-当然也实现了一些小目标">
+<p>
+跑了一个半程马拉松，虽然是第一次，但还是成功完赛，并取得了一枚小奖牌；
+负责的教育资讯类产品成功上线，虽然目前用户量还不具规模，但也算是小有成就了，希望可以继续变得越来越好！
+</p>
+
+<div class="morelink" id="org801236d">
+<p>
+<a href="2017-02-04-2016-personal-summary.html">Read More →</a>
+</p>
+
+</div>
+
+<hr>
+</div>
+</div>
+</div>
+<div id="outline-container-org80bfbbc" class="outline-2">
+<h2 id="org80bfbbc"><a href="2015-12-19-centos-mongo-install.html">Mongo installed and confiure</a></h2>
+<div class="outline-text-2" id="text-org80bfbbc">
+<div class="published" id="org92c1a87">
+<p>
+星期六, 十二月 19, 2015 at  9:54 下午 CST
+</p>
+
+</div>
+<p>
+<b>1. 创建 /etc/yum.repos.d/mongodb-org-3.0.repo</b>
+</p>
+
+<pre class="example" id="org7a05618">
+[mongodb-org-3.0]
+name=MongoDB Repository
+baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/3.0/x86_64/
+gpgcheck=0
+enabled=1
+</pre>
+
+<p>
+<b>2. yum安装mongo</b>
+</p>
+
+<p>
+<code>sudo yum install -y mongodb-org</code>
+</p>
+
+<p>
+或者 指定版本
+</p>
+
+<p>
+<code>sudo yum install -y mongodb-org-3.0.7 mongodb-org-server-3.0.7 mongodb-org-shell-3.0.7 mongodb-org-mongos-3.0.7 mongodb-org-tools-3.0.7</code>
+</p>
+
+<p>
+为了阻止以后更新，你可能需要修改/etc/yum.conf文件，添加配置：
+</p>
+
+<p>
+<code>exclude=mongodb-org,mongodb-org-server,mongodb-org-shell,mongodb-org-mongos,mongodb-org-tools</code>
+</p>
+
+<div class="morelink" id="orgb9c7c90">
+<p>
+<a href="2015-12-19-centos-mongo-install.html">Read More →</a>
+</p>
+
+</div>
+
+<hr>
+</div>
+</div>
+<div id="outline-container-org2851e33" class="outline-2">
+<h2 id="org2851e33"><a href="2015-12-19-centos-elasticsearch-install.html">Elasticsearch installed tips</a></h2>
+<div class="outline-text-2" id="text-org2851e33">
+<div class="published" id="org88c1150">
+<p>
+星期六, 十二月 19, 2015 at  9:53 下午 CST
+</p>
+
+</div>
+<p>
+<i>1. 下载安装包</i>
+</p>
+
+<p>
+<i>2. 修改config配置文件</i>
+</p>
+
+<p>
+<i>3. 运行 ./bin/elasticsearch</i>
+</p>
+
+<p>
+<i>4. 验证：curl 'http://localhost:9200</i>?pretty'/
+</p>
+
+<p>
+<b>5. 关闭：curl -XPOST 'http://localhost:9200/_shutdown'</b>
+</p>
+
+<p>
+<i>6. 安装head plugin</i>
+</p>
+
+<p>
+Running as a plugin of ElasticSearch (this is the preferred method)
+</p>
+
+<p>
+<code>elasticsearch/bin/plugin -install mobz/elasticsearch-head</code>
+</p>
+
+<p>
+浏览器打开=<a href="http://localhost:9200/_plugin/head/=%E6%9F%A5%E7%9C%8B%E6%98%AF%E5%90%A6%E6%88%90%E5%8A%9F%E5%AE%89%E8%A3%85">http://localhost:9200/_plugin/head/=%E6%9F%A5%E7%9C%8B%E6%98%AF%E5%90%A6%E6%88%90%E5%8A%9F%E5%AE%89%E8%A3%85</a>
+</p>
+<hr>
+</div>
+</div>
+<div id="outline-container-orgc0bdde5" class="outline-2">
+<h2 id="orgc0bdde5"><a href="2015-12-19-centos-vsftpd-install.html">vsftpd installed and configure</a></h2>
+<div class="outline-text-2" id="text-orgc0bdde5">
+<div class="published" id="org883cd46">
+<p>
+星期六, 十二月 19, 2015 at  9:53 下午 CST
+</p>
+
+</div>
+<p>
+<b>1. yum install vsftpd</b>
+</p>
+
+<p>
+<b>2. 配置/etc/vsftpd/vsftpd.conf</b>
+</p>
+
+<p>
+配置参考如下：
+</p>
+
+<pre class="example" id="org3715adb">
+anonymous_enable=NO
+local_enable=YES
+write_enable=YES
+local_umask=022
+dirmessage_enable=YES
+xferlog_enable=YES
+connect_from_port_20=YES
+ascii_upload_enable=YES
+ascii_download_enable=YES
+chroot_local_user=YES
+chroot_list_enable=YES
+chroot_list_file=/etc/vsftpd/chroot_list
+listen=YES
+pam_service_name=vsftpd
+userlist_enable=YES
+tcp_wrappers=YES
+use_localtime=YES
+allow_writeable_chroot=YES
+</pre>
+
+<div class="morelink" id="org4293e9b">
+<p>
+<a href="2015-12-19-centos-vsftpd-install.html">Read More →</a>
+</p>
+
+</div>
+
+<hr>
+</div>
+</div>
+<div id="outline-container-orgdf75c5b" class="outline-2">
+<h2 id="orgdf75c5b"><a href="2015-12-19-centos-mysql-install.html">Mysql installed and configure</a></h2>
+<div class="outline-text-2" id="text-orgdf75c5b">
+<div class="published" id="orga326036">
+<p>
+星期六, 十二月 19, 2015 at  9:52 下午 CST
+</p>
+
+</div>
+<p>
+原来是rpm安装，检查并卸载
+</p>
+
+<pre class="example" id="org6b24731">
+rpm -qa|grep -i mysql
+rpm -ev MySQL-service-5.6.25-1.el7.x86_64
+rpm -ev MySQL-client-5.6.25-1.el7.x86_64
+</pre>
+
+<p>
+原来是yum安装，检查并卸载 <code>rpm -qa|grep mysql</code>
+</p>
+
+<p>
+一般输出内容如下：
+</p>
+
+<pre class="example" id="orgd65fc9e">
+mysql-community-release-el7-5.noarch
+mysql-community-client-5.7.7-0.3.rc.el7.x86_64
+mysql-community-libs-5.7.7-0.3.rc.el7.x86_64
+mysql-community-server-5.7.7-0.3.rc.el7.x86_64
+mysql-community-common-5.7.7-0.3.rc.el7.x86_64
+mysql-community-libs-compat-5.7.7-0.3.rc.el7.x86_64
+</pre>
+
+<div class="morelink" id="orgca9a4aa">
+<p>
+<a href="2015-12-19-centos-mysql-install.html">Read More →</a>
+</p>
+
+</div>
+
+<hr>
+</div>
+</div>
+<div id="outline-container-org32457a4" class="outline-2">
+<h2 id="org32457a4"><a href="2014-08-07-merge-the-project-forked-from-github.html">Merge the project forked from github</a></h2>
+<div class="outline-text-2" id="text-org32457a4">
+<div class="published" id="org30050d9">
+<p>
+星期四, 八月  7, 2014 at  5:24 下午 CST
+</p>
+
+</div>
+<p>
+Github真是一个好地方，相信很多程序员们都知道！大家在上面可能都有多多少少的个人项目。我们常常会关注自己兴趣以及xx大牛的项目，甚至于fork牛人们的项目，慢慢研究。但是牛人们的步伐，岂是偶等可以追逐的，他们可能一天=commit=很多次，这样就会导致我们刚刚=fork=的代码已经不是最新的了，那现在我们就来看下如何更新到原作者的最新代码。
+</p>
+
+<div class="morelink" id="orgd5492c1">
+<p>
+<a href="2014-08-07-merge-the-project-forked-from-github.html">Read More →</a>
+</p>
+
+</div>
+
+<hr>
+</div>
+</div>
+<div id="outline-container-orgc69e674" class="outline-2">
+<h2 id="orgc69e674"><a href="2014-07-23-a-note-of-programming-clojure.html">Clojure Programming</a></h2>
+<div class="outline-text-2" id="text-orgc69e674">
+<div class="published" id="orgda295f7">
+<p>
+星期三, 七月 23, 2014 at 11:02 上午 CST
+</p>
+
+</div>
+<p>
+1.use 用来导入clojure.core命名空间
+</p>
+
+<pre class="example" id="org9373035">
+user&gt;(clojure.core/use 'clojure.core)
+</pre>
+
+<p>
+2.import导入java类
+</p>
+
+<pre class="example" id="org3333c33">
+user&gt;(import '(java.io InputStream File))
+java.io.File
+</pre>
+
+<p>
+3.require引入clj到当前命名空间
+</p>
+
+<pre class="example" id="orgf20498e">
+user&gt;(require 'clojure.string)
+nil
+</pre>
+
+<div class="morelink" id="orgdef7976">
+<p>
+<a href="2014-07-23-a-note-of-programming-clojure.html">Read More →</a>
+</p>
+
+</div>
+
+<hr>
+</div>
+</div>
+<div id="outline-container-orgd2ceaea" class="outline-2">
+<h2 id="orgd2ceaea"><a href="2014-07-18-a-store.html">Setting up this blog</a></h2>
+<div class="outline-text-2" id="text-orgd2ceaea">
+<div class="published" id="orga41cd1f">
+<p>
+星期五, 七月 18, 2014 at  4:09 下午 CST
+</p>
+
+</div>
+<p>
+<b><i>&#x2013;来源于互联网的小故事，虽然可能是某些人丰富想象力的创作，但我觉得挺有意思的，在这里做个记录</i></b>
+</p>
+
+<p>
+*=25岁毕业=*，拿一万块钱月薪
+</p>
+
+<p>
+*=30岁=*，涨到一万五，期间无女盆友，吃10块钱盖饭，跟同学合租，挤2块钱地铁上下班，存钱25万
+</p>
+
+<p>
+*=31岁=*，啃老找父母要了35万块钱，买了50平米老房子一处，贷款90万，20年，月供6500。
+</p>
+
+<p>
+*=35岁0个月=*，认识一4分木耳，接盘玩腻的木耳结婚。
+</p>
+
+<p>
+*=35岁6个月=*，生了小孩，小孩眉宇间有高富帅的痕迹
+</p>
+
+<p>
+*=36岁=*，工资涨到2万，木耳要买驴牌，便宜儿子要喝进口奶粉，压力很大
+</p>
+
+<p>
+*=37岁=*，木耳说，人家的儿子都读花家地，读史家胡同，你也要给咱高富帅的儿子搞个学区房，你这个死没用的东西
+</p>
+
+<div class="morelink" id="org77348e6">
+<p>
+<a href="2014-07-18-a-store.html">Read More →</a>
+</p>
+
+</div>
+
+<hr>
+</div>
+</div>
+<div id="outline-container-org845da06" class="outline-2">
+<h2 id="org845da06"><a href="2014-07-17-this-is-life.html">This is life</a></h2>
+<div class="outline-text-2" id="text-org845da06">
+<div class="published" id="org4385b44">
+<p>
+星期四, 七月 17, 2014 at  9:52 上午 CST
+</p>
+
+</div>
+<p>
+上周经历了一次沉重的心路历程，也许是我内心不够强大，也许是每个人遇到相同的问题都会如此反应。不过总的来说是有惊无险，心也就慢慢释然了。同事们都感觉到我的变化，从一个性格相对开朗到如突然间默不做声，大家都表现出对我的关心，但我却无法告诉他们自己的想法！虽然内心比较痛苦，但却充满着温暖，慢慢在安慰着自己。
+</p>
+
+<p>
+好了，上面的事情就此告一段落了。这阶段，外甥女的入学也搞定了，参加技术培训也完成了，经理人培训也结束了，工作在稳步进行中。总体来看，算是过到了一个平稳期。在工作上，我还想有更好的突破，昨天领导找我了，说今年加薪恐怕不太理想，公司在控制成本。。感觉整个部门都充满着困难和危机。今天离职的兄弟都走了7个了，却只进来两个没多少经验的新人。哎，替部门，替公司担忧！
+</p>
+
+<p>
+我只能做的是，对自己的生活，工作负责，做*=最好的自己=*！
+</p>
+
+<div class="morelink" id="org78b1c03">
+<p>
+<a href="2014-07-17-this-is-life.html">Read More →</a>
+</p>
+
+</div>
+
+<hr>
+</div>
+</div>
+<div id="outline-container-orga914b52" class="outline-2">
+<h2 id="orga914b52"><a href="2014-06-19-m1-professional-training.html">M1 professional training</a></h2>
+<div class="outline-text-2" id="text-orga914b52">
+<div class="published" id="orgcedb132">
+<p>
+星期四, 六月 19, 2014 at 10:36 下午 CST
+</p>
+
+</div>
+<p>
+昨天过来南京参加公司级的M1经理人培训，希望借此机会，了解公司管理人的发展计划以及职业管理的知识和技能。昨天一过来，向同学了解了南京的相关景点后，就匆忙赶完传说中的夫子庙。
+</p>
+
+<p>
+*=夫子庙=*，5A级景区，不知道其他地方的人评价如何，我真没发现有什么特别好的地方。只不过是比我们那边的古建筑规模大了点。传说的秦淮河畔，真心感觉不出什么，也许是我的文化底蕴不够吧：）
+培训虽然累点，总算还是有点收获的，还要坚持两天。但是今天发生了一件事，让我心碎啊。老婆送给我的天梭表在培训快结束的时候，跟同事的手碰到一起了，镜面破了。。当时我想到的是，完了，回去要挨骂了。
+</p>
+
+<p>
+晚上又补老姐打来的电话给烦到了，脾气顿时爆发了，再也忍不住了。是气自己的不小心，也是气老姐的不努力，现在外甥女的入学还是个未知数。。真是超级郁闷啊。。
+</p>
+<hr>
+</div>
+</div>
+<div id="outline-container-orgc1f7655" class="outline-2">
+<h2 id="orgc1f7655"><a href="2014-05-27-ji-yu-axis,-xfire,-cxfde-webserviceke-hu-duan.html">A Client of Webservice by Axis/XFire/CXF</a></h2>
+<div class="outline-text-2" id="text-orgc1f7655">
+<div class="published" id="orgd6c40eb">
+<p>
+星期二, 五月 27, 2014 at  2:59 下午 CST
+</p>
+
+</div>
+<p>
+##Axis客户端调用 webservice
+</p>
+
+<pre class="example" id="org5c00044">
+URL endpointURL = new URL("http://localhost:8080/webservice/HelloService");  
+            String requestText = "javalinjx"  
+            Service service = new Service();  
+            Call call = (Call) service.createCall();  
+            call.setTargetEndpointAddress(endpointURL);  
+            call.setOperationName("sayHello");  
+            call.addParameter("xml", XMLType.XSD_STRING, ParameterMode.IN);  
+            call.setReturnClass(String.class);  
+            call.setReturnType(XMLType.XSD_STRING);// 设置返回类型  
+            Object [] obj = new Object[]{ requestText };  
+            String result = (String) call.invoke(obj);
+</pre>
+
+<div class="morelink" id="org5659e44">
+<p>
+<a href="2014-05-27-ji-yu-axis,-xfire,-cxfde-webserviceke-hu-duan.html">Read More →</a>
+</p>
+
+</div>
+
+<hr>
+</div>
+</div>
+<div id="outline-container-orgcd2b51d" class="outline-2">
+<h2 id="orgcd2b51d"><a href="2014-05-25-grep-and-find.html">Grep and Find</a></h2>
+<div class="outline-text-2" id="text-orgcd2b51d">
+<div class="published" id="org5f52ab3">
+<p>
+星期日, 五月 25, 2014 at  5:54 下午 CST
+</p>
+
+</div>
+<p>
+##grep ###1.从文件中查找关键词 <b>grep 'linux' text.txt //查找包含
+linux的关键词</b>
+</p>
+
+<pre class="example" id="orge19cae8">
+[root@localhost ~]# grep 'root' /etc/group
+root:x:0:root
+bin:x:1:root,bin,daemon
+</pre>
+
+<p>
+###2.从多个文件中查找关键词
+</p>
+
+<pre class="example" id="orgdc58329">
+[root@localhost ~]# grep 'root' /etc/group /etc/my.cnf
+/etc/group:root:x:0:root
+/etc/my.cnf:user = root
+</pre>
+
+<p>
+###3.查找当前目录下以及下辖子目录下所有包含str字符串的文件,会列出文件名.以及该行的内容.以及行号
+</p>
+
+<p>
+<b>-n是打印行号，-r是在子目录也要查询</b>
+</p>
+
+<pre class="example" id="org9320ef8">
+grep -n "str" -r ./
+</pre>
+
+<p>
+<b>用 -i 搜索的时候可以忽略大小写</b>
+</p>
+
+<p>
+<b>利用 -r 来完成所有的子目录下面执行相应的查找</b>
+</p>
+
+<p>
+<b>用-l是打印所有的结果</b>
+</p>
+
+<div class="morelink" id="orgac1d1d1">
+<p>
+<a href="2014-05-25-grep-and-find.html">Read More →</a>
+</p>
+
+</div>
+
+<hr>
+</div>
+</div>
+<div id="outline-container-orgd661bf8" class="outline-2">
+<h2 id="orgd661bf8"><a href="2014-05-10-countdownlatch.html">CountDownLatch</a></h2>
+<div class="outline-text-2" id="text-orgd661bf8">
+<div class="published" id="orge674563">
+<p>
+星期六, 五月 10, 2014 at  3:29 下午 CST
+</p>
+
+</div>
+<p>
+###同步工具类之闭锁-CountDownLatch
+</p>
+
+<p>
+/闭锁/是一种同步工具类，可以延迟线程的进度直到其到达终止状态。闭锁的作用相当于一扇门：在闭锁到达结束状态之前，这扇门一直是关闭的，并且没有
+任何线程能通过，当到达结束状态时，这扇门会打开并允许所有的线程通过。当闭锁到达结束状态后，将不会再改变状态，因此这扇门将永远保持打开状态。
+闭锁可以用来确保某些活动直到其他活动都完成后才继续执行。
+</p>
+
+<p>
+*=CountDownLatch=*是一种灵活的闭锁实现，可以在上述各种情况中使用，它可以使一个或多个线程等待一组事件发生。闭锁状态包括一个计数器，该计数器
+被初始化为一个正数，表示需要等待的事件数量。=countDown=方法递减计数器，表示有一个事件已经发生了，而await方法等待计数器达到零，这表示所有
+需要等待的事件都已经发生。如果计数器的值非零，那么=await=会一直阻塞直到计数器为零，或者等待中的线程中断，或者等待超时。
+</p>
+
+<pre class="example" id="org2edafae">
+public class TestHarness {  
+    public long timeTasks(int nthreads, final Runnable task) throws InterruptedException {  
+        final CountDownLatch startGate = new CountDownLatch(1);  
+        final CountDownLatch endGate = new CountDownLatch(nthreads);  
+
+        for (int i = 0; i &lt; nthreads; i++) {  
+        Thread t = new Thread(){  
+            @Override  
+            public void run() {  
+                try{  
+                    startGate.await();  
+                    try{  
+                        task.run();  
+                    }finally {  
+                        endGate.countDown();  
+                    }  
+                } catch (InterruptedException ignored) {}  
+            }  
+        };  
+        t.start();  
+        }  
+
+        long start = System.nanoTime();  
+        startGate.countDown();  
+        endGate.await();  
+        long end = System.nanoTime();  
+        return end-start;  
+    }  
+}  
+</pre>
+
+<div class="morelink" id="org1fdd44d">
+<p>
+<a href="2014-05-10-countdownlatch.html">Read More →</a>
+</p>
+
+</div>
+
+<hr>
+</div>
+</div>
+<div id="outline-container-org92dd0fa" class="outline-2">
+<h2 id="org92dd0fa"><a href="2014-04-11-a-note-of-understanding-the-jvm.html">A note of Understanding the JVM</a></h2>
+<div class="outline-text-2" id="text-org92dd0fa">
+<div class="published" id="org22f733e">
+<p>
+星期五, 四月 11, 2014 at  1:05 下午 CST
+</p>
+
+</div>
+<hr>
+
+<p>
+##java内存区域和内存溢出异常 ###运行时数据区域 * 程序计数器（Program
+Counter Register） * Java虚拟机栈（Java Virtual Machine Stacks） *
+本地方法栈（Native Method Stacks） * Java堆（Java Heap） *
+方法区（Method Area） * 运行时常量池（Runtime Constant Pool） *
+另：直接内存
+</p>
+
+<hr>
+
+<p>
+###程序计数器
+</p>
+
+<p>
+程序计数器是一块较小的内存空间，它的作用可以看做是当前线程所执行的字节码的行号指示器。字节码解释器工作时就是通过改变这个计数器的值来选取下一条需要执行的字节码指令，分支、循环、跳转、异常处理、线程恢复等都需要它来完成。java虚拟机的多线程切换后需要恢复到正确的执行位置都需要一个独立的程序计数器，各线程之间的计数器互不影响，独立存储，所以这类内存区域为“线程私有”的内存。
+如果线程正在执行的是一个java方法，这个计数器记录的是正在执行的虚拟机字节码指令的地址；如果正在执行的是Native方法，这个计数器值则为空（Undefined）。此内存区域是唯一一个在java虚拟机规范中没有规定任何OutOfMemoryError情况的区域。
+</p>
+
+<div class="morelink" id="org28a0326">
+<p>
+<a href="2014-04-11-a-note-of-understanding-the-jvm.html">Read More →</a>
 </p>
 
 </div>

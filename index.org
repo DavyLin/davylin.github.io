@@ -21,7 +21,7 @@ I am here to record my program, life, investment.
 ** Links:
 [[https://github.com/davylin][github]]
 [[http://weibo.com/u/2150445074][weibo]]
-[[https://www.linkedin.cn/incareer/in/davy-lin-4a084260][davylin]]
+[[https://www.linkedin.cn/incareer/in/davy-lin-4a084260][linkedin]]
 
 In addition to the various [[./portfolio/index.org][projects]] hosted here, I maintain
 [[./blog/index.org][a long-running weblog]], and [[./resume.org][my resume is available here]].

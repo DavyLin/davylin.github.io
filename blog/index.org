@@ -1,28 +1,5 @@
 #+TITLE: Kinhung Lam ∴ A Weblog
 
-* [[file:sitemap.org][Sitemap]]
-#+begin_published
-星期四, 十二月  1, 2022 at  2:37 下午 CST
-#+end_published
-
------
-* [[file:2014-04-09-my-first-octopress-blog.org][Setting up this blog]]
-#+begin_published
-星期五, 三月 24, 2017 at  6:19 下午 CST
-#+end_published
-*** --Setting up this blog
-
-:PROPERTIES:
-:CUSTOM_ID: setting-up-this-blog
-:END:
-Apparently I'm using emacs org mode to power this
-blog.Many thanks for the nice framework that save me a lot of time to
-get up to speed.I probably wouldn't have decided to move my blog here in
-the first place if there weren't ready-to-use solutions for lazy people
-like me.
-
-Anyway, here's the link to my old blog: http://javalinjx.iteye.com/
------
 * [[file:2017-02-04-2016-personal-summary.org][Looking back on 2016 and looking forward to 2017]]
 #+begin_published
 星期六, 二月  4, 2017 at 11:02 上午 CST
@@ -94,7 +71,7 @@ Running as a plugin of ElasticSearch (this is the preferred method)
 
 =elasticsearch/bin/plugin -install mobz/elasticsearch-head=
 
-浏览器打开=http://localhost:9200/_plugin/head/=查看是否成功安装
+[[http://localhost:9200/_plugin/head/=查看是否成功安装][http://localhost:9200/_plugin/head/=查看是否成功安装]]
 -----
 * [[file:2015-12-19-centos-vsftpd-install.org][vsftpd installed and configure]]
 #+begin_published
@@ -242,17 +219,6 @@ Github真是一个好地方，相信很多程序员们都知道！大家在上�
 #+end_morelink
 
 -----
-* [[file:2014-06-19-m1-professional-training.org][M1 professional training]]
-#+begin_published
-星期四, 六月 19, 2014 at 10:36 下午 CST
-#+end_published
-昨天过来南京参加公司级的M1经理人培训，希望借此机会，了解公司管理人的发展计划以及职业管理的知识和技能。昨天一过来，向同学了解了南京的相关景点后，就匆忙赶完传说中的夫子庙。
-
-*=夫子庙=*，5A级景区，不知道其他地方的人评价如何，我真没发现有什么特别好的地方。只不过是比我们那边的古建筑规模大了点。传说的秦淮河畔，真心感觉不出什么，也许是我的文化底蕴不够吧：）
-培训虽然累点，总算还是有点收获的，还要坚持两天。但是今天发生了一件事，让我心碎啊。老婆送给我的天梭表在培训快结束的时候，跟同事的手碰到一起了，镜面破了。。当时我想到的是，完了，回去要挨骂了。
-
-晚上又补老姐打来的电话给烦到了，脾气顿时爆发了，再也忍不住了。是气自己的不小心，也是气老姐的不努力，现在外甥女的入学还是个未知数。。真是超级郁闷啊。。
------
 * [[file:2014-05-27-ji-yu-axis,-xfire,-cxfde-webserviceke-hu-duan.org][A Client of Webservice by Axis/XFire/CXF]]
 #+begin_published
 星期二, 五月 27, 2014 at  2:59 下午 CST
@@ -392,4 +358,21 @@ Counter Register） * Java虚拟机栈（Java Virtual Machine Stacks） *
 [[file:2014-04-11-a-note-of-understanding-the-jvm.org][Read More →]]
 #+end_morelink
 
+-----
+* [[file:2014-04-09-my-first-octopress-blog.org][Setting up this blog]]
+#+begin_published
+星期一, 三月 24, 2014 at  6:19 下午 CST
+#+end_published
+*** --Setting up this blog
+
+:PROPERTIES:
+:CUSTOM_ID: setting-up-this-blog
+:END:
+Apparently I'm using emacs org mode to power this
+blog.Many thanks for the nice framework that save me a lot of time to
+get up to speed.I probably wouldn't have decided to move my blog here in
+the first place if there weren't ready-to-use solutions for lazy people
+like me.
+
+Anyway, here's the link to my old blog: http://javalinjx.iteye.com/
 -----

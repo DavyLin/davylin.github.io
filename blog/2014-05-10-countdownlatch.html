@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 星期五, 十二月  2, 2022 at  3:40 下午 -->
+<!-- 星期五, 十二月  2, 2022 at  4:06 下午 -->
 <meta charset="utf-8" />
 <title>CountDownLatch</title>
 <meta name="author" content="Kinhung Lam" />
@@ -51,7 +51,7 @@ Published 星期六, 五月 10, 2014 at  3:29 下午
 需要等待的事件都已经发生。如果计数器的值非零，那么=await=会一直阻塞直到计数器为零，或者等待中的线程中断，或者等待超时。
 </p>
 
-<pre class="example" id="org2c2b71b">
+<pre class="example" id="orgdfeb1ae">
 public class TestHarness {  
     public long timeTasks(int nthreads, final Runnable task) throws InterruptedException {  
         final CountDownLatch startGate = new CountDownLatch(1);  

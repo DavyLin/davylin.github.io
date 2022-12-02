@@ -1,7 +1,7 @@
 #+AUTHOR: Kinhung Lam
 #+EMAIL: linjxljx@gmail.com
 #+TITLE: Setting up this blog
-#+DATE: <2017-03-24 Fri 18:19>
+#+DATE: <2014-03-24 Mon 18:19>
 #+OPTIONS: ':t
 
 *** --Setting up this blog

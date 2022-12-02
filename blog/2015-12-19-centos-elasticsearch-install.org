@@ -20,4 +20,4 @@ Running as a plugin of ElasticSearch (this is the preferred method)
 
 =elasticsearch/bin/plugin -install mobz/elasticsearch-head=
 
-浏览器打开=http://localhost:9200/_plugin/head/=查看是否成功安装
+[[http://localhost:9200/_plugin/head/=查看是否成功安装][http://localhost:9200/_plugin/head/=查看是否成功安装]]

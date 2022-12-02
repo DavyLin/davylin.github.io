@@ -15,15 +15,22 @@ enabled=1
 
 *2. yum安装mongo*
 
+#+begin_src 
 =sudo yum install -y mongodb-org=
+#+end_src
 
 或者 指定版本
 
+#+begin_src 
 =sudo yum install -y mongodb-org-3.0.7 mongodb-org-server-3.0.7 mongodb-org-shell-3.0.7 mongodb-org-mongos-3.0.7 mongodb-org-tools-3.0.7=
+#+end_src
 
 为了阻止以后更新，你可能需要修改/etc/yum.conf文件，添加配置：
 
+#+begin_src 
 =exclude=mongodb-org,mongodb-org-server,mongodb-org-shell,mongodb-org-mongos,mongodb-org-tools=
+#+end_src
+
 
 #+MORE_LINK:
 
@@ -60,11 +67,14 @@ sudo rm -r /var/lib/mongo
 *7. Mongo 迁移*
 
 - 导出：
+  #+begin_src 
   =mongoexport --port 27017 --db zhibird --collection Subject_M --out ./Subject_M.json=
-
+  #+end_src
 - 导入：
+  #+begin_src 
   =mongoimport --port 27017 --db zhibird --collection Subject_M --file ./Subject_M.json=
-
+  #+end_src
+  
 - 当然也可以使用 =mongodump= 和 =mongorestore= 命令进行导入导出
 
 *8. ReplSet Config (复制集配置)*
@@ -74,9 +84,10 @@ sudo rm -r /var/lib/mongo
 - 然后分别使用=mongod -f mongod.conf=命令启动 mongo
 
 - 或者直接启动，例如，首先创建三个不同的实例位置 ，分别启动，再统一配置
+  #+begin_src 
   =mkdir -p /srv/mongodb/rs0-0 /srv/mongodb/rs0-1 /srv/mongodb/rs0-2=
   =mongod --port 27017 --dbpath /srv/mongodb/rs0-0 --replSet rs0 --smallfiles --oplogSize 128 (端口默认为27017)=
-
+  #+end_src
 - 连接其中一台mongo，使用=mongo --port port=
 
 - 在=mongo shell=中：

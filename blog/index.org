@@ -36,15 +36,21 @@
 
 *2. yum安装mongo*
 
-=sudo yum install -y mongodb-org=
+#+begin_src
+  =sudo yum install -y mongodb-org=
+#+end_src
 
 或者 指定版本
 
-=sudo yum install -y mongodb-org-3.0.7 mongodb-org-server-3.0.7 mongodb-org-shell-3.0.7 mongodb-org-mongos-3.0.7 mongodb-org-tools-3.0.7=
+#+begin_src
+  =sudo yum install -y mongodb-org-3.0.7 mongodb-org-server-3.0.7 mongodb-org-shell-3.0.7 mongodb-org-mongos-3.0.7 mongodb-org-tools-3.0.7=
+#+end_src
 
 为了阻止以后更新，你可能需要修改/etc/yum.conf文件，添加配置：
 
-=exclude=mongodb-org,mongodb-org-server,mongodb-org-shell,mongodb-org-mongos,mongodb-org-tools=
+#+begin_src
+  =exclude=mongodb-org,mongodb-org-server,mongodb-org-shell,mongodb-org-mongos,mongodb-org-tools=
+#+end_src
 
 #+begin_morelink
 [[file:2015-12-19-centos-mongo-install.org][Read More →]]

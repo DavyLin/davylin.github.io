@@ -1,8 +1,63 @@
 #+TITLE: Kinhung Lam ∴ A Weblog
 
+* [[file:2022-12-03 2022 Good Book Recommendations.org][2022 Good Book Recommendation]]
+#+begin_published
+Saturday, December  3, 2022 at  9:20 PM CST
+#+end_published
+晚上看了 吴鲁加老师的 [[https://mp.weixin.qq.com/s/L6jw60lqdLqMCeDwKMfP8g][2021好书推荐]] ,就想着也可以记录下，于是就有了这篇文章哈。
+
+2022年快过去了，想来今年也看了几本书，可以在这做个小结吧。近几年都比较少写年末总结，说来惭愧，每年年初的目标基本上没有完成。
+
+近来我看的书，基本上包括了编程、投资、社科、教育等，我看得比较慢，所以每年基本上都只有几本。
+
+工作相关：
+
+《深入实践Spring Boot》
+《Java 并发编程实践》，重读
+《Java 并发编程艺术》，重读
+《Python 核心编程》
+《Activiti 实战》
+《数据中台架构-企业》
+《Learn GNU Emacs》
+《计算机程序的构造与解释》
+《黑客与画家》
+《Build web application with Golang》
+《Programming Clojure》
+《Clojure Programming》
+《白话区块链》
+《深入理解 Java 虚拟机》，重读新版
+《算法》
+《代码未来》
+《Rust 权限指南》
+
+投资：
+
+《投资最重要的事》
+《文明、现代化、价值投资与中国》，第三遍重读
+《股票大作手回忆录》
+《黑天鹅》
+《随机漫步的傻瓜》
+《异类：不一样的成功启示录》
+《指数基金投资指南》
+
+社科文学：
+
+《枪炮、病菌与钢铁》
+《置身事内：中国政府与经济发展》
+《底层逻辑》
+
+经济：
+
+《宏观经济通识课》
+
+#+begin_morelink
+[[file:2022-12-03 2022 Good Book Recommendations.org][Read More →]]
+#+end_morelink
+
+-----
 * [[file:2017-02-04-2016-personal-summary.org][Looking back on 2016 and looking forward to 2017]]
 #+begin_published
-星期六, 二月  4, 2017 at 11:02 上午 CST
+Saturday, February  4, 2017 at 11:02 AM CST
 #+end_published
 转眼一年又过去了！大家都很早写好总结和展望了，可是我迟迟未动手，只因为我比较懒。。
 
@@ -22,7 +77,7 @@
 -----
 * [[file:2015-12-19-centos-mongo-install.org][Mongo installed and confiure]]
 #+begin_published
-星期六, 十二月 19, 2015 at  9:54 下午 CST
+Saturday, December 19, 2015 at  9:54 PM CST
 #+end_published
 *1. 创建 /etc/yum.repos.d/mongodb-org-3.0.repo*
 
@@ -59,7 +114,7 @@
 -----
 * [[file:2015-12-19-centos-elasticsearch-install.org][Elasticsearch installed tips]]
 #+begin_published
-星期六, 十二月 19, 2015 at  9:53 下午 CST
+Saturday, December 19, 2015 at  9:53 PM CST
 #+end_published
 /1. 下载安装包/
 
@@ -81,7 +136,7 @@ Running as a plugin of ElasticSearch (this is the preferred method)
 -----
 * [[file:2015-12-19-centos-vsftpd-install.org][vsftpd installed and configure]]
 #+begin_published
-星期六, 十二月 19, 2015 at  9:53 下午 CST
+Saturday, December 19, 2015 at  9:53 PM CST
 #+end_published
 *1. yum install vsftpd*
 
@@ -117,7 +172,7 @@ Running as a plugin of ElasticSearch (this is the preferred method)
 -----
 * [[file:2015-12-19-centos-mysql-install.org][Mysql installed and configure]]
 #+begin_published
-星期六, 十二月 19, 2015 at  9:52 下午 CST
+Saturday, December 19, 2015 at  9:52 PM CST
 #+end_published
 原来是rpm安装，检查并卸载
 
@@ -147,7 +202,7 @@ Running as a plugin of ElasticSearch (this is the preferred method)
 -----
 * [[file:2014-08-07-merge-the-project-forked-from-github.org][Merge the project forked from github]]
 #+begin_published
-星期四, 八月  7, 2014 at  5:24 下午 CST
+Thursday, August  7, 2014 at  5:24 PM CST
 #+end_published
 Github真是一个好地方，相信很多程序员们都知道！大家在上面可能都有多多少少的个人项目。我们常常会关注自己兴趣以及xx大牛的项目，甚至于fork牛人们的项目，慢慢研究。但是牛人们的步伐，岂是偶等可以追逐的，他们可能一天=commit=很多次，这样就会导致我们刚刚=fork=的代码已经不是最新的了，那现在我们就来看下如何更新到原作者的最新代码。
 
@@ -158,7 +213,7 @@ Github真是一个好地方，相信很多程序员们都知道！大家在上�
 -----
 * [[file:2014-07-23-a-note-of-programming-clojure.org][Clojure Programming]]
 #+begin_published
-星期三, 七月 23, 2014 at 11:02 上午 CST
+Wednesday, July 23, 2014 at 11:02 AM CST
 #+end_published
 1.use 用来导入clojure.core命名空间
 
@@ -187,7 +242,7 @@ Github真是一个好地方，相信很多程序员们都知道！大家在上�
 -----
 * [[file:2014-07-18-a-store.org][Setting up this blog]]
 #+begin_published
-星期五, 七月 18, 2014 at  4:09 下午 CST
+Friday, July 18, 2014 at  4:09 PM CST
 #+end_published
 */--来源于互联网的小故事，虽然可能是某些人丰富想象力的创作，但我觉得挺有意思的，在这里做个记录/*
 
@@ -212,7 +267,7 @@ Github真是一个好地方，相信很多程序员们都知道！大家在上�
 -----
 * [[file:2014-07-17-this-is-life.org][This is life]]
 #+begin_published
-星期四, 七月 17, 2014 at  9:52 上午 CST
+Thursday, July 17, 2014 at  9:52 AM CST
 #+end_published
 上周经历了一次沉重的心路历程，也许是我内心不够强大，也许是每个人遇到相同的问题都会如此反应。不过总的来说是有惊无险，心也就慢慢释然了。同事们都感觉到我的变化，从一个性格相对开朗到如突然间默不做声，大家都表现出对我的关心，但我却无法告诉他们自己的想法！虽然内心比较痛苦，但却充满着温暖，慢慢在安慰着自己。
 
@@ -227,7 +282,7 @@ Github真是一个好地方，相信很多程序员们都知道！大家在上�
 -----
 * [[file:2014-05-27-ji-yu-axis,-xfire,-cxfde-webserviceke-hu-duan.org][A Client of Webservice by Axis/XFire/CXF]]
 #+begin_published
-星期二, 五月 27, 2014 at  2:59 下午 CST
+Tuesday, May 27, 2014 at  2:59 PM CST
 #+end_published
 ##Axis客户端调用 webservice
 
@@ -252,7 +307,7 @@ Github真是一个好地方，相信很多程序员们都知道！大家在上�
 -----
 * [[file:2014-05-25-grep-and-find.org][Grep and Find]]
 #+begin_published
-星期日, 五月 25, 2014 at  5:54 下午 CST
+Sunday, May 25, 2014 at  5:54 PM CST
 #+end_published
 ##grep ###1.从文件中查找关键词 *grep 'linux' text.txt //查找包含
 linux的关键词*
@@ -292,7 +347,7 @@ linux的关键词*
 -----
 * [[file:2014-05-10-countdownlatch.org][CountDownLatch]]
 #+begin_published
-星期六, 五月 10, 2014 at  3:29 下午 CST
+Saturday, May 10, 2014 at  3:29 PM CST
 #+end_published
 ###同步工具类之闭锁-CountDownLatch
 
@@ -343,7 +398,7 @@ linux的关键词*
 -----
 * [[file:2014-04-11-a-note-of-understanding-the-jvm.org][A note of Understanding the JVM]]
 #+begin_published
-星期五, 四月 11, 2014 at  1:05 下午 CST
+Friday, April 11, 2014 at  1:05 PM CST
 #+end_published
 -----
 
@@ -367,7 +422,7 @@ Counter Register） * Java虚拟机栈（Java Virtual Machine Stacks） *
 -----
 * [[file:2014-04-09-my-first-octopress-blog.org][Setting up this blog]]
 #+begin_published
-星期一, 三月 24, 2014 at  6:19 下午 CST
+Monday, March 24, 2014 at  6:19 PM CST
 #+end_published
 *** --Setting up this blog
 

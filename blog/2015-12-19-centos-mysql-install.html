@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 星期五, 十二月  2, 2022 at  4:23 下午 -->
+<!-- Sunday, December  4, 2022 at  4:20 PM -->
 <meta charset="utf-8" />
 <title>Mysql installed and configure</title>
 <meta name="author" content="Kinhung Lam" />
@@ -29,7 +29,7 @@
   <div class="navitem"><a href="/contact.html">Contact</a></div>
 </nav>
 <div class="published">
-Published 星期六, 十二月 19, 2015 at  9:52 下午
+Published Saturday, December 19, 2015 at  9:52 PM
 </nav>
 </div>
 <div id="content" class="content">
@@ -39,7 +39,7 @@ Published 星期六, 十二月 19, 2015 at  9:52 下午
 <li>原来是rpm安装，检查并卸载</li>
 </ul>
 
-<pre class="example" id="org01c14ae">
+<pre class="example" id="org230b075">
 rpm -qa|grep -i mysql
 rpm -ev MySQL-service-5.6.25-1.el7.x86_64
 rpm -ev MySQL-client-5.6.25-1.el7.x86_64
@@ -53,7 +53,7 @@ rpm -ev MySQL-client-5.6.25-1.el7.x86_64
 一般输出内容如下：
 </p>
 
-<pre class="example" id="orgb4f698a">
+<pre class="example" id="org14fa39a">
 mysql-community-release-el7-5.noarch
 mysql-community-client-5.7.7-0.3.rc.el7.x86_64
 mysql-community-libs-5.7.7-0.3.rc.el7.x86_64
@@ -74,7 +74,7 @@ mysql-community-libs-compat-5.7.7-0.3.rc.el7.x86_64
 <b>0、先建mysql用户,mysql组，然后执行命令安装mysql</b>
 </p>
 
-<pre class="example" id="orgb1dcf6d">
+<pre class="example" id="org432aab5">
 rpm -ivh MySQL-server-5.6.25-1.el7.x86_64.rpm
 rpm -ivh MySQL-client-5.6.25-1.el7.x86_64.rpm
 </pre>
@@ -146,7 +146,7 @@ rpm -ivh MySQL-client-5.6.25-1.el7.x86_64.rpm
 <b>3. 增加账号</b>
 </p>
 
-<pre class="example" id="org2b91687">
+<pre class="example" id="orgfcc86e4">
 grant all on *.* to 'davylin'@'%' identified by 'davylin';
 
 flush privileges; 

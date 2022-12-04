@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 星期五, 十二月  2, 2022 at  4:23 下午 -->
+<!-- Sunday, December  4, 2022 at  4:20 PM -->
 <meta charset="utf-8" />
 <title>Grep and Find</title>
 <meta name="author" content="Kinhung Lam" />
@@ -29,7 +29,7 @@
   <div class="navitem"><a href="/contact.html">Contact</a></div>
 </nav>
 <div class="published">
-Published 星期日, 五月 25, 2014 at  5:54 下午
+Published Sunday, May 25, 2014 at  5:54 PM
 </nav>
 </div>
 <div id="content" class="content">
@@ -40,7 +40,7 @@ Published 星期日, 五月 25, 2014 at  5:54 下午
 linux的关键词</b>
 </p>
 
-<pre class="example" id="orgf872e17">
+<pre class="example" id="org83b5ba3">
 [root@localhost ~]# grep 'root' /etc/group
 root:x:0:root
 bin:x:1:root,bin,daemon
@@ -50,7 +50,7 @@ bin:x:1:root,bin,daemon
 ###2.从多个文件中查找关键词
 </p>
 
-<pre class="example" id="orgb7e06ef">
+<pre class="example" id="orgca9785a">
 [root@localhost ~]# grep 'root' /etc/group /etc/my.cnf
 /etc/group:root:x:0:root
 /etc/my.cnf:user = root
@@ -64,7 +64,7 @@ bin:x:1:root,bin,daemon
 <b>-n是打印行号，-r是在子目录也要查询</b>
 </p>
 
-<pre class="example" id="orgfeced43">
+<pre class="example" id="orgba286ef">
 grep -n "str" -r ./
 </pre>
 
@@ -80,7 +80,7 @@ grep -n "str" -r ./
 <b>用-l是打印所有的结果</b>
 </p>
 
-<pre class="example" id="org624d3a0">
+<pre class="example" id="org3ab0f43">
 grep -ril 'str' ./
 </pre>
 
@@ -92,7 +92,7 @@ grep -ril 'str' ./
 ###1.查找在 /etc 目录下所有文件名中含有 mail 的文件
 </p>
 
-<pre class="example" id="org7a80c3f">
+<pre class="example" id="orgec12896">
 [root@localhost ]# find /etc/ -name '*mail*'
 /etc/mail.rc
 /etc/rc.d/rc5.d/K30sendmail
@@ -103,7 +103,7 @@ grep -ril 'str' ./
 ###2.查找文件大小超过指定值的文件
 </p>
 
-<pre class="example" id="org49196b5">
+<pre class="example" id="org7c6c66f">
 [root@localhost ]# find ./ -type f -size +100M
 ./test.sql
 </pre>
@@ -112,7 +112,7 @@ grep -ril 'str' ./
 ###3.最近几天被修改过的文件
 </p>
 
-<pre class="example" id="org648ea73">
+<pre class="example" id="org11d4679">
 find . -mtime -2 
 </pre>
 </div>

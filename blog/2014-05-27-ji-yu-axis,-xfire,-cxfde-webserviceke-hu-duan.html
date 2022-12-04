@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 星期五, 十二月  2, 2022 at  4:23 下午 -->
+<!-- Sunday, December  4, 2022 at  4:20 PM -->
 <meta charset="utf-8" />
 <title>A Client of Webservice by Axis/XFire/CXF</title>
 <meta name="author" content="Kinhung Lam" />
@@ -29,7 +29,7 @@
   <div class="navitem"><a href="/contact.html">Contact</a></div>
 </nav>
 <div class="published">
-Published 星期二, 五月 27, 2014 at  2:59 下午
+Published Tuesday, May 27, 2014 at  2:59 PM
 </nav>
 </div>
 <div id="content" class="content">
@@ -39,7 +39,7 @@ Published 星期二, 五月 27, 2014 at  2:59 下午
 ##Axis客户端调用 webservice
 </p>
 
-<pre class="example" id="orga77fb05">
+<pre class="example" id="org2f6f2da">
 URL endpointURL = new URL("http://localhost:8080/webservice/HelloService");  
             String requestText = "javalinjx"  
             Service service = new Service();  
@@ -57,7 +57,7 @@ URL endpointURL = new URL("http://localhost:8080/webservice/HelloService");
 ##XFire客户端调用
 </p>
 
-<pre class="example" id="org3b42741">
+<pre class="example" id="org59d99db">
 public void call() throws Exception {  
         Service service = new ObjectServiceFactory().create(HelloService.class);  
         XFireProxyFactory factory = new XFireProxyFactory(XFireFactory.newInstance().getXFire());  
@@ -71,7 +71,7 @@ public void call() throws Exception {
 ##CXF客户端调用
 </p>
 
-<pre class="example" id="org84c82ba">
+<pre class="example" id="orgcbb5d06">
 JaxWsProxyFactoryBean factory1 = new JaxWsProxyFactoryBean();  
 factory1.setServiceClass(UaAuthInterfaces.class);  
         factory1.setAddress("http://localhost:8080/webservices/HelloService");  

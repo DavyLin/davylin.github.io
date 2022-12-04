@@ -2,6 +2,7 @@
 #+EMAIL: linjxljx@gmail.com
 #+DATE: <2022-11-13 Sun>
 #+TITLE: Kinhung Communications,PLI
+#+FILETAGS: index blog org
 #+OPTIONS: title:nil
 #+STARTUP: showall
 

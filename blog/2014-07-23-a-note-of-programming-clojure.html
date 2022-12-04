@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Sunday, December  4, 2022 at  4:43 PM -->
+<!-- Sunday, December  4, 2022 at  4:47 PM -->
 <meta charset="utf-8" />
 <title>Clojure Programming</title>
 <meta name="author" content="Kinhung Lam" />
@@ -39,7 +39,7 @@ Published Wednesday, July 23, 2014 at 11:02 AM
 1.use 用来导入clojure.core命名空间
 </p>
 
-<pre class="example" id="org1f342b3">
+<pre class="example" id="org1db0c34">
 user&gt;(clojure.core/use 'clojure.core)
 </pre>
 
@@ -47,7 +47,7 @@ user&gt;(clojure.core/use 'clojure.core)
 2.import导入java类
 </p>
 
-<pre class="example" id="org6a4d67d">
+<pre class="example" id="org8ab39cf">
 user&gt;(import '(java.io InputStream File))
 java.io.File
 </pre>
@@ -56,7 +56,7 @@ java.io.File
 3.require引入clj到当前命名空间
 </p>
 
-<pre class="example" id="org44632e7">
+<pre class="example" id="org8e8a5ea">
 user&gt;(require 'clojure.string)
 nil
 </pre>
@@ -65,7 +65,7 @@ nil
 4.查看信息
 </p>
 
-<pre class="example" id="org74fb949">
+<pre class="example" id="org3138418">
 user&gt;(find-doc "ns-")
 </pre>
 
@@ -73,7 +73,7 @@ user&gt;(find-doc "ns-")
 5.解构
 </p>
 
-<pre class="example" id="orgb4a794c">
+<pre class="example" id="org96480e7">
 user&gt;(let [[x y] [1 2 3]] 
             [x y])
 [1 2]
@@ -97,7 +97,7 @@ user&gt; (let [[x y :as coords] [1 2 3 4 5 6]]
 6.常用数据类型
 </p>
 
-<pre class="example" id="orgd77ac3f">
+<pre class="example" id="org0a4a300">
 Keyword   :tag, :doc
 List     (1 2 3), (pringln "foo")
 Map  {:name "bill", :age 42}

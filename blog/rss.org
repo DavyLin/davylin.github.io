@@ -6,7 +6,7 @@
 :PUBDATE:  2014-05-27 14:59:00
 :EMAIL:    linjxljx@gmail.com
 :AUTHOR:   kinhung lam
-:ID:       39944211-7F93-4304-9494-B12DB5F7FA35
+:ID:       D8925C27-E3BD-402E-AF96-B5750732C47A
 :END:
 ##Axis客户端调用 webservice
 
@@ -31,7 +31,7 @@
 :PUBDATE:  2014-04-11 13:05:00
 :EMAIL:    linjxljx@gmail.com
 :AUTHOR:   kinhung lam
-:ID:       F70CA699-CA2A-436B-A866-12907F13AFFB
+:ID:       4BCB6B2F-5286-430D-A80B-6C2145296A87
 :END:
 -----
 
@@ -55,7 +55,7 @@ Counter Register） * Java虚拟机栈（Java Virtual Machine Stacks） *
 :PUBDATE:  2014-07-23 11:02:00
 :EMAIL:    linjxljx@gmail.com
 :AUTHOR:   kinhung lam
-:ID:       A18811BD-403A-4714-A036-D370200143CD
+:ID:       93F11BF8-74B8-4C9C-A0BC-EBD956E96DA8
 :END:
 1.use 用来导入clojure.core命名空间
 
@@ -84,7 +84,7 @@ Counter Register） * Java虚拟机栈（Java Virtual Machine Stacks） *
 :PUBDATE:  2014-05-10 15:29:00
 :EMAIL:    linjxljx@gmail.com
 :AUTHOR:   kinhung lam
-:ID:       45044C5C-EA87-49D8-B43B-1CDCD99C0896
+:ID:       3A1B48A5-386D-4CDD-9465-F9E6B76C6D36
 :END:
 ###同步工具类之闭锁-CountDownLatch
 
@@ -135,7 +135,7 @@ Counter Register） * Java虚拟机栈（Java Virtual Machine Stacks） *
 :PUBDATE:  2015-12-19 21:53:00
 :EMAIL:    linjxljx@gmail.com
 :AUTHOR:   kinhung lam
-:ID:       581A5387-2E73-4357-A084-A9BC5C5BE227
+:ID:       8F4F45E0-3F31-4B6D-92E2-849491FBC482
 :END:
 /1. 下载安装包/
 
@@ -160,7 +160,7 @@ Running as a plugin of ElasticSearch (this is the preferred method)
 :PUBDATE:  2014-05-25 17:54:00
 :EMAIL:    linjxljx@gmail.com
 :AUTHOR:   kinhung lam
-:ID:       5A0CBFB4-7872-4F16-A875-7EF82351185A
+:ID:       9120B9E7-25D2-46A7-A6CB-94FB7BBF0772
 :END:
 ##grep ###1.从文件中查找关键词 *grep 'linux' text.txt //查找包含
 linux的关键词*
@@ -200,7 +200,7 @@ linux的关键词*
 :PUBDATE:  2017-02-04 11:02:00
 :EMAIL:    linjxljx@gmail.com
 :AUTHOR:   kinhung lam
-:ID:       0116F99D-15F1-464F-850C-83E09DDF4AB6
+:ID:       E58F9B4C-0E6E-4B58-9A38-01A96568B01A
 :END:
 转眼一年又过去了！大家都很早写好总结和展望了，可是我迟迟未动手，只因为我比较懒。。
 
@@ -209,7 +209,7 @@ linux的关键词*
 *** 当然也实现了一些小目标：
 :PROPERTIES:
 :CUSTOM_ID: 当然也实现了一些小目标
-:ID:       86FB8B91-D63F-4FAC-A524-10348ABFBCDE
+:ID:       E11F7B44-3DEC-44B4-A2B3-D5E85289C04E
 :END:
 跑了一个半程马拉松，虽然是第一次，但还是成功完赛，并取得了一枚小奖牌；
 负责的教育资讯类产品成功上线，虽然目前用户量还不具规模，但也算是小有成就了，希望可以继续变得越来越好！
@@ -221,7 +221,7 @@ linux的关键词*
 :PUBDATE:  2014-08-07 17:24:00
 :EMAIL:    linjxljx@gmail.com
 :AUTHOR:   kinhung lam
-:ID:       D9D2DF42-213E-4EE6-8CAD-0340DF3B40A4
+:ID:       2E7F6522-FA1A-43BF-B89C-E7620230A097
 :END:
 Github真是一个好地方，相信很多程序员们都知道！大家在上面可能都有多多少少的个人项目。我们常常会关注自己兴趣以及xx大牛的项目，甚至于fork牛人们的项目，慢慢研究。但是牛人们的步伐，岂是偶等可以追逐的，他们可能一天=commit=很多次，这样就会导致我们刚刚=fork=的代码已经不是最新的了，那现在我们就来看下如何更新到原作者的最新代码。
 
@@ -232,7 +232,7 @@ Github真是一个好地方，相信很多程序员们都知道！大家在上�
 :PUBDATE:  2015-12-19 21:54:00
 :EMAIL:    linjxljx@gmail.com
 :AUTHOR:   kinhung lam
-:ID:       C8989FC4-8863-4203-BFD1-4B530472E9AA
+:ID:       F513FA5D-31CD-4C90-B5A9-77FDFCF24477
 :END:
 *1. 创建 /etc/yum.repos.d/mongodb-org-3.0.repo*
 
@@ -269,7 +269,7 @@ Github真是一个好地方，相信很多程序员们都知道！大家在上�
 :PUBDATE:  2022-12-03 21:20:00
 :EMAIL:    linjxljx@gmail.com
 :AUTHOR:   kinhung lam
-:ID:       7F24DDEC-E0DA-4D14-8E8F-4C56269EEB14
+:ID:       6CDE80B3-BFEB-4283-9D3C-031559E67893
 :END:
 晚上看了 吴鲁加老师的 [[https://mp.weixin.qq.com/s/L6jw60lqdLqMCeDwKMfP8g][2021好书推荐]] ，就想着也可以记录下，于是就有了这篇文章哈。
 
@@ -279,55 +279,55 @@ Github真是一个好地方，相信很多程序员们都知道！大家在上�
 
 ** 工作相关：
 :PROPERTIES:
-:ID:       AB96F098-11DC-44E6-8B97-6D13D1912016
+:ID:       A95EB997-C7A1-43AE-95E1-2921AF8F35F6
 :END:
 
--《深入实践Spring Boot》
--《Java 并发编程实践》，重读
--《Java 并发编程艺术》，重读
--《Python 核心编程》
--《Activiti 实战》
--《数据中台架构-企业》
--《Learn GNU Emacs》
--《计算机程序的构造与解释》
--《黑客与画家》
--《Build web application with Golang》
--《Programming Clojure》
--《Clojure Programming》
--《白话区块链》
--《深入理解 Java 虚拟机》，重读新版
--《算法》
--《代码未来》
--《Rust 权限指南》
+《深入实践Spring Boot》
+《Java 并发编程实践》，重读
+《Java 并发编程艺术》，重读
+《Python 核心编程》
+《Activiti 实战》
+《数据中台架构-企业》
+《Learn GNU Emacs》
+《计算机程序的构造与解释》
+《黑客与画家》
+《Build web application with Golang》
+《Programming Clojure》
+《Clojure Programming》
+《白话区块链》
+《深入理解 Java 虚拟机》，重读新版
+《算法》
+《代码未来》
+《Rust 权限指南》
 
 ** 投资：
 :PROPERTIES:
-:ID:       9CDE5F4A-C508-445C-9699-0E402A52442E
+:ID:       C738E8EE-183B-4F9D-B772-DB56DE0C968C
 :END:
 
--《投资最重要的事》
--《文明、现代化、价值投资与中国》，第三遍重读
--《股票大作手回忆录》
--《黑天鹅》
--《随机漫步的傻瓜》
--《异类：不一样的成功启示录》
--《指数基金投资指南》
+《投资最重要的事》
+《文明、现代化、价值投资与中国》，第三遍重读
+《股票大作手回忆录》
+《黑天鹅》
+《随机漫步的傻瓜》
+《异类：不一样的成功启示录》
+《指数基金投资指南》
 
 ** 社科文学：
 :PROPERTIES:
-:ID:       08DBAE53-55A3-4F22-B058-7EEBE13C1991
+:ID:       25F2120D-D0C5-428F-95FC-A671C23F5CFD
 :END:
 
--《枪炮、病菌与钢铁》
--《置身事内：中国政府与经济发展》
--《底层逻辑》
+《枪炮、病菌与钢铁》
+《置身事内：中国政府与经济发展》
+《底层逻辑》
 
 ** 经济：
 :PROPERTIES:
-:ID:       4FB68514-1CD4-40A0-8DA9-6F7D42B179F0
+:ID:       483DF4BF-06FA-43CF-AEF4-6C3A29399A74
 :END:
 
--《宏观经济通识课》
+《宏观经济通识课》
 
 [[file:./blog/2022-12-03 My reading history in 2022.org][Read More →]]
 * [[file:/Users/jianxionglin/spaces/personal/org/blog/2015-12-19-centos-mysql-install.org][Mysql installed and configure]]
@@ -336,7 +336,7 @@ Github真是一个好地方，相信很多程序员们都知道！大家在上�
 :PUBDATE:  2015-12-19 21:52:00
 :EMAIL:    linjxljx@gmail.com
 :AUTHOR:   kinhung lam
-:ID:       CB0E69DC-B3C9-44C8-B1ED-08B9ECD6E7C0
+:ID:       7B757948-070D-498F-B9B6-99EE60972481
 :END:
 原来是rpm安装，检查并卸载
 
@@ -366,7 +366,7 @@ Github真是一个好地方，相信很多程序员们都知道！大家在上�
 :PUBDATE:  2014-07-18 16:09:00
 :EMAIL:    linjxljx@gmail.com
 :AUTHOR:   kinhung lam
-:ID:       AC00B476-E77C-4D33-AE36-53F658AEC84D
+:ID:       014EBF09-2B02-4676-917E-C9E6FE42691F
 :END:
 */--来源于互联网的小故事，虽然可能是某些人丰富想象力的创作，但我觉得挺有意思的，在这里做个记录/*
 
@@ -391,11 +391,11 @@ Github真是一个好地方，相信很多程序员们都知道！大家在上�
 :PUBDATE:  2014-03-24 18:19:00
 :EMAIL:    linjxljx@gmail.com
 :AUTHOR:   kinhung lam
-:ID:       E3DD383A-07DD-4E09-8D8E-6C3972061D3A
+:ID:       25A2B3F5-8AF1-4FD5-88D6-AA3A75D833B0
 :END:
 *** --Setting up this blog
 :PROPERTIES:
-:ID:       37B5BAB0-1906-4400-98D2-9A585BAF1633
+:ID:       E3CCA312-DCB6-462B-B673-DEDA84E12CF3
 :END:
 
 :PROPERTIES:
@@ -414,7 +414,7 @@ Anyway, here's the link to my old blog: http://javalinjx.iteye.com/
 :PUBDATE:  2014-07-17 09:52:00
 :EMAIL:    linjxljx@gmail.com
 :AUTHOR:   kinhung lam
-:ID:       229868AF-1BFB-4401-A793-1FDF90A237E3
+:ID:       51BBE411-E881-45A0-9A4C-B55995A3EE64
 :END:
 上周经历了一次沉重的心路历程，也许是我内心不够强大，也许是每个人遇到相同的问题都会如此反应。不过总的来说是有惊无险，心也就慢慢释然了。同事们都感觉到我的变化，从一个性格相对开朗到如突然间默不做声，大家都表现出对我的关心，但我却无法告诉他们自己的想法！虽然内心比较痛苦，但却充满着温暖，慢慢在安慰着自己。
 
@@ -429,7 +429,7 @@ Anyway, here's the link to my old blog: http://javalinjx.iteye.com/
 :PUBDATE:  2015-12-19 21:53:00
 :EMAIL:    linjxljx@gmail.com
 :AUTHOR:   kinhung lam
-:ID:       27D7C870-0D9E-4733-BD28-F7187D1D2EEC
+:ID:       2B2763AA-B526-46B0-ACF5-622C97104778
 :END:
 *1. yum install vsftpd*
 

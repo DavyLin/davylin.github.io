@@ -14,8 +14,8 @@
 <link>/blog/</link>
 <description><![CDATA[]]></description>
 <language>en</language>
-<pubDate>Sun, 04 Dec 2022 17:07:32 +0800</pubDate>
-<lastBuildDate>Sun, 04 Dec 2022 17:07:32 +0800</lastBuildDate>
+<pubDate>Sun, 04 Dec 2022 17:18:21 +0800</pubDate>
+<lastBuildDate>Sun, 04 Dec 2022 17:18:21 +0800</lastBuildDate>
 <generator>Emacs 28.2 Org-mode 9.5.5</generator>
 <webMaster>linjxljx@gmail.com (kinhung lam)</webMaster>
 <image>
@@ -25,6 +25,162 @@
 </image>
 
 
+<item>
+<title>2022年阅读历史</title>
+<link>/blog/2022-12-03 My reading history in 2022.html</link>
+<author>linjxljx@gmail.com (kinhung lam)</author>
+<guid isPermaLink="false">/blog/2022-12-03 My reading history in 2022.html</guid>
+<pubDate>Sat, 03 Dec 2022 21:20:00 +0800</pubDate>
+
+<description><![CDATA[<p>
+晚上看了 吴鲁加老师的 <a href="https://mp.weixin.qq.com/s/L6jw60lqdLqMCeDwKMfP8g">2021好书推荐</a> ，就想着也可以记录下，于是就有了这篇文章哈。
+</p>
+
+<p>
+2022年快过去了，想来今年也看了几本书，可以在这做个小结吧。近几年都比较少写年末总结，说来惭愧，每年年初的目标基本上没有完成。
+</p>
+
+<p>
+近来我看的书，基本上包括了编程、投资、社科、教育等，我看得比较慢，所以每年基本上都只有几本。
+</p>
+
+<div id="outline-container-orge8c294e" class="outline-3">
+<h3 id="orge8c294e"><span class="section-number-3">1.1.</span> 工作相关：</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+《E深入实践Spring Boot》
+</p>
+
+<p>
+《Java 并发编程实践》，重读
+</p>
+
+<p>
+《Java 并发编程艺术》，重读
+</p>
+
+<p>
+《Python 核心编程》
+</p>
+
+<p>
+《Activiti 实战》
+</p>
+
+<p>
+《数据中台架构-企业》
+</p>
+
+<p>
+《Learn GNU Emacs》
+</p>
+
+<p>
+《计算机程序的构造与解释》
+</p>
+
+<p>
+《黑客与画家》
+</p>
+
+<p>
+《Build web application with Golang》
+</p>
+
+<p>
+《Programming Clojure》
+</p>
+
+<p>
+《Clojure Programming》
+</p>
+
+<p>
+《白话区块链》
+</p>
+
+<p>
+《深入理解 Java 虚拟机》，重读新版
+</p>
+
+<p>
+《算法》
+</p>
+
+<p>
+《代码未来》
+</p>
+
+<p>
+《Rust 权限指南》
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb8aff5e" class="outline-3">
+<h3 id="orgb8aff5e"><span class="section-number-3">1.2.</span> 投资：</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+《投资最重要的事》
+</p>
+
+<p>
+《文明、现代化、价值投资与中国》，第三遍重读
+</p>
+
+<p>
+《股票大作手回忆录》
+</p>
+
+<p>
+《黑天鹅》
+</p>
+
+<p>
+《随机漫步的傻瓜》
+</p>
+
+<p>
+《异类：不一样的成功启示录》
+</p>
+
+<p>
+《指数基金投资指南》
+</p>
+</div>
+</div>
+
+<div id="outline-container-org032625d" class="outline-3">
+<h3 id="org032625d"><span class="section-number-3">1.3.</span> 社科文学：</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+《枪炮、病菌与钢铁》
+</p>
+
+<p>
+《置身事内：中国政府与经济发展》
+</p>
+
+<p>
+《底层逻辑》
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8e74788" class="outline-3">
+<h3 id="org8e74788"><span class="section-number-3">1.4.</span> 经济：</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+《宏观经济通识课》
+</p>
+
+<p>
+<a href="./blog/2022-12-03 My reading history in 2022.html">Read More →</a>
+</p>
+</div>
+</div>
+]]></description>
+</item>
 <item>
 <title>A Client of Webservice by Axis/XFire/CXF</title>
 <link>/blog/2014-05-27-ji-yu-axis,-xfire,-cxfde-webserviceke-hu-duan.html</link>
@@ -36,7 +192,7 @@
 ##Axis客户端调用 webservice
 </p>
 
-<pre class="example" id="org8a9930c">
+<pre class="example" id="orgca085c5">
 URL endpointURL = new URL("http://localhost:8080/webservice/HelloService");  
             String requestText = "javalinjx"  
             Service service = new Service();  
@@ -99,7 +255,7 @@ Counter Register） * Java虚拟机栈（Java Virtual Machine Stacks） *
 1.use 用来导入clojure.core命名空间
 </p>
 
-<pre class="example" id="orgee4ef36">
+<pre class="example" id="orga206259">
 user&gt;(clojure.core/use 'clojure.core)
 </pre>
 
@@ -107,7 +263,7 @@ user&gt;(clojure.core/use 'clojure.core)
 2.import导入java类
 </p>
 
-<pre class="example" id="org32c16fa">
+<pre class="example" id="orgba6cdcb">
 user&gt;(import '(java.io InputStream File))
 java.io.File
 </pre>
@@ -116,7 +272,7 @@ java.io.File
 3.require引入clj到当前命名空间
 </p>
 
-<pre class="example" id="orgab554bd">
+<pre class="example" id="org2681782">
 user&gt;(require 'clojure.string)
 nil
 </pre>
@@ -149,7 +305,7 @@ nil
 需要等待的事件都已经发生。如果计数器的值非零，那么=await=会一直阻塞直到计数器为零，或者等待中的线程中断，或者等待超时。
 </p>
 
-<pre class="example" id="orgd21e25d">
+<pre class="example" id="orgf3ecddb">
 public class TestHarness {  
     public long timeTasks(int nthreads, final Runnable task) throws InterruptedException {  
         final CountDownLatch startGate = new CountDownLatch(1);  
@@ -242,7 +398,7 @@ Running as a plugin of ElasticSearch (this is the preferred method)
 linux的关键词</b>
 </p>
 
-<pre class="example" id="org2ac4067">
+<pre class="example" id="org5534e62">
 [root@localhost ~]# grep 'root' /etc/group
 root:x:0:root
 bin:x:1:root,bin,daemon
@@ -252,7 +408,7 @@ bin:x:1:root,bin,daemon
 ###2.从多个文件中查找关键词
 </p>
 
-<pre class="example" id="orga54a207">
+<pre class="example" id="org937e639">
 [root@localhost ~]# grep 'root' /etc/group /etc/my.cnf
 /etc/group:root:x:0:root
 /etc/my.cnf:user = root
@@ -266,7 +422,7 @@ bin:x:1:root,bin,daemon
 <b>-n是打印行号，-r是在子目录也要查询</b>
 </p>
 
-<pre class="example" id="org707e150">
+<pre class="example" id="org7f4be09">
 grep -n "str" -r ./
 </pre>
 
@@ -303,7 +459,7 @@ grep -n "str" -r ./
 </p>
 
 <div id="outline-container-当然也实现了一些小目标" class="outline-4">
-<h4 id="当然也实现了一些小目标"><span class="section-number-4">7.0.1.</span> 当然也实现了一些小目标：</h4>
+<h4 id="当然也实现了一些小目标"><span class="section-number-4">8.0.1.</span> 当然也实现了一些小目标：</h4>
 <div class="outline-text-4" id="text-当然也实现了一些小目标">
 <p>
 跑了一个半程马拉松，虽然是第一次，但还是成功完赛，并取得了一枚小奖牌；
@@ -344,7 +500,7 @@ Github真是一个好地方，相信很多程序员们都知道！大家在上�
 <b>1. 创建 /etc/yum.repos.d/mongodb-org-3.0.repo</b>
 </p>
 
-<pre class="example" id="orgf2275ac">
+<pre class="example" id="org487bc09">
 [mongodb-org-3.0]
 name=MongoDB Repository
 baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/3.0/x86_64/
@@ -382,162 +538,6 @@ enabled=1
 ]]></description>
 </item>
 <item>
-<title>My reading history in 2022</title>
-<link>/blog/2022-12-03 My reading history in 2022.html</link>
-<author>linjxljx@gmail.com (kinhung lam)</author>
-<guid isPermaLink="false">/blog/2022-12-03 My reading history in 2022.html</guid>
-<pubDate>Sat, 03 Dec 2022 21:20:00 +0800</pubDate>
-
-<description><![CDATA[<p>
-晚上看了 吴鲁加老师的 <a href="https://mp.weixin.qq.com/s/L6jw60lqdLqMCeDwKMfP8g">2021好书推荐</a> ，就想着也可以记录下，于是就有了这篇文章哈。
-</p>
-
-<p>
-2022年快过去了，想来今年也看了几本书，可以在这做个小结吧。近几年都比较少写年末总结，说来惭愧，每年年初的目标基本上没有完成。
-</p>
-
-<p>
-近来我看的书，基本上包括了编程、投资、社科、教育等，我看得比较慢，所以每年基本上都只有几本。
-</p>
-
-<div id="outline-container-orgc3f749f" class="outline-3">
-<h3 id="orgc3f749f"><span class="section-number-3">10.1.</span> 工作相关：</h3>
-<div class="outline-text-3" id="text-10-1">
-<p>
-《E深入实践Spring Boot》
-</p>
-
-<p>
-《Java 并发编程实践》，重读
-</p>
-
-<p>
-《Java 并发编程艺术》，重读
-</p>
-
-<p>
-《Python 核心编程》
-</p>
-
-<p>
-《Activiti 实战》
-</p>
-
-<p>
-《数据中台架构-企业》
-</p>
-
-<p>
-《Learn GNU Emacs》
-</p>
-
-<p>
-《计算机程序的构造与解释》
-</p>
-
-<p>
-《黑客与画家》
-</p>
-
-<p>
-《Build web application with Golang》
-</p>
-
-<p>
-《Programming Clojure》
-</p>
-
-<p>
-《Clojure Programming》
-</p>
-
-<p>
-《白话区块链》
-</p>
-
-<p>
-《深入理解 Java 虚拟机》，重读新版
-</p>
-
-<p>
-《算法》
-</p>
-
-<p>
-《代码未来》
-</p>
-
-<p>
-《Rust 权限指南》
-</p>
-</div>
-</div>
-
-<div id="outline-container-orga2cf7a9" class="outline-3">
-<h3 id="orga2cf7a9"><span class="section-number-3">10.2.</span> 投资：</h3>
-<div class="outline-text-3" id="text-10-2">
-<p>
-《投资最重要的事》
-</p>
-
-<p>
-《文明、现代化、价值投资与中国》，第三遍重读
-</p>
-
-<p>
-《股票大作手回忆录》
-</p>
-
-<p>
-《黑天鹅》
-</p>
-
-<p>
-《随机漫步的傻瓜》
-</p>
-
-<p>
-《异类：不一样的成功启示录》
-</p>
-
-<p>
-《指数基金投资指南》
-</p>
-</div>
-</div>
-
-<div id="outline-container-org5312ad7" class="outline-3">
-<h3 id="org5312ad7"><span class="section-number-3">10.3.</span> 社科文学：</h3>
-<div class="outline-text-3" id="text-10-3">
-<p>
-《枪炮、病菌与钢铁》
-</p>
-
-<p>
-《置身事内：中国政府与经济发展》
-</p>
-
-<p>
-《底层逻辑》
-</p>
-</div>
-</div>
-
-<div id="outline-container-org4539bc0" class="outline-3">
-<h3 id="org4539bc0"><span class="section-number-3">10.4.</span> 经济：</h3>
-<div class="outline-text-3" id="text-10-4">
-<p>
-《宏观经济通识课》
-</p>
-
-<p>
-<a href="./blog/2022-12-03 My reading history in 2022.html">Read More →</a>
-</p>
-</div>
-</div>
-]]></description>
-</item>
-<item>
 <title>Mysql installed and configure</title>
 <link>/blog/2015-12-19-centos-mysql-install.html</link>
 <author>linjxljx@gmail.com (kinhung lam)</author>
@@ -548,7 +548,7 @@ enabled=1
 原来是rpm安装，检查并卸载
 </p>
 
-<pre class="example" id="org1c8f7bd">
+<pre class="example" id="org822f27a">
 rpm -qa|grep -i mysql
 rpm -ev MySQL-service-5.6.25-1.el7.x86_64
 rpm -ev MySQL-client-5.6.25-1.el7.x86_64
@@ -562,7 +562,7 @@ rpm -ev MySQL-client-5.6.25-1.el7.x86_64
 一般输出内容如下：
 </p>
 
-<pre class="example" id="org4cbe28b">
+<pre class="example" id="org7125978">
 mysql-community-release-el7-5.noarch
 mysql-community-client-5.7.7-0.3.rc.el7.x86_64
 mysql-community-libs-5.7.7-0.3.rc.el7.x86_64
@@ -627,8 +627,8 @@ mysql-community-libs-compat-5.7.7-0.3.rc.el7.x86_64
 <guid isPermaLink="false">/blog/2014-04-09-my-first-octopress-blog.html</guid>
 <pubDate>Mon, 24 Mar 2014 18:19:00 +0800</pubDate>
 
-<description><![CDATA[<div id="outline-container-orgc124cf5" class="outline-4">
-<h4 id="orgc124cf5"><span class="section-number-4">13.0.1.</span> &#x2013;Setting up this blog</h4>
+<description><![CDATA[<div id="outline-container-org21947d9" class="outline-4">
+<h4 id="org21947d9"><span class="section-number-4">13.0.1.</span> &#x2013;Setting up this blog</h4>
 <div class="outline-text-4" id="text-13-0-1">
 <p>
 :CUSTOM<sub>ID</sub>: setting-up-this-blog
@@ -691,7 +691,7 @@ Anyway, here's the link to my old blog: <a href="http://javalinjx.iteye.com/">ht
 配置参考如下：
 </p>
 
-<pre class="example" id="org1bc81af">
+<pre class="example" id="org36d3a98">
 anonymous_enable=NO
 local_enable=YES
 write_enable=YES

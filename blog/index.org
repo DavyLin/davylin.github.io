@@ -1,6 +1,6 @@
 #+TITLE: Kinhung Lam ∴ A Weblog
 
-* [[file:2022-12-03 My reading history in 2022.org][My reading history in 2022]]
+* [[file:2022-12-03 My reading history in 2022.org][2022年阅读历史]]
 #+begin_published
 Saturday, December  3, 2022 at  9:20 PM CST
 #+end_published

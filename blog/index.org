@@ -11,88 +11,98 @@ Saturday, December  3, 2022 at  9:20 PM CST
 近来我看的书，基本上包括了编程、投资、社科、教育等，我看得比较慢，所以每年基本上都只有几本。
 
 ** 工作相关：
+#+begin_src text
+    《深入实践Spring Boot》
+    《Java 并发编程实践》，重读
+    《Java 并发编程艺术》，重读
+    《Python 核心编程》
+    《Activiti 实战》
+    《数据中台架构-企业》
+    《Learn GNU Emacs》
+    《计算机程序的构造与解释》
+    《黑客与画家》
+    《Build web application with Golang》
+    《Programming Clojure》
+    《Clojure Programming》
+    《白话区块链》
+    《深入理解 Java 虚拟机》，重读新版
+    《算法》
+    《代码未来》
+    《Rust 权限指南》
+    ,#+end_src text
 
-《深入实践Spring Boot》
-《Java 并发编程实践》，重读
-《Java 并发编程艺术》，重读
-《Python 核心编程》
-《Activiti 实战》
-《数据中台架构-企业》
-《Learn GNU Emacs》
-《计算机程序的构造与解释》
-《黑客与画家》
-《Build web application with Golang》
-《Programming Clojure》
-《Clojure Programming》
-《白话区块链》
-《深入理解 Java 虚拟机》，重读新版
-《算法》
-《代码未来》
-《Rust 权限指南》
+    ,** 投资：
 
-** 投资：
+    ,#+begin_src text
+    - 《投资最重要的事》
+    - 《文明、现代化、价值投资与中国》，第三遍重读
+    - 《股票大作手回忆录》
+    - 《黑天鹅》
+    - 《随机漫步的傻瓜》
+    - 《异类：不一样的成功启示录》
+    - 《指数基金投资指南》
+    ,#+end_src text
 
-《投资最重要的事》
-《文明、现代化、价值投资与中国》，第三遍重读
-《股票大作手回忆录》
-《黑天鹅》
-《随机漫步的傻瓜》
-《异类：不一样的成功启示录》
-《指数基金投资指南》
+    ,** 社科文学：
 
-** 社科文学：
+    ,#+begin_src text
+    - 《枪炮、病菌与钢铁》
+    - 《置身事内：中国政府与经济发展》
+    - 《底层逻辑》
+    ,#+end_src text
 
-《枪炮、病菌与钢铁》
-《置身事内：中国政府与经济发展》
-《底层逻辑》
+    ,** 经济：
 
-** 经济：
+    ,#+begin_src text
+    - 《宏观经济通识课》
+    ,#+end_src text
 
-《宏观经济通识课》
+    ,#+BEGIN_morelink
+    [[file:2022-12-03 My reading history in 2022.org][Read More →]]
+    ,#+END_morelink
 
-#+begin_morelink
-[[file:2022-12-03 My reading history in 2022.org][Read More →]]
-#+end_morelink
+    --------
 
------
-* [[file:2017-02-04-2016-personal-summary.org][Looking back on 2016 and looking forward to 2017]]
-#+begin_published
-Saturday, February  4, 2017 at 11:02 AM CST
-#+end_published
-转眼一年又过去了！大家都很早写好总结和展望了，可是我迟迟未动手，只因为我比较懒。。
+  - * [[file:2017-02-04-2016-personal-summary.org][Looking back on 2016 and looking forward to 2017]]
+    ,#+BEGIN_published
+    Saturday, February  4, 2017 at 11:02 AM CST
+    ,#+END_published
+    转眼一年又过去了！大家都很早写好总结和展望了，可是我迟迟未动手，只因为我比较懒。。
 
-回顾 2016，哈哈！
+    回顾 2016，哈哈！
 
-*** 当然也实现了一些小目标：
-:PROPERTIES:
-:CUSTOM_ID: 当然也实现了一些小目标
-:END:
-跑了一个半程马拉松，虽然是第一次，但还是成功完赛，并取得了一枚小奖牌；
-负责的教育资讯类产品成功上线，虽然目前用户量还不具规模，但也算是小有成就了，希望可以继续变得越来越好！
+    ,*** 当然也实现了一些小目标：
+    :PROPERTIES:
+    :CUSTOM_ID: 当然也实现了一些小目标
+    :END:
+    - 跑了一个半程马拉松，虽然是第一次，但还是成功完赛，并取得了一枚小奖牌；
 
-#+begin_morelink
-[[file:2017-02-04-2016-personal-summary.org][Read More →]]
-#+end_morelink
+    - 负责的教育资讯类产品成功上线，虽然目前用户量还不具规模，但也算是小有成就了，希望可以继续变得越来越好！
 
------
-* [[file:2015-12-19-centos-mongo-install.org][Mongo installed and confiure]]
-#+begin_published
-Saturday, December 19, 2015 at  9:54 PM CST
-#+end_published
-*1. 创建 /etc/yum.repos.d/mongodb-org-3.0.repo*
+    ,#+BEGIN_morelink
+    [[file:2017-02-04-2016-personal-summary.org][Read More →]]
+    ,#+END_morelink
 
-#+begin_example
-  [mongodb-org-3.0]
-  name=MongoDB Repository
-  baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/3.0/x86_64/
-  gpgcheck=0
-  enabled=1
-#+end_example
+    --------
 
-*2. yum安装mongo*
+  - * [[file:2015-12-19-centos-mongo-install.org][Mongo installed and confiure]]
+    ,#+BEGIN_published
+    Saturday, December 19, 2015 at  9:54 PM CST
+    ,#+END_published
+    ,*1. 创建 /etc/yum.repos.d/mongodb-org-3.0.repo*
 
-#+begin_src
-  =sudo yum install -y mongodb-org=
+    ,#+begin_example
+    [mongodb-org-3.0]
+    name=MongoDB Repository
+    baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/3.0/x86_64/
+    gpgcheck=0
+    enabled=1
+    ,#+end_example
+
+    ,*2. yum安装mongo*
+
+    ,#+begin_src 
+    =sudo yum install -y mongodb-org=
 #+end_src
 
 或者 指定版本

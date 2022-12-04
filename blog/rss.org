@@ -6,7 +6,7 @@
 :PUBDATE:  2014-05-27 14:59:00
 :EMAIL:    linjxljx@gmail.com
 :AUTHOR:   kinhung lam
-:ID:       D8925C27-E3BD-402E-AF96-B5750732C47A
+:ID:       67605E3F-DADF-4ECB-ADEE-66675F756574
 :END:
 ##Axis客户端调用 webservice
 
@@ -31,7 +31,7 @@
 :PUBDATE:  2014-04-11 13:05:00
 :EMAIL:    linjxljx@gmail.com
 :AUTHOR:   kinhung lam
-:ID:       4BCB6B2F-5286-430D-A80B-6C2145296A87
+:ID:       54A3E41F-8E3B-45D7-9BEE-510B1BF89668
 :END:
 -----
 
@@ -55,7 +55,7 @@ Counter Register） * Java虚拟机栈（Java Virtual Machine Stacks） *
 :PUBDATE:  2014-07-23 11:02:00
 :EMAIL:    linjxljx@gmail.com
 :AUTHOR:   kinhung lam
-:ID:       93F11BF8-74B8-4C9C-A0BC-EBD956E96DA8
+:ID:       5EAC382A-B6ED-4E8A-B82A-416891148A4E
 :END:
 1.use 用来导入clojure.core命名空间
 
@@ -84,7 +84,7 @@ Counter Register） * Java虚拟机栈（Java Virtual Machine Stacks） *
 :PUBDATE:  2014-05-10 15:29:00
 :EMAIL:    linjxljx@gmail.com
 :AUTHOR:   kinhung lam
-:ID:       3A1B48A5-386D-4CDD-9465-F9E6B76C6D36
+:ID:       EEF97449-CBAA-4AFA-8749-677A7D13CF3C
 :END:
 ###同步工具类之闭锁-CountDownLatch
 
@@ -135,7 +135,7 @@ Counter Register） * Java虚拟机栈（Java Virtual Machine Stacks） *
 :PUBDATE:  2015-12-19 21:53:00
 :EMAIL:    linjxljx@gmail.com
 :AUTHOR:   kinhung lam
-:ID:       8F4F45E0-3F31-4B6D-92E2-849491FBC482
+:ID:       A6B77D80-F2DB-4FD5-BD5B-7D618D31CCC9
 :END:
 /1. 下载安装包/
 
@@ -160,7 +160,7 @@ Running as a plugin of ElasticSearch (this is the preferred method)
 :PUBDATE:  2014-05-25 17:54:00
 :EMAIL:    linjxljx@gmail.com
 :AUTHOR:   kinhung lam
-:ID:       9120B9E7-25D2-46A7-A6CB-94FB7BBF0772
+:ID:       143D879B-6782-4B18-92C6-BB295F55D48D
 :END:
 ##grep ###1.从文件中查找关键词 *grep 'linux' text.txt //查找包含
 linux的关键词*
@@ -200,7 +200,7 @@ linux的关键词*
 :PUBDATE:  2017-02-04 11:02:00
 :EMAIL:    linjxljx@gmail.com
 :AUTHOR:   kinhung lam
-:ID:       E58F9B4C-0E6E-4B58-9A38-01A96568B01A
+:ID:       C7D450F9-7CE5-4685-B7A8-CE9833579575
 :END:
 转眼一年又过去了！大家都很早写好总结和展望了，可是我迟迟未动手，只因为我比较懒。。
 
@@ -209,7 +209,7 @@ linux的关键词*
 *** 当然也实现了一些小目标：
 :PROPERTIES:
 :CUSTOM_ID: 当然也实现了一些小目标
-:ID:       E11F7B44-3DEC-44B4-A2B3-D5E85289C04E
+:ID:       2EE48881-4F97-4345-877F-25207D849B09
 :END:
 跑了一个半程马拉松，虽然是第一次，但还是成功完赛，并取得了一枚小奖牌；
 负责的教育资讯类产品成功上线，虽然目前用户量还不具规模，但也算是小有成就了，希望可以继续变得越来越好！
@@ -221,7 +221,7 @@ linux的关键词*
 :PUBDATE:  2014-08-07 17:24:00
 :EMAIL:    linjxljx@gmail.com
 :AUTHOR:   kinhung lam
-:ID:       2E7F6522-FA1A-43BF-B89C-E7620230A097
+:ID:       9A76B3EB-383C-4110-8F50-E55E0183D35F
 :END:
 Github真是一个好地方，相信很多程序员们都知道！大家在上面可能都有多多少少的个人项目。我们常常会关注自己兴趣以及xx大牛的项目，甚至于fork牛人们的项目，慢慢研究。但是牛人们的步伐，岂是偶等可以追逐的，他们可能一天=commit=很多次，这样就会导致我们刚刚=fork=的代码已经不是最新的了，那现在我们就来看下如何更新到原作者的最新代码。
 
@@ -232,7 +232,7 @@ Github真是一个好地方，相信很多程序员们都知道！大家在上�
 :PUBDATE:  2015-12-19 21:54:00
 :EMAIL:    linjxljx@gmail.com
 :AUTHOR:   kinhung lam
-:ID:       F513FA5D-31CD-4C90-B5A9-77FDFCF24477
+:ID:       E3F4021B-7C30-424A-B297-578E24C0433A
 :END:
 *1. 创建 /etc/yum.repos.d/mongodb-org-3.0.repo*
 
@@ -269,7 +269,7 @@ Github真是一个好地方，相信很多程序员们都知道！大家在上�
 :PUBDATE:  2022-12-03 21:20:00
 :EMAIL:    linjxljx@gmail.com
 :AUTHOR:   kinhung lam
-:ID:       6CDE80B3-BFEB-4283-9D3C-031559E67893
+:ID:       C9C2826A-C0E3-46F4-87A0-BD9595683CE9
 :END:
 晚上看了 吴鲁加老师的 [[https://mp.weixin.qq.com/s/L6jw60lqdLqMCeDwKMfP8g][2021好书推荐]] ，就想着也可以记录下，于是就有了这篇文章哈。
 
@@ -279,9 +279,9 @@ Github真是一个好地方，相信很多程序员们都知道！大家在上�
 
 ** 工作相关：
 :PROPERTIES:
-:ID:       A95EB997-C7A1-43AE-95E1-2921AF8F35F6
+:ID:       A3E76770-837C-4342-A12E-F75E6FF34F77
 :END:
-
+#+begin_src text
 《深入实践Spring Boot》
 《Java 并发编程实践》，重读
 《Java 并发编程艺术》，重读
@@ -299,12 +299,14 @@ Github真是一个好地方，相信很多程序员们都知道！大家在上�
 《算法》
 《代码未来》
 《Rust 权限指南》
+#+end_src text
 
 ** 投资：
 :PROPERTIES:
-:ID:       C738E8EE-183B-4F9D-B772-DB56DE0C968C
+:ID:       87453620-0FFA-4F2D-A844-7AF6B289D31E
 :END:
 
+#+begin_src text
 《投资最重要的事》
 《文明、现代化、价值投资与中国》，第三遍重读
 《股票大作手回忆录》
@@ -312,22 +314,27 @@ Github真是一个好地方，相信很多程序员们都知道！大家在上�
 《随机漫步的傻瓜》
 《异类：不一样的成功启示录》
 《指数基金投资指南》
+#+end_src text
 
 ** 社科文学：
 :PROPERTIES:
-:ID:       25F2120D-D0C5-428F-95FC-A671C23F5CFD
+:ID:       48E2DBB9-8E50-4703-82D8-665485F9C022
 :END:
 
+#+begin_src text
 《枪炮、病菌与钢铁》
 《置身事内：中国政府与经济发展》
 《底层逻辑》
+#+end_src text
 
 ** 经济：
 :PROPERTIES:
-:ID:       483DF4BF-06FA-43CF-AEF4-6C3A29399A74
+:ID:       7A92A302-4615-4C06-BF47-B1DDF1A6A75F
 :END:
 
+#+begin_src text
 《宏观经济通识课》
+#+end_src text
 
 [[file:./blog/2022-12-03 My reading history in 2022.org][Read More →]]
 * [[file:/Users/jianxionglin/spaces/personal/org/blog/2015-12-19-centos-mysql-install.org][Mysql installed and configure]]
@@ -336,7 +343,7 @@ Github真是一个好地方，相信很多程序员们都知道！大家在上�
 :PUBDATE:  2015-12-19 21:52:00
 :EMAIL:    linjxljx@gmail.com
 :AUTHOR:   kinhung lam
-:ID:       7B757948-070D-498F-B9B6-99EE60972481
+:ID:       756B5A2F-68ED-4A1A-94AD-D0EBAE93856A
 :END:
 原来是rpm安装，检查并卸载
 
@@ -366,7 +373,7 @@ Github真是一个好地方，相信很多程序员们都知道！大家在上�
 :PUBDATE:  2014-07-18 16:09:00
 :EMAIL:    linjxljx@gmail.com
 :AUTHOR:   kinhung lam
-:ID:       014EBF09-2B02-4676-917E-C9E6FE42691F
+:ID:       F2F67B31-17EF-4D05-B360-4E92ECA5F8C7
 :END:
 */--来源于互联网的小故事，虽然可能是某些人丰富想象力的创作，但我觉得挺有意思的，在这里做个记录/*
 
@@ -391,11 +398,11 @@ Github真是一个好地方，相信很多程序员们都知道！大家在上�
 :PUBDATE:  2014-03-24 18:19:00
 :EMAIL:    linjxljx@gmail.com
 :AUTHOR:   kinhung lam
-:ID:       25A2B3F5-8AF1-4FD5-88D6-AA3A75D833B0
+:ID:       20111634-4013-492D-81F8-2C6A4CE24146
 :END:
 *** --Setting up this blog
 :PROPERTIES:
-:ID:       E3CCA312-DCB6-462B-B673-DEDA84E12CF3
+:ID:       E29DE3FA-1C7C-4AAA-9442-D1EDC82A5384
 :END:
 
 :PROPERTIES:
@@ -414,7 +421,7 @@ Anyway, here's the link to my old blog: http://javalinjx.iteye.com/
 :PUBDATE:  2014-07-17 09:52:00
 :EMAIL:    linjxljx@gmail.com
 :AUTHOR:   kinhung lam
-:ID:       51BBE411-E881-45A0-9A4C-B55995A3EE64
+:ID:       D7135A93-C79E-4782-A5DA-BCB3A9A02F32
 :END:
 上周经历了一次沉重的心路历程，也许是我内心不够强大，也许是每个人遇到相同的问题都会如此反应。不过总的来说是有惊无险，心也就慢慢释然了。同事们都感觉到我的变化，从一个性格相对开朗到如突然间默不做声，大家都表现出对我的关心，但我却无法告诉他们自己的想法！虽然内心比较痛苦，但却充满着温暖，慢慢在安慰着自己。
 
@@ -429,7 +436,7 @@ Anyway, here's the link to my old blog: http://javalinjx.iteye.com/
 :PUBDATE:  2015-12-19 21:53:00
 :EMAIL:    linjxljx@gmail.com
 :AUTHOR:   kinhung lam
-:ID:       2B2763AA-B526-46B0-ACF5-622C97104778
+:ID:       86265903-B6CB-4667-BD7E-F3829D553F34
 :END:
 *1. yum install vsftpd*
 

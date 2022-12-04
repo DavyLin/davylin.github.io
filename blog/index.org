@@ -12,7 +12,7 @@ Saturday, December  3, 2022 at  9:20 PM CST
 
 ** 工作相关：
 
-《E深入实践Spring Boot》
+《深入实践Spring Boot》
 
 《Java 并发编程实践》，重读
 

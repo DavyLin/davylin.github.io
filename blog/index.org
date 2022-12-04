@@ -1,6 +1,6 @@
 #+TITLE: Kinhung Lam ∴ A Weblog
 
-* [[file:2022-12-03 2022 Good Book Recommendations.org][2022 Good Book Recommendation]]
+* [[file:2022-12-03 My reading history in 2022.org][My reading history in 2022]]
 #+begin_published
 Saturday, December  3, 2022 at  9:20 PM CST
 #+end_published
@@ -51,7 +51,7 @@ Saturday, December  3, 2022 at  9:20 PM CST
 《宏观经济通识课》
 
 #+begin_morelink
-[[file:2022-12-03 2022 Good Book Recommendations.org][Read More →]]
+[[file:2022-12-03 My reading history in 2022.org][Read More →]]
 #+end_morelink
 
 -----

@@ -1,6 +1,6 @@
 #+AUTHOR: Kinhung Lam
 #+EMAIL: linjxljx@gmail.com
-#+TITLE: 2022 Good Book Recommendation
+#+TITLE: My reading history in 2022
 #+DATE: <2022-12-03 Sat 21:20>
 
 晚上看了 吴鲁加老师的 [[https://mp.weixin.qq.com/s/L6jw60lqdLqMCeDwKMfP8g][2021好书推荐]] ,就想着也可以记录下，于是就有了这篇文章哈。

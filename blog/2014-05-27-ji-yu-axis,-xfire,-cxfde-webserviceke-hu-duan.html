@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Sunday, December  4, 2022 at  5:01 PM -->
+<!-- Sunday, December  4, 2022 at  5:07 PM -->
 <meta charset="utf-8" />
 <title>A Client of Webservice by Axis/XFire/CXF</title>
 <meta name="author" content="Kinhung Lam" />
@@ -39,7 +39,7 @@ Published Tuesday, May 27, 2014 at  2:59 PM
 ##Axis客户端调用 webservice
 </p>
 
-<pre class="example" id="org72ab9dc">
+<pre class="example" id="org3660133">
 URL endpointURL = new URL("http://localhost:8080/webservice/HelloService");  
             String requestText = "javalinjx"  
             Service service = new Service();  
@@ -57,7 +57,7 @@ URL endpointURL = new URL("http://localhost:8080/webservice/HelloService");
 ##XFire客户端调用
 </p>
 
-<pre class="example" id="orga0feb18">
+<pre class="example" id="orgf62bcee">
 public void call() throws Exception {  
         Service service = new ObjectServiceFactory().create(HelloService.class);  
         XFireProxyFactory factory = new XFireProxyFactory(XFireFactory.newInstance().getXFire());  
@@ -71,7 +71,7 @@ public void call() throws Exception {
 ##CXF客户端调用
 </p>
 
-<pre class="example" id="orgee07940">
+<pre class="example" id="org062092f">
 JaxWsProxyFactoryBean factory1 = new JaxWsProxyFactoryBean();  
 factory1.setServiceClass(UaAuthInterfaces.class);  
         factory1.setAddress("http://localhost:8080/webservices/HelloService");  

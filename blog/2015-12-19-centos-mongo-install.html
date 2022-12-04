@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Sunday, December  4, 2022 at  5:01 PM -->
+<!-- Sunday, December  4, 2022 at  5:07 PM -->
 <meta charset="utf-8" />
 <title>Mongo installed and confiure</title>
 <meta name="author" content="Kinhung Lam" />
@@ -39,7 +39,7 @@ Published Saturday, December 19, 2015 at  9:54 PM
 <b>1. 创建 /etc/yum.repos.d/mongodb-org-3.0.repo</b>
 </p>
 
-<pre class="example" id="org90102d6">
+<pre class="example" id="org8665af5">
 [mongodb-org-3.0]
 name=MongoDB Repository
 baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/3.0/x86_64/
@@ -101,7 +101,7 @@ enabled=1
 <b>5. 设置开机启动</b>
 </p>
 
-<pre class="example" id="orga847056">
+<pre class="example" id="org5cda6b7">
 sudo service mongod start
 sudo chkconfig mongod on
 sudo service mongod stop // 停止
@@ -112,7 +112,7 @@ sudo service mongod restart // 重启
 <b>6. 卸载</b>
 </p>
 
-<pre class="example" id="org43aefd5">
+<pre class="example" id="orgcac15b8">
 sudo yum erase $(rpm -qa | grep mongodb-org)
 sudo rm -r /var/log/mongodb
 sudo rm -r /var/lib/mongo
@@ -161,7 +161,7 @@ sudo rm -r /var/lib/mongo
 在=mongo shell=中：
 </p>
 
-<pre class="example" id="org5aaf8c5">
+<pre class="example" id="org5d7b99e">
 rsconf = {
          _id: "rs0",
          members: [
@@ -183,7 +183,7 @@ rsconf = {
 <b>备注：</b>
 </p>
 
-<pre class="example" id="orgb48003a">
+<pre class="example" id="org39984b5">
 rs.initiate()
 rs.conf()
 rs.reconfig()
@@ -201,7 +201,7 @@ rs.status()
 在终端下执行如下命令，即可启用数据复制，开始从mongo数据导出到ES中：
 </p>
 
-<pre class="example" id="org469c02f">
+<pre class="example" id="org912f71e">
 nohup mongo-connector -c config.json --auto-commit-interval=20 -m localhost:27017 -d elastic_doc_manager -t localhost:9200 &amp;   
 </pre>
 
